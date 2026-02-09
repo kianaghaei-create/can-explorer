@@ -128,8 +128,11 @@ Years: 2015-2024. Use gender='T' for totals unless user asks for gender breakdow
 
 
 def search_variables(keywords: list) -> str:
-    """Search the database for variables matching keywords. Returns formatted results."""
+    """Search the database for variables matching keywords. Returns formatted results.
+    Limits results PER keyword to ensure all topics in the question are represented."""
     con = duckdb.connect(DB_PATH, read_only=True)
+
+    per_kw_limit = max(5, 40 // max(len(keywords), 1))  # distribute slots evenly
 
     all_results = []
     for kw in keywords:
@@ -144,7 +147,7 @@ def search_variables(keywords: list) -> str:
                OR LOWER(table_title) LIKE '%{kw_clean}%'
             GROUP BY report, table_id, table_title, variable
             ORDER BY report, table_id
-            LIMIT 30
+            LIMIT {per_kw_limit}
         """).fetchdf()
         all_results.append(results)
 
@@ -182,16 +185,18 @@ def ask_data(question: str, conversation_history: list = None) -> dict:
 
 User question: "{question}"
 
-Extract 2-5 Swedish search keywords to find the right variables in the database.
+Extract 2-6 Swedish search keywords to find the right variables in the database.
 Think about what Swedish words would appear in variable names.
+IMPORTANT: If the question mentions MULTIPLE topics (e.g. "smoking AND drinking"), include keywords for EACH topic separately.
 
 Respond in JSON:
 {{"keywords": ["keyword1", "keyword2", ...]}}
 
 Examples:
-- "cocaine prices vs seizures" → {{"keywords": ["kokain", "pris", "beslag", "antal"]}}
+- "cocaine prices vs seizures" → {{"keywords": ["kokain", "pris", "beslag", "kokain_antal"]}}
 - "youth alcohol consumption" → {{"keywords": ["alkohol", "druckit", "pojkar", "flickor"]}}
 - "smoking trends among women" → {{"keywords": ["rökt", "dagligen", "kvinnor", "cigaretter"]}}
+- "correlation between smoking and drinking" → {{"keywords": ["rökt", "cigaretter", "alkohol", "druckit", "dagligen"]}}
 - "biggest changes in school survey" → {{"keywords": ["skolelever", "narkotika", "alkohol", "rökt", "snusat"]}}"""
 
     try:
