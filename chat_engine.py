@@ -19,6 +19,73 @@ DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "can_data.duc
 
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", ""))
 
+# Map report IDs to source file names and descriptions
+REPORT_SOURCES = {
+    "CAN-233": {
+        "title": "Narkotikaprisutvecklingen 1988–2024",
+        "file": "can-rapport-233-narkotikaprisutvecklingen-1988-2024-tabellbilaga.xlsx",
+        "description": "Drug price trends",
+    },
+    "CAN-234": {
+        "title": "Självrapporterade rök- och snusvanor 2003–2024",
+        "file": "can-rapport-234-sjalvrapporterade-rok-och-snusvanor-2003-2024-tabellbilaga.xlsx",
+        "description": "Self-reported smoking & snus habits",
+    },
+    "CAN-235": {
+        "title": "Narkotikautvecklingen i Sverige",
+        "file": "can-rapport-235-narkotikautvecklingen-i-sverige-tabellbilaga.xlsx",
+        "description": "Drug seizures, crime & health stats",
+    },
+    "CAN-236": {
+        "title": "Alkoholkonsumtionen i Sverige 2001–2024",
+        "file": "can-rapport-236-alkoholkonsumtionen-i-sverige-2001-2024-tabellbilaga.xlsx",
+        "description": "Total alcohol consumption",
+    },
+    "CAN-237": {
+        "title": "Självrapporterade alkoholvanor 2004–2024",
+        "file": "can-rapport-237-sjalvrapporterade-alkoholvanor-i-sverige-2004-2024-tabellbilaga.xlsx",
+        "description": "Self-reported alcohol habits",
+    },
+    "CAN-238": {
+        "title": "Total konsumtion av tobaks- och nikotinprodukter 2003–2024",
+        "file": "can-rapport-238-den-totala-konsumtionen-av-tobaks-och-nikotinprodukter-i-sverige-2003-2024-tabellbilaga.xlsx",
+        "description": "Tobacco & nicotine consumption",
+    },
+    "CAN-239": {
+        "title": "CANs nationella skolundersökning 2025",
+        "file": "can-rapport-239-cans-nationella-skolundersokning-2025-tabellbilaga.xlsx",
+        "description": "Youth school survey",
+    },
+}
+
+
+def get_source_citations(data) -> str:
+    """Extract unique report sources from query results and format as citations."""
+    if data is None or len(data) == 0:
+        return ""
+
+    reports_used = set()
+    # Check for 'report' column in the data
+    if "report" in data.columns:
+        reports_used = set(data["report"].dropna().unique())
+    # Also check if report IDs appear in other columns (from CASE WHEN aliases)
+    for col in data.columns:
+        for report_id in REPORT_SOURCES:
+            if report_id.lower() in str(data[col].values).lower():
+                reports_used.add(report_id)
+
+    if not reports_used:
+        return ""
+
+    citations = []
+    for report_id in sorted(reports_used):
+        if report_id in REPORT_SOURCES:
+            src = REPORT_SOURCES[report_id]
+            citations.append(f"📄 **{report_id}**: {src['title']} ({src['description']})")
+
+    return "\n".join(citations)
+
+
 SCHEMA_OVERVIEW = """DATABASE: CAN — 60 years of Swedish substance use data
 
 Table: timeseries (LONG FORMAT — each row = one variable, one year, one value)
@@ -129,10 +196,11 @@ I searched the database and found these REAL variables (use ONLY these exact nam
 {variable_matches}
 
 Now write a SQL query using the EXACT variable names from above.
+IMPORTANT: Always include the 'report' column in your SELECT so we can cite the source.
 
 Respond in JSON:
 {{
-    "sql": "SELECT year, variable, value FROM timeseries WHERE ... ORDER BY year",
+    "sql": "SELECT year, variable, value, report FROM timeseries WHERE ... ORDER BY year",
     "chart": {{
         "type": "line",
         "x": "year",
@@ -165,7 +233,7 @@ SQL RULES:
         if not sql:
             return {
                 "answer": "I couldn't formulate a query. Try rephrasing your question.",
-                "sql": None, "data": None, "chart_spec": None, "error": None,
+                "sql": None, "data": None, "chart_spec": None, "sources": "", "error": None,
             }
 
         # ── Execute SQL ───────────────────────────────────────
@@ -175,7 +243,7 @@ SQL RULES:
         except Exception as e:
             return {
                 "answer": f"SQL error: {str(e)}\n\nThe query was:\n```sql\n{sql}\n```\n\nAvailable variables I found:\n{variable_matches[:500]}",
-                "sql": sql, "data": None, "chart_spec": None, "error": str(e),
+                "sql": sql, "data": None, "chart_spec": None, "sources": "", "error": str(e),
             }
         finally:
             con.close()
@@ -183,7 +251,7 @@ SQL RULES:
         if len(data) == 0:
             return {
                 "answer": f"No results. The variables I searched for:\n{variable_matches[:500]}\n\nTry a more specific question.",
-                "sql": sql, "data": data, "chart_spec": None, "error": None,
+                "sql": sql, "data": data, "chart_spec": None, "sources": "", "error": None,
             }
 
         # ── STEP 3: Generate answer from actual results ───────
@@ -206,7 +274,9 @@ Write a clear, insightful answer. RULES:
 - Point out trends, peaks, troughs, and surprises
 - Compare across time periods when relevant
 - Keep it concise: 3-5 sentences
-- Do NOT use placeholders — only real numbers from the data above"""
+- Do NOT use placeholders — only real numbers from the data above
+- When citing a number, add the report source in parentheses, e.g. "cocaine seizures reached 5,200 (CAN-235)"
+- If data comes from multiple reports, cite each one where relevant"""
 
         step3_resp = client.chat.completions.create(
             model="gpt-4o",
@@ -216,17 +286,19 @@ Write a clear, insightful answer. RULES:
         )
 
         answer = step3_resp.choices[0].message.content
+        sources = get_source_citations(data)
 
         return {
             "answer": answer,
             "sql": sql,
             "data": data,
             "chart_spec": chart_spec,
+            "sources": sources,
             "error": None,
         }
 
     except Exception as e:
         return {
             "answer": f"Error: {str(e)}",
-            "sql": None, "data": None, "chart_spec": None, "error": str(e),
+            "sql": None, "data": None, "chart_spec": None, "sources": "", "error": str(e),
         }

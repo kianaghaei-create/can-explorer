@@ -133,6 +133,12 @@ if page == "💬 Ask the Data":
                     # Display answer
                     st.markdown(result["answer"])
 
+                    # Display source citations
+                    if result.get("sources"):
+                        st.markdown("---")
+                        st.markdown("**📚 Sources:**")
+                        st.markdown(result["sources"])
+
                     # Display chart if we have data
                     chart_fig = None
                     if result["data"] is not None and len(result["data"]) > 0 and result.get("chart_spec"):
