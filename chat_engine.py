@@ -276,7 +276,17 @@ Write a clear, insightful answer. RULES:
 - Keep it concise: 3-5 sentences
 - Do NOT use placeholders — only real numbers from the data above
 - When citing a number, add the report source in parentheses, e.g. "cocaine seizures reached 5,200 (CAN-235)"
-- If data comes from multiple reports, cite each one where relevant"""
+- If data comes from multiple reports, cite each one where relevant
+
+UNITS BY REPORT (use the correct unit when presenting numbers):
+- CAN-233: Values are PRICES in SEK (Swedish kronor). E.g. "800 SEK per gram"
+- CAN-234: Values are mostly PERCENTAGES (%). E.g. "9.7% smoked daily". Some are annual counts (cigarettes/year).
+- CAN-235: MIXED — seizure counts (antal), percentages (andel), and rates per 100,000. Check the variable name: "antal"=count, "andel"=percentage.
+- CAN-236: Values are LITERS of pure alcohol per capita. E.g. "3.19 liters per capita"
+- CAN-237: Values are PERCENTAGES (%). E.g. "4.8% report risk consumption"
+- CAN-238: Values are PER CAPITA counts. Cigarettes per person, snus cans per person, etc.
+- CAN-239: Values are PERCENTAGES (%). E.g. "11.8% have tried cannabis"
+- Round values to 1 decimal place for readability."""
 
         step3_resp = client.chat.completions.create(
             model="gpt-4o",
