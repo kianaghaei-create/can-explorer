@@ -40,7 +40,7 @@ MAJOR_MUNICIPALITIES = {
     "1480": "Göteborg",
     "0380": "Uppsala",
     "0580": "Linköping",
-    "1280": "Malmö",
+    "1880": "Örebro",
     "0680": "Jönköping",
     "0880": "Kalmar",
     "1080": "Karlskrona",
