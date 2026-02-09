@@ -77,9 +77,15 @@ def get_source_citations(data) -> str:
     if not reports_used:
         return ""
 
+    # Also check if kolada table was used
+    if "kpi_title" in data.columns or "municipality_name" in data.columns:
+        reports_used.add("KOLADA")
+
     citations = []
     for report_id in sorted(reports_used):
-        if report_id in REPORT_SOURCES:
+        if report_id == "KOLADA":
+            citations.append(f"📄 **KOLADA**: Swedish Municipal Statistics API (api.kolada.se)")
+        elif report_id in REPORT_SOURCES:
             src = REPORT_SOURCES[report_id]
             citations.append(f"📄 **{report_id}**: {src['title']} ({src['description']})")
 
@@ -100,7 +106,25 @@ REPORTS:
 - CAN-238: Total TOBACCO & NICOTINE consumption. Cigarettes, snus, e-liquid per capita. Years 2003-2024.
 - CAN-239: YOUTH SCHOOL SURVEY. Grade 9 + gymnasium year 2. Alcohol, tobacco, drugs, gambling. By gender (_pojkar=boys, _flickor=girls, _alla=all). Years 1971-2025.
 
-SWEDISH TERMS: kokain=cocaine, amfetamin=amphetamine, hasch=hashish, cannabis=cannabis, heroin=heroin, ecstasy=ecstasy, beslag=seizures, antal=count, pris=price, alkohol=alcohol, rökt/rokt=smoked, snusat=snus use, druckit=drank, narkotika=drugs, dagligen=daily, pojkar=boys, flickor=girls, alla=all, man/män=men, kvinnor=women"""
+SWEDISH TERMS: kokain=cocaine, amfetamin=amphetamine, hasch=hashish, cannabis=cannabis, heroin=heroin, ecstasy=ecstasy, beslag=seizures, antal=count, pris=price, alkohol=alcohol, rökt/rokt=smoked, snusat=snus use, druckit=drank, narkotika=drugs, dagligen=daily, pojkar=boys, flickor=girls, alla=all, man/män=men, kvinnor=women
+
+Table: kolada (MUNICIPAL-LEVEL DATA from KOLADA API — Swedish municipal statistics)
+Columns: kpi_id (VARCHAR), municipality_id (VARCHAR), year (INT), gender (VARCHAR: T=total, K=women, M=men), value (DOUBLE), kpi_title (VARCHAR), municipality_name (VARCHAR)
+
+KOLADA KPIs available:
+- N07544: Drug offenses per 100,000 inhabitants
+- N33820: Mental ill-health among children/youth 0-19 (%)
+- N03921: Youth unemployment 16-24 (%)
+- N03922: Youth openly unemployed 16-24 (%)
+- N17441: Gymnasium completion rate within 3 years (%)
+- N17473: University eligibility within 3 years (%)
+- N00621: Few problems with drug trafficking (citizen survey %)
+- N00620: Few problems with alcohol/drug-affected persons (%)
+- N07628: Problems with substance-affected persons outdoors (%)
+- N02280: Unemployment 20-64 (%)
+
+Municipalities: Stockholm, Malmö, Göteborg, Uppsala, Linköping, Örebro, Jönköping, Kalmar, Karlskrona, Halmstad
+Years: 2015-2024. Use gender='T' for totals unless user asks for gender breakdown."""
 
 
 def search_variables(keywords: list) -> str:
@@ -286,6 +310,7 @@ UNITS BY REPORT (use the correct unit when presenting numbers):
 - CAN-237: Values are PERCENTAGES (%). E.g. "4.8% report risk consumption"
 - CAN-238: Values are PER CAPITA counts. Cigarettes per person, snus cans per person, etc.
 - CAN-239: Values are PERCENTAGES (%). E.g. "11.8% have tried cannabis"
+- KOLADA: Check the kpi_title for the unit. "per 100,000" = rate, "(%)" = percentage. Always mention which municipality.
 - Round values to 1 decimal place for readability."""
 
         step3_resp = client.chat.completions.create(
