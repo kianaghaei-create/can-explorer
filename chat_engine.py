@@ -159,6 +159,9 @@ def search_variables(keywords: list) -> str:
     import pandas as pd
     combined = pd.concat(all_results).drop_duplicates()
 
+    # Filter out generic column names (col_1, col_2 etc.) — these have ambiguous data
+    combined = combined[~combined["variable"].str.match(r".*__col_\d+$", na=False)]
+
     if len(combined) == 0:
         return "No matching variables found."
 
