@@ -60,26 +60,35 @@ REPORT_SOURCES = {
 
 
 def get_source_citations(data) -> str:
-    """Extract unique report sources from query results and format as citations."""
+    """Extract unique report sources from query results and format as citations with table-level detail."""
     if data is None or len(data) == 0:
         return ""
 
     reports_used = set()
+    table_details = []  # (report, table_id, table_title) tuples
+
     # Check for 'report' column in the data
     if "report" in data.columns:
         reports_used = set(data["report"].dropna().unique())
+
     # Also check if report IDs appear in other columns (from CASE WHEN aliases)
     for col in data.columns:
         for report_id in REPORT_SOURCES:
             if report_id.lower() in str(data[col].values).lower():
                 reports_used.add(report_id)
 
-    if not reports_used:
-        return ""
+    # Extract table-level detail if available
+    if "table_id" in data.columns and "table_title" in data.columns:
+        for _, row in data[["report", "table_id", "table_title"]].drop_duplicates().iterrows():
+            if row["report"] and row["table_id"] and row["table_title"]:
+                table_details.append((str(row["report"]), str(row["table_id"]), str(row["table_title"])))
 
     # Also check if kolada table was used
     if "kpi_title" in data.columns or "municipality_name" in data.columns:
         reports_used.add("KOLADA")
+
+    if not reports_used:
+        return ""
 
     citations = []
     for report_id in sorted(reports_used):
@@ -87,7 +96,12 @@ def get_source_citations(data) -> str:
             citations.append(f"📄 **KOLADA**: Swedish Municipal Statistics API (api.kolada.se)")
         elif report_id in REPORT_SOURCES:
             src = REPORT_SOURCES[report_id]
-            citations.append(f"📄 **{report_id}**: {src['title']} ({src['description']})")
+            citations.append(f"📄 **{report_id}**: {src['title']}")
+            # Add table-level detail for this report
+            tables_for_report = [(tid, tt) for r, tid, tt in table_details if r == report_id]
+            for tid, tt in sorted(set(tables_for_report)):
+                title_short = tt[:100] if len(tt) > 100 else tt
+                citations.append(f"   ↳ Tabell {tid}: {title_short}")
 
     return "\n".join(citations)
 
@@ -228,11 +242,11 @@ I searched the database and found these REAL variables (use ONLY these exact nam
 {variable_matches}
 
 Now write a SQL query using the EXACT variable names from above.
-IMPORTANT: Always include the 'report' column in your SELECT so we can cite the source.
+IMPORTANT: Always include report, table_id, and table_title columns in your SELECT so we can cite the exact source sheet.
 
 Respond in JSON:
 {{
-    "sql": "SELECT year, variable, value, report FROM timeseries WHERE ... ORDER BY year",
+    "sql": "SELECT year, variable, value, report, table_id, table_title FROM timeseries WHERE ... ORDER BY year",
     "chart": {{
         "type": "line",
         "x": "year",
