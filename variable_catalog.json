@@ -2676,33 +2676,6 @@
     "report": "CAN-234",
     "table_id": "5",
     "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
-    "variable": "alla_dag",
-    "y_min": 2003,
-    "y_max": 2024,
-    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: alla dag. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, alla=all/everyone, cigaretter=cigarettes, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-234",
-    "table_id": "5",
-    "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
-    "variable": "alla_dag_1",
-    "y_min": 2003,
-    "y_max": 2024,
-    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: alla dag 1. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, alla=all/everyone, cigaretter=cigarettes, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-234",
-    "table_id": "5",
-    "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
-    "variable": "alla_dag_2",
-    "y_min": 2003,
-    "y_max": 2024,
-    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: alla dag 2. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, alla=all/everyone, cigaretter=cigarettes, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-234",
-    "table_id": "5",
-    "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
     "variable": "alla_vecka",
     "y_min": 2003,
     "y_max": 2024,
@@ -2730,28 +2703,55 @@
     "report": "CAN-234",
     "table_id": "5",
     "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
-    "variable": "kvinnor_dag",
+    "variable": "dagligen_alla",
     "y_min": 2003,
     "y_max": 2024,
-    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: kvinnor dag. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, kvinnor=women, cigaretter=cigarettes, konsumtion=consumption."
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: dagligen alla. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, dagligen=daily, alla=all/everyone, cigaretter=cigarettes, konsumtion=consumption."
   },
   {
     "report": "CAN-234",
     "table_id": "5",
     "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
-    "variable": "kvinnor_dag_1",
+    "variable": "dagligen_kvinnor",
     "y_min": 2003,
     "y_max": 2024,
-    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: kvinnor dag 1. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, kvinnor=women, cigaretter=cigarettes, konsumtion=consumption."
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: dagligen kvinnor. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, dagligen=daily, kvinnor=women, cigaretter=cigarettes, konsumtion=consumption."
   },
   {
     "report": "CAN-234",
     "table_id": "5",
     "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
-    "variable": "kvinnor_dag_2",
+    "variable": "dagligen_män",
     "y_min": 2003,
     "y_max": 2024,
-    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: kvinnor dag 2. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, kvinnor=women, cigaretter=cigarettes, konsumtion=consumption."
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: dagligen män. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, dagligen=daily, män=men, cigaretter=cigarettes, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "5",
+    "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
+    "variable": "ej_rökt_30d_alla",
+    "y_min": 2003,
+    "y_max": 2024,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: ej rökt 30d alla. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, rökt=smoked, alla=all/everyone, cigaretter=cigarettes, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "5",
+    "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
+    "variable": "ej_rökt_30d_kvinnor",
+    "y_min": 2003,
+    "y_max": 2024,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: ej rökt 30d kvinnor. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, rökt=smoked, kvinnor=women, cigaretter=cigarettes, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "5",
+    "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
+    "variable": "ej_rökt_30d_män",
+    "y_min": 2003,
+    "y_max": 2024,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: ej rökt 30d män. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, rökt=smoked, män=men, cigaretter=cigarettes, konsumtion=consumption."
   },
   {
     "report": "CAN-234",
@@ -2784,33 +2784,6 @@
     "report": "CAN-234",
     "table_id": "5",
     "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
-    "variable": "män_dag",
-    "y_min": 2003,
-    "y_max": 2024,
-    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: män dag. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, män=men, cigaretter=cigarettes, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-234",
-    "table_id": "5",
-    "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
-    "variable": "män_dag_1",
-    "y_min": 2003,
-    "y_max": 2024,
-    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: män dag 1. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, män=men, cigaretter=cigarettes, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-234",
-    "table_id": "5",
-    "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
-    "variable": "män_dag_2",
-    "y_min": 2003,
-    "y_max": 2024,
-    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: män dag 2. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, män=men, cigaretter=cigarettes, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-234",
-    "table_id": "5",
-    "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
     "variable": "män_vecka",
     "y_min": 2003,
     "y_max": 2024,
@@ -2833,6 +2806,33 @@
     "y_min": 2003,
     "y_max": 2024,
     "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: män vecka 2. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, män=men, cigaretter=cigarettes, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "5",
+    "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
+    "variable": "sporadiskt_alla",
+    "y_min": 2003,
+    "y_max": 2024,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: sporadiskt alla. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, sporadiskt=occasionally, alla=all/everyone, cigaretter=cigarettes, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "5",
+    "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
+    "variable": "sporadiskt_kvinnor",
+    "y_min": 2003,
+    "y_max": 2024,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: sporadiskt kvinnor. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, sporadiskt=occasionally, kvinnor=women, cigaretter=cigarettes, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "5",
+    "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
+    "variable": "sporadiskt_män",
+    "y_min": 2003,
+    "y_max": 2024,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Variable: sporadiskt män. Years: 2003-2024. Terms: antal=count/number, medel=average/mean, sporadiskt=occasionally, män=men, cigaretter=cigarettes, konsumtion=consumption."
   },
   {
     "report": "CAN-234",
@@ -23367,325 +23367,325 @@
     "report": "CAN-239",
     "table_id": "6",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "alla",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: alla. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "alla_1",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: alla 1. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "alla_2",
+    "variable": "blanddrycker_andel_alla",
     "y_min": 1998,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: alla 2. Years: 1998-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: blanddrycker andel alla. Years: 1998-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "6",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "alla_3",
+    "variable": "blanddrycker_andel_flickor",
+    "y_min": 1998,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: blanddrycker andel flickor. Years: 1998-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "blanddrycker_andel_pojkar",
+    "y_min": 1998,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: blanddrycker andel pojkar. Years: 1998-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "blanddrycker_liter_alla",
+    "y_min": 1998,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: blanddrycker liter alla. Years: 1998-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "blanddrycker_liter_flickor",
+    "y_min": 1998,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: blanddrycker liter flickor. Years: 1998-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "blanddrycker_liter_pojkar",
+    "y_min": 1998,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: blanddrycker liter pojkar. Years: 1998-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "folköl_andel_alla",
     "y_min": 1989,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: alla 3. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: folköl andel alla. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "6",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "alla_4",
+    "variable": "folköl_andel_flickor",
     "y_min": 1989,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: alla 4. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: folköl andel flickor. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "6",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "alla_5",
+    "variable": "folköl_andel_pojkar",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: folköl andel pojkar. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "folköl_liter_alla",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: folköl liter alla. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "folköl_liter_flickor",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: folköl liter flickor. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "folköl_liter_pojkar",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: folköl liter pojkar. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "sprit_andel_alla",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: sprit andel alla. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "sprit_andel_flickor",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: sprit andel flickor. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "sprit_andel_pojkar",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: sprit andel pojkar. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "sprit_liter_alla",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: sprit liter alla. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "sprit_liter_flickor",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: sprit liter flickor. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "sprit_liter_pojkar",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: sprit liter pojkar. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "starköl_andel_alla",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: starköl andel alla. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "starköl_andel_flickor",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: starköl andel flickor. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "starköl_andel_pojkar",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: starköl andel pojkar. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "starköl_liter_alla",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: starköl liter alla. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "starköl_liter_flickor",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: starköl liter flickor. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "starköl_liter_pojkar",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: starköl liter pojkar. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "totalt_andel_alla",
     "y_min": 1977,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: alla 5. Years: 1977-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: totalt andel alla. Years: 1977-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "6",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "alla_liter",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: alla liter. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "alla_liter_1",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: alla liter 1. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "alla_liter_2",
-    "y_min": 1998,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: alla liter 2. Years: 1998-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "alla_liter_3",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: alla liter 3. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "alla_liter_4",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: alla liter 4. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "alla_liter_5",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: alla liter 5. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "flickor",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: flickor. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "flickor_1",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: flickor 1. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "flickor_2",
-    "y_min": 1998,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: flickor 2. Years: 1998-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "flickor_3",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: flickor 3. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "flickor_4",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: flickor 4. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "flickor_5",
+    "variable": "totalt_andel_flickor",
     "y_min": 1977,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: flickor 5. Years: 1977-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: totalt andel flickor. Years: 1977-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "6",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "flickor_liter",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: flickor liter. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "flickor_liter_1",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: flickor liter 1. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "flickor_liter_2",
-    "y_min": 1998,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: flickor liter 2. Years: 1998-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "flickor_liter_3",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: flickor liter 3. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "flickor_liter_4",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: flickor liter 4. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "flickor_liter_5",
+    "variable": "totalt_andel_pojkar",
     "y_min": 1977,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: flickor liter 5. Years: 1977-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: totalt andel pojkar. Years: 1977-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "6",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "pojkar",
+    "variable": "totalt_liter_alla",
     "y_min": 1989,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: pojkar. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: totalt liter alla. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "6",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "pojkar_1",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: pojkar 1. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "pojkar_2",
-    "y_min": 1998,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: pojkar 2. Years: 1998-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "pojkar_3",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: pojkar 3. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "pojkar_4",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: pojkar 4. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "pojkar_5",
+    "variable": "totalt_liter_flickor",
     "y_min": 1977,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: pojkar 5. Years: 1977-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: totalt liter flickor. Years: 1977-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "6",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "pojkar_liter",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: pojkar liter. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "pojkar_liter_1",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: pojkar liter 1. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "pojkar_liter_2",
-    "y_min": 1998,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: pojkar liter 2. Years: 1998-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "pojkar_liter_3",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: pojkar liter 3. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "pojkar_liter_4",
-    "y_min": 1989,
-    "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: pojkar liter 4. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
-  },
-  {
-    "report": "CAN-239",
-    "table_id": "6",
-    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
-    "variable": "pojkar_liter_5",
+    "variable": "totalt_liter_pojkar",
     "y_min": 1977,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: pojkar liter 5. Years: 1977-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: totalt liter pojkar. Years: 1977-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "vin_andel_alla",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: vin andel alla. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "vin_andel_flickor",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: vin andel flickor. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "vin_andel_pojkar",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: vin andel pojkar. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "vin_liter_alla",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: vin liter alla. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "vin_liter_flickor",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: vin liter flickor. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, årskurs=grade, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "variable": "vin_liter_pojkar",
+    "y_min": 1989,
+    "y_max": 2025,
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Variable: vin liter pojkar. Years: 1989-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, årskurs=grade, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
@@ -25716,325 +25716,325 @@
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "alla",
+    "variable": "blanddrycker_andel_alla",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: alla. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: blanddrycker andel alla. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "alla_1",
+    "variable": "blanddrycker_andel_flickor",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: alla 1. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: blanddrycker andel flickor. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "alla_2",
+    "variable": "blanddrycker_andel_pojkar",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: alla 2. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: blanddrycker andel pojkar. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "alla_3",
+    "variable": "blanddrycker_liter_alla",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: alla 3. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: blanddrycker liter alla. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "alla_4",
+    "variable": "blanddrycker_liter_flickor",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: alla 4. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: blanddrycker liter flickor. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "alla_5",
+    "variable": "blanddrycker_liter_pojkar",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: alla 5. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: blanddrycker liter pojkar. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "alla_liter",
+    "variable": "folköl_andel_alla",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: alla liter. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: folköl andel alla. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "alla_liter_1",
+    "variable": "folköl_andel_flickor",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: alla liter 1. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: folköl andel flickor. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "alla_liter_2",
+    "variable": "folköl_andel_pojkar",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: alla liter 2. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: folköl andel pojkar. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "alla_liter_3",
+    "variable": "folköl_liter_alla",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: alla liter 3. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: folköl liter alla. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "alla_liter_4",
+    "variable": "folköl_liter_flickor",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: alla liter 4. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: folköl liter flickor. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "alla_liter_5",
+    "variable": "folköl_liter_pojkar",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: alla liter 5. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: folköl liter pojkar. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "flickor",
+    "variable": "sprit_andel_alla",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: flickor. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: sprit andel alla. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "flickor_1",
+    "variable": "sprit_andel_flickor",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: flickor 1. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: sprit andel flickor. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "flickor_2",
+    "variable": "sprit_andel_pojkar",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: flickor 2. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: sprit andel pojkar. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "flickor_3",
+    "variable": "sprit_liter_alla",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: flickor 3. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: sprit liter alla. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "flickor_4",
+    "variable": "sprit_liter_flickor",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: flickor 4. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: sprit liter flickor. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "flickor_5",
+    "variable": "sprit_liter_pojkar",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: flickor 5. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: sprit liter pojkar. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "flickor_liter",
+    "variable": "starköl_andel_alla",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: flickor liter. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: starköl andel alla. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "flickor_liter_1",
+    "variable": "starköl_andel_flickor",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: flickor liter 1. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: starköl andel flickor. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "flickor_liter_2",
+    "variable": "starköl_andel_pojkar",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: flickor liter 2. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: starköl andel pojkar. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "flickor_liter_3",
+    "variable": "starköl_liter_alla",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: flickor liter 3. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: starköl liter alla. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "flickor_liter_4",
+    "variable": "starköl_liter_flickor",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: flickor liter 4. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: starköl liter flickor. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "flickor_liter_5",
+    "variable": "starköl_liter_pojkar",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: flickor liter 5. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: starköl liter pojkar. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "pojkar",
+    "variable": "totalt_andel_alla",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: pojkar. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: totalt andel alla. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "pojkar_1",
+    "variable": "totalt_andel_flickor",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: pojkar 1. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: totalt andel flickor. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "pojkar_2",
+    "variable": "totalt_andel_pojkar",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: pojkar 2. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: totalt andel pojkar. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "pojkar_3",
+    "variable": "totalt_liter_alla",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: pojkar 3. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: totalt liter alla. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "pojkar_4",
+    "variable": "totalt_liter_flickor",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: pojkar 4. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: totalt liter flickor. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "pojkar_5",
+    "variable": "totalt_liter_pojkar",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: pojkar 5. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: totalt liter pojkar. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "pojkar_liter",
+    "variable": "vin_andel_alla",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: pojkar liter. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: vin andel alla. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "pojkar_liter_1",
+    "variable": "vin_andel_flickor",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: pojkar liter 1. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: vin andel flickor. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "pojkar_liter_2",
+    "variable": "vin_andel_pojkar",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: pojkar liter 2. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: vin andel pojkar. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "pojkar_liter_3",
+    "variable": "vin_liter_alla",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: pojkar liter 3. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: vin liter alla. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "pojkar_liter_4",
+    "variable": "vin_liter_flickor",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: pojkar liter 4. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: vin liter flickor. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, flickor=girls, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
     "table_id": "7",
     "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
-    "variable": "pojkar_liter_5",
+    "variable": "vin_liter_pojkar",
     "y_min": 2004,
     "y_max": 2025,
-    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: pojkar liter 5. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
+    "description": "Report CAN-239: Youth school survey — grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling among young people. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Variable: vin liter pojkar. Years: 2004-2025. Terms: andel=proportion/share, alkohol=alcohol, pojkar=boys, gymnasiet=upper secondary school, konsumtion=consumption."
   },
   {
     "report": "CAN-239",
