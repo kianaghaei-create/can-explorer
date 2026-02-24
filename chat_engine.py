@@ -245,8 +245,9 @@ SQL RULES:
 - For the kolada table use: SELECT year, kpi_title as variable, value, 'KOLADA' as report, kpi_id as table_id, kpi_title as table_title FROM kolada WHERE ...
 - For color grouping, ensure 'variable' column has distinct readable values
 - UNLESS the user asks about a specific time period, focus on the LAST 15 years (year >= 2010). This makes charts readable and data more relevant.
-- Avoid variables that represent "never used" or "ej svar" (no answer) — they dominate the scale (90%+) and make other trends invisible on charts. Prefer variables showing ACTUAL usage/consumption.
-- Pick 2-4 variables max for the chart — too many lines makes it unreadable."""
+- Avoid "ej svar" (no answer) variables — they are not useful.
+- Pick 2-4 variables max for the chart — too many lines makes it unreadable.
+- If including a "never used" variable (e.g. "ingen_gång", "dricker_inte") alongside usage variables, that's fine — the chart will auto-detect the scale difference and use dual Y-axes."""
 
         step1_resp = client.chat.completions.create(
             model="gpt-4o",

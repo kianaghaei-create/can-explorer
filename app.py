@@ -157,35 +157,63 @@ if page == "💬 Ask the Data":
                                 color_col = "variable" if "variable" in df.columns else None
 
                             # Check if we have multiple series with very different scales
-                            # (e.g. prices in hundreds vs seizures in thousands)
+                            # (e.g. "never used" at 90% vs "used cannabis" at 5%)
                             use_dual_axis = False
+                            primary_groups = []
+                            secondary_groups = []
                             if color_col and color_col in df.columns:
                                 groups = df.groupby(color_col)[y_col].agg(["mean"])
-                                if len(groups) == 2:
-                                    means = groups["mean"].values
-                                    if min(means) > 0 and max(means) / min(means) > 5:
+                                if len(groups) >= 2:
+                                    means = groups["mean"]
+                                    overall_median = means.median()
+                                    # Split into two scale groups: high vs low
+                                    for gname, gmean in means.items():
+                                        if overall_median > 0 and gmean > overall_median * 3:
+                                            secondary_groups.append(gname)
+                                        else:
+                                            primary_groups.append(gname)
+                                    # Only use dual axis if we have groups on both sides
+                                    if secondary_groups and primary_groups:
                                         use_dual_axis = True
+                                    else:
+                                        primary_groups = list(means.index)
+                                        secondary_groups = []
 
                             if use_dual_axis and color_col:
                                 # Dual Y-axis chart for comparing series with different scales
                                 from plotly.subplots import make_subplots
-                                group_names = df[color_col].unique()
-                                colors = ["#636EFA", "#EF553B"]
+                                all_colors = ["#636EFA", "#EF553B", "#00CC96", "#AB63FA", "#FFA15A"]
                                 chart_fig = make_subplots(specs=[[{"secondary_y": True}]])
-                                for idx, gname in enumerate(group_names):
+                                color_idx = 0
+                                for gname in primary_groups:
                                     gdata = df[df[color_col] == gname].sort_values(x_col)
                                     chart_fig.add_trace(
                                         go.Scatter(
                                             x=gdata[x_col], y=gdata[y_col],
                                             name=str(gname)[:50],
                                             mode="lines+markers",
-                                            line=dict(color=colors[idx % 2]),
+                                            line=dict(color=all_colors[color_idx % len(all_colors)]),
                                         ),
-                                        secondary_y=(idx == 1),
+                                        secondary_y=False,
                                     )
+                                    color_idx += 1
+                                for gname in secondary_groups:
+                                    gdata = df[df[color_col] == gname].sort_values(x_col)
+                                    chart_fig.add_trace(
+                                        go.Scatter(
+                                            x=gdata[x_col], y=gdata[y_col],
+                                            name=str(gname)[:50],
+                                            mode="lines+markers",
+                                            line=dict(color=all_colors[color_idx % len(all_colors)], dash="dash"),
+                                        ),
+                                        secondary_y=True,
+                                    )
+                                    color_idx += 1
                                 chart_fig.update_layout(height=450, title=title)
-                                chart_fig.update_yaxes(title_text=str(group_names[0])[:30], secondary_y=False)
-                                chart_fig.update_yaxes(title_text=str(group_names[1])[:30], secondary_y=True)
+                                primary_label = ", ".join(str(g)[:20] for g in primary_groups[:2])
+                                secondary_label = ", ".join(str(g)[:20] for g in secondary_groups[:2])
+                                chart_fig.update_yaxes(title_text=primary_label, secondary_y=False)
+                                chart_fig.update_yaxes(title_text=secondary_label, secondary_y=True)
                                 st.plotly_chart(chart_fig, use_container_width=True)
 
                             elif chart_type == "bar":
