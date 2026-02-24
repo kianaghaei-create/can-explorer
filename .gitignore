@@ -4,3 +4,4 @@ __pycache__/
 *.egg-info/
 .env
 backup/
+openai_key.txt
