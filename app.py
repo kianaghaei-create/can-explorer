@@ -14,6 +14,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import streamlit as st
+from datetime import datetime
 
 DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "can_data.duckdb")
 
@@ -34,6 +35,151 @@ def get_db():
 def query(sql):
     con = get_db()
     return con.execute(sql).fetchdf()
+
+
+# ── Report dialog ─────────────────────────────────────────────
+@st.dialog("📄 Create Report", width="large")
+def report_dialog():
+    """Multi-phase dialog: fetch studies → configure → generate PDF."""
+    info = st.session_state.get("last_chat_result", {})
+    question = info.get("question", "")
+    answer = info.get("answer", "")
+    data = info.get("data")
+
+    if not question:
+        st.warning("No recent query found. Please ask a question first.")
+        if st.button("Close"):
+            st.session_state.pop("rg_trigger", None)
+            st.rerun()
+        return
+
+    phase = st.session_state.get("rg_phase", "loading")
+
+    # ── Phase 1: Fetch PubMed studies ────────────────────────
+    if phase == "loading":
+        st.markdown("**Searching PubMed for relevant studies…**")
+        with st.spinner("Querying PubMed…"):
+            try:
+                from chat_engine import decompose_query
+                topics = decompose_query(question)
+            except Exception:
+                topics = [question]
+            from report_generator import search_pubmed_multi, filter_relevant_studies
+            raw = search_pubmed_multi(topics, max_per_topic=8)
+            filtered = filter_relevant_studies(raw, question)
+            st.session_state.rg_studies = filtered
+            st.session_state.rg_phase = "configure"
+        st.rerun()
+
+    # ── Phase 2: Configure ────────────────────────────────────
+    elif phase == "configure":
+        studies = st.session_state.get("rg_studies", [])
+
+        st.markdown(f"**Question:** {question[:220]}")
+        st.markdown("---")
+        st.markdown(
+            "**Report sections:**  \n"
+            "Sammanfattning · Inledning · Resultat *(with data table)* · "
+            "Diskussion · Avslutande kommentarer · Externa studier · Referenser"
+        )
+        st.markdown("---")
+
+        st.markdown(f"### Relevant studies found: {len(studies)}")
+        if not studies:
+            st.info(
+                "No highly relevant PubMed studies were found for this query. "
+                "The report will be based on CAN data only."
+            )
+        selected = []
+        for i, s in enumerate(studies):
+            au = ", ".join(s.get("authors", [])[:2])
+            score = s.get("relevance_score", 0)
+            col1, col2 = st.columns([0.06, 0.94])
+            with col1:
+                inc = st.checkbox("", value=True, key=f"rg_inc_{i}")
+            with col2:
+                st.markdown(
+                    f"**{s['title'][:115]}**  \n"
+                    f"{au} ({s.get('year', 'n.d.')}) — *{s.get('journal', '')[:60]}*  \n"
+                    f"Relevance score: `{score:.2f}`"
+                )
+            if inc:
+                selected.append(s)
+
+        st.markdown("---")
+        lang = st.radio(
+            "Report language", ["Swedish", "English"],
+            horizontal=True, key="rg_lang_choice",
+        )
+        c1, c2 = st.columns(2)
+        with c1:
+            if st.button(
+                "Generate PDF", type="primary",
+                use_container_width=True, key="rg_gen",
+            ):
+                st.session_state.rg_selected_studies = selected
+                st.session_state.rg_language = lang
+                st.session_state.rg_phase = "generating"
+                st.rerun()
+        with c2:
+            if st.button("Cancel", use_container_width=True, key="rg_cancel"):
+                for k in [
+                    "rg_phase", "rg_studies", "rg_selected_studies",
+                    "rg_pdf", "rg_language", "rg_trigger",
+                ]:
+                    st.session_state.pop(k, None)
+                st.rerun()
+
+    # ── Phase 3: Generate ─────────────────────────────────────
+    elif phase == "generating":
+        st.info("Generating report… this may take 20–40 seconds.")
+        with st.spinner("Writing sections and rendering PDF…"):
+            from report_generator import generate_report_sections, build_pdf
+            selected = st.session_state.get("rg_selected_studies", [])
+            lang = st.session_state.get("rg_language", "Swedish")
+            data_preview = (
+                data.head(30).to_string(index=False)
+                if data is not None and len(data) > 0
+                else ""
+            )
+            sections = generate_report_sections(
+                question=question,
+                answer=answer,
+                data_preview=data_preview,
+                studies=selected,
+                language=lang,
+            )
+            pdf_bytes = build_pdf(
+                question=question,
+                sections=sections,
+                studies=selected,
+                data=data if data is not None and len(data) > 0 else None,
+                language=lang,
+            )
+            st.session_state.rg_pdf = pdf_bytes
+            st.session_state.rg_phase = "done"
+        st.rerun()
+
+    # ── Phase 4: Done ─────────────────────────────────────────
+    elif phase == "done":
+        st.success("Your report is ready!")
+        today = datetime.now().strftime("%Y%m%d_%H%M")
+        st.download_button(
+            "📥 Download PDF Report",
+            data=st.session_state.rg_pdf,
+            file_name=f"CAN_Report_{today}.pdf",
+            mime="application/pdf",
+            type="primary",
+            use_container_width=True,
+        )
+        st.markdown("---")
+        if st.button("Close", use_container_width=True, key="rg_close"):
+            for k in [
+                "rg_phase", "rg_studies", "rg_selected_studies",
+                "rg_pdf", "rg_language", "rg_trigger",
+            ]:
+                st.session_state.pop(k, None)
+            st.rerun()
 
 
 # ── Sidebar ──────────────────────────────────────────────────
@@ -97,6 +243,10 @@ if page == "💬 Ask the Data":
     if "messages" not in st.session_state:
         st.session_state.messages = []
 
+    # Open dialog if triggered
+    if st.session_state.get("rg_trigger"):
+        report_dialog()
+
     # Display chat history
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
@@ -109,6 +259,18 @@ if page == "💬 Ask the Data":
             if message.get("data") is not None and len(message.get("data", [])) > 0:
                 with st.expander("View raw data"):
                     st.dataframe(message["data"], use_container_width=True)
+
+    # "Create Report" button — visible whenever there is a previous result
+    if "last_chat_result" in st.session_state:
+        _, col_btn = st.columns([0.72, 0.28])
+        with col_btn:
+            if st.button(
+                "📄 Create Report",
+                use_container_width=True,
+                help="Generate a CAN-styled PDF report from your last question",
+            ):
+                st.session_state.rg_trigger = True
+                st.rerun()
 
     # Chat input
     if prompt := st.chat_input("Ask a question about Swedish substance use data..."):
@@ -284,6 +446,13 @@ if page == "💬 Ask the Data":
                         "data": result["data"] if result["data"] is not None else None,
                         "chart": chart_fig,
                     })
+
+                    # Store for report generation
+                    st.session_state.last_chat_result = {
+                        "question": prompt,
+                        "answer": result["answer"],
+                        "data": result["data"],
+                    }
 
                 except Exception as e:
                     error_msg = f"Error: {str(e)}"
