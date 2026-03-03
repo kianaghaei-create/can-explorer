@@ -48,50 +48,67 @@ def _load_embeddings():
         _catalog = json.load(f)
 
 
-def semantic_search(query: str, top_k: int = 25) -> str:
+def semantic_search_results(query: str, top_k: int = 25) -> list:
     """
     Embed the user's question and find the most relevant variables
-    via cosine similarity against pre-computed variable embeddings.
-    Returns formatted list of matching variables for the LLM.
+    via cosine similarity. Returns a list of dicts with structured data.
     """
     _load_embeddings()
 
-    # Embed the query
     response = client.embeddings.create(
         input=[query],
         model="text-embedding-3-small",
     )
     query_vec = np.array(response.data[0].embedding, dtype=np.float32)
 
-    # Cosine similarity (embeddings are normalized by OpenAI)
     scores = _embeddings_matrix @ query_vec
-    top_indices = np.argsort(scores)[::-1][:top_k]
+    top_indices = np.argsort(scores)[::-1][:top_k * 2]  # oversample before dedup
 
-    # Build results, filtering out generic col_ variables
-    lines = []
+    results = []
     seen = set()
     for idx in top_indices:
+        if len(results) >= top_k:
+            break
         entry = _catalog[idx]
         var = entry["variable"]
 
-        # Skip generic column names
         if "__col_" in var:
             continue
 
-        # Deduplicate same variable from same report
         key = (entry["report"], entry["table_id"], var)
         if key in seen:
             continue
         seen.add(key)
 
-        score = scores[idx]
-        title_short = (entry["table_title"] or "")[:70]
-        lines.append(
-            f"[{score:.3f}] {entry['report']} | table {entry['table_id']} | "
-            f"{var} | {entry['y_min']}-{entry['y_max']} | {title_short}"
-        )
+        results.append({
+            "report": entry["report"],
+            "table_id": entry["table_id"],
+            "table_title": entry.get("table_title", ""),
+            "variable": var,
+            "y_min": entry.get("y_min"),
+            "y_max": entry.get("y_max"),
+            "score": float(scores[idx]),
+        })
 
-    return "\n".join(lines) if lines else "No matching variables found."
+    return results
+
+
+def semantic_search(query: str, top_k: int = 25) -> str:
+    """
+    Returns formatted string of top matching variables for the LLM prompt.
+    """
+    results = semantic_search_results(query, top_k=top_k)
+    if not results:
+        return "No matching variables found."
+
+    lines = []
+    for r in results:
+        title_short = (r["table_title"] or "")[:70]
+        lines.append(
+            f"[{r['score']:.3f}] {r['report']} | table {r['table_id']} | "
+            f"{r['variable']} | {r['y_min']}-{r['y_max']} | {title_short}"
+        )
+    return "\n".join(lines)
 
 
 # ── Report source mapping ───────────────────────────────────
@@ -204,7 +221,12 @@ def ask_data(question: str, conversation_history: list = None) -> dict:
 
     try:
         # ── STEP 1: Semantic search + SQL generation ────────
-        variable_matches = semantic_search(question, top_k=30)
+        hits = semantic_search_results(question, top_k=30)
+        variable_matches = "\n".join(
+            f"[{r['score']:.3f}] {r['report']} | table {r['table_id']} | "
+            f"{r['variable']} | {r['y_min']}-{r['y_max']} | {(r['table_title'] or '')[:70]}"
+            for r in hits
+        ) if hits else "No matching variables found."
 
         step1_prompt = f"""You are a data analyst for CAN (Swedish Council for Alcohol and Drug Information).
 
@@ -264,6 +286,7 @@ SQL RULES:
             return {
                 "answer": "I couldn't formulate a query. Try rephrasing your question.",
                 "sql": None, "data": None, "chart_spec": None, "sources": "", "error": None,
+                "semantic_hits": hits,
             }
 
         # ── Execute SQL ─────────────────────────────────────
@@ -274,6 +297,7 @@ SQL RULES:
             return {
                 "answer": f"SQL error: {str(e)}\n\nThe query was:\n```sql\n{sql}\n```\n\nTop matching variables:\n{variable_matches[:500]}",
                 "sql": sql, "data": None, "chart_spec": None, "sources": "", "error": str(e),
+                "semantic_hits": hits,
             }
         finally:
             con.close()
@@ -282,6 +306,7 @@ SQL RULES:
             return {
                 "answer": f"No results found. The most relevant variables I found were:\n{variable_matches[:500]}\n\nTry rephrasing your question.",
                 "sql": sql, "data": data, "chart_spec": None, "sources": "", "error": None,
+                "semantic_hits": hits,
             }
 
         # ── STEP 2: Generate answer from actual results ─────
@@ -336,10 +361,12 @@ UNITS BY REPORT (use the correct unit when presenting numbers):
             "chart_spec": chart_spec,
             "sources": sources,
             "error": None,
+            "semantic_hits": hits,
         }
 
     except Exception as e:
         return {
             "answer": f"Error: {str(e)}",
             "sql": None, "data": None, "chart_spec": None, "sources": "", "error": str(e),
+            "semantic_hits": [],
         }

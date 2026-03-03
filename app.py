@@ -246,6 +246,26 @@ if page == "💬 Ask the Data":
                             chart_fig.update_layout(height=450)
                             st.plotly_chart(chart_fig, use_container_width=True)
 
+                    # Show semantic search hits
+                    if result.get("semantic_hits"):
+                        with st.expander(f"🔍 Variables found by semantic search ({len(result['semantic_hits'])})"):
+                            hits_df = pd.DataFrame(result["semantic_hits"])
+                            hits_df["score"] = hits_df["score"].round(3)
+                            hits_df = hits_df.rename(columns={
+                                "score": "Relevance",
+                                "report": "Report",
+                                "table_id": "Table",
+                                "table_title": "Title",
+                                "variable": "Variable",
+                                "y_min": "From",
+                                "y_max": "To",
+                            })
+                            st.dataframe(
+                                hits_df[["Relevance", "Report", "Table", "Variable", "From", "To"]],
+                                use_container_width=True,
+                                hide_index=True,
+                            )
+
                     # Show SQL
                     if result.get("sql"):
                         with st.expander("View SQL query"):
@@ -724,14 +744,33 @@ elif page == "📚 Data Catalog":
     col3.metric("Reports", catalog["report"].nunique())
     col4.metric("Year Range", f"{catalog['year_min'].min()} – {catalog['year_max'].max()}")
 
-    search = st.text_input("Search tables (by title or variable name)")
+    search = st.text_input(
+        "Search variables",
+        placeholder="e.g. 'youth cannabis use', 'cocaine price', 'binge drinking women'",
+    )
     if search:
-        vars_match = query(f"""
-            SELECT DISTINCT report, table_id, variable FROM variables
-            WHERE LOWER(variable) LIKE '%{search.lower()}%'
-        """)
-        st.markdown(f"**{len(vars_match)} matching variables:**")
-        st.dataframe(vars_match, use_container_width=True)
+        from chat_engine import semantic_search_results
+        with st.spinner("Searching…"):
+            hits = semantic_search_results(search, top_k=20)
+        if hits:
+            hits_df = pd.DataFrame(hits)
+            hits_df["score"] = hits_df["score"].round(3)
+            hits_df = hits_df.rename(columns={
+                "score": "Relevance",
+                "report": "Report",
+                "table_id": "Table",
+                "table_title": "Title",
+                "variable": "Variable",
+                "y_min": "From",
+                "y_max": "To",
+            })
+            st.markdown(f"**{len(hits_df)} matches**")
+            st.dataframe(
+                hits_df[["Relevance", "Report", "Table", "Title", "Variable", "From", "To"]],
+                use_container_width=True,
+            )
+        else:
+            st.info("No matching variables found.")
 
     st.subheader("All Tables")
     st.dataframe(
