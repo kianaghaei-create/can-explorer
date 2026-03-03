@@ -10,6 +10,7 @@ Two-step approach (with semantic search):
 """
 
 import os
+import re
 import json
 import duckdb
 import numpy as np
@@ -270,6 +271,55 @@ KOLADA KPIs: N07544 (Drug offenses per 100k), N33820 (Youth mental ill-health %)
 Municipalities: Stockholm, Malmö, Göteborg, Uppsala, Linköping, Örebro, Jönköping, Kalmar, Karlskrona, Halmstad. Years: 2015-2024."""
 
 
+# ── Gender-aware hit filtering ───────────────────────────────
+
+_GENDER_QUESTION_RE = re.compile(
+    r'\b(pojkar|flickor|m[aä]n|kvinnor|boys|girls|men|women|gender|k[oö]n|'
+    r'killar|tjejer)\b',
+    re.IGNORECASE,
+)
+
+# Suffixes that mark gender-specific variables
+_GENDER_VAR_SUFFIXES = ('_fl', '_po', '_men', '_kv')
+
+
+def _filter_gender_hits(hits: list, question: str) -> list:
+    """
+    When the question does NOT mention gender, suppress gender-specific
+    variables (_fl, _po, _men, _kv) for any concept that also has an
+    '_alla' aggregate counterpart in the hit list.
+    Keeps gender-specific variables only when no '_alla' twin exists.
+    """
+    if _GENDER_QUESTION_RE.search(question):
+        return hits  # question asks about gender — show everything
+
+    # Collect (report, table_id, base_name) for every '_alla' variable
+    has_alla: set = set()
+    for hit in hits:
+        var = hit["variable"]
+        if var.endswith("_alla"):
+            base = var[:-5]  # strip '_alla'
+            has_alla.add((hit["report"], hit["table_id"], base))
+
+    if not has_alla:
+        return hits  # no aggregates present, nothing to filter
+
+    filtered = []
+    for hit in hits:
+        var = hit["variable"]
+        skip = False
+        for suffix in _GENDER_VAR_SUFFIXES:
+            if var.endswith(suffix):
+                base = var[: -len(suffix)]
+                if (hit["report"], hit["table_id"], base) in has_alla:
+                    skip = True  # drop — the '_alla' twin is present
+                break
+        if not skip:
+            filtered.append(hit)
+
+    return filtered
+
+
 # ── Main chat function ──────────────────────────────────────
 
 def ask_data(question: str, conversation_history: list = None) -> dict:
@@ -282,6 +332,7 @@ def ask_data(question: str, conversation_history: list = None) -> dict:
     try:
         # ── STEP 1: Multi-topic semantic search + SQL generation ────────
         hits = multi_topic_search(question, top_k_per_topic=15)
+        hits = _filter_gender_hits(hits, question)   # prefer _alla unless gender asked
         variable_matches = "\n".join(
             f"[{r['score']:.3f}] {r['report']} | table {r['table_id']} | "
             f"{r['variable']} | {r['y_min']}-{r['y_max']} | {(r['table_title'] or '')[:70]}"
