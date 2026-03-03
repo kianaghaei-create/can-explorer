@@ -111,6 +111,65 @@ def semantic_search(query: str, top_k: int = 25) -> str:
     return "\n".join(lines)
 
 
+def decompose_query(question: str) -> list:
+    """
+    Use gpt-4o-mini to split a multi-topic question into per-topic sub-queries.
+    Single-topic questions return a list with just the original question.
+    """
+    response = client.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[{"role": "user", "content": f"""You are helping decompose a data question into focused search queries.
+
+Extract the distinct topics/substances from this question and return one short search phrase per topic.
+Each phrase should be self-contained and specific enough to retrieve relevant variables.
+
+Question: "{question}"
+
+Examples:
+- "How has youth alcohol and narcotics consumption changed?" → ["youth alcohol consumption", "youth narcotics drug use"]
+- "Compare cocaine prices with cocaine seizures" → ["cocaine street price SEK", "cocaine seizures arrests"]
+- "What happened to smoking rates?" → ["smoking rates cigarettes"]
+- "Show alcohol, cannabis and amphetamine trends" → ["alcohol consumption", "cannabis marijuana use", "amphetamine use"]
+
+Return JSON: {{"topics": ["phrase1", "phrase2", ...]}}
+Return a single topic if the question is about one thing."""}],
+        temperature=0,
+        max_tokens=200,
+        response_format={"type": "json_object"},
+    )
+    result = json.loads(response.choices[0].message.content)
+    topics = result.get("topics", [question])
+    return topics if topics else [question]
+
+
+def multi_topic_search(question: str, top_k_per_topic: int = 15) -> list:
+    """
+    Decompose the question into topics, run semantic search per topic,
+    and merge results — guaranteeing coverage of all topics.
+    Falls back to a single search if decomposition fails.
+    """
+    try:
+        topics = decompose_query(question)
+    except Exception:
+        topics = [question]
+
+    seen = set()
+    merged = []
+
+    for topic in topics:
+        hits = semantic_search_results(topic, top_k=top_k_per_topic)
+        for hit in hits:
+            key = (hit["report"], hit["table_id"], hit["variable"])
+            if key not in seen:
+                seen.add(key)
+                hit["topic"] = topic  # tag which sub-query found it
+                merged.append(hit)
+
+    # Sort merged list by score descending
+    merged.sort(key=lambda x: x["score"], reverse=True)
+    return merged
+
+
 # ── Report source mapping ───────────────────────────────────
 
 REPORT_SOURCES = {
@@ -220,8 +279,8 @@ def ask_data(question: str, conversation_history: list = None) -> dict:
     """
 
     try:
-        # ── STEP 1: Semantic search + SQL generation ────────
-        hits = semantic_search_results(question, top_k=30)
+        # ── STEP 1: Multi-topic semantic search + SQL generation ────────
+        hits = multi_topic_search(question, top_k_per_topic=15)
         variable_matches = "\n".join(
             f"[{r['score']:.3f}] {r['report']} | table {r['table_id']} | "
             f"{r['variable']} | {r['y_min']}-{r['y_max']} | {(r['table_title'] or '')[:70]}"
