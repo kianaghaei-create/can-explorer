@@ -454,6 +454,19 @@ if page == "💬 Ask the Data":
                         "data": result["data"],
                     }
 
+                    # Show "Create Report" button immediately in the response
+                    st.markdown("---")
+                    _, col_rpt = st.columns([0.65, 0.35])
+                    with col_rpt:
+                        if st.button(
+                            "📄 Create Report",
+                            key=f"cr_inline_{len(st.session_state.messages)}",
+                            use_container_width=True,
+                            help="Generate a CAN-styled PDF from this answer",
+                        ):
+                            st.session_state.rg_trigger = True
+                            st.rerun()
+
                 except Exception as e:
                     error_msg = f"Error: {str(e)}"
                     st.error(error_msg)
