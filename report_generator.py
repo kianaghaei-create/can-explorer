@@ -356,13 +356,12 @@ def build_pdf(
         canvas.setFillColor(HexColor("#7EB3E8"))
         canvas.drawString(LM, PAGE_H - nh + 14 * mm, L["cover_tag"])
 
-        # Question text — word-wrapped, centred vertically in white area
-        white_area_top = PAGE_H - nh
-        white_area_bottom = 14 * mm  # above footer
-        white_mid = white_area_bottom + (white_area_top - white_area_bottom) * 0.55
+        # Question text — anchored 35 mm below the navy bottom edge
+        navy_bottom = PAGE_H - nh          # y-coordinate of navy's lower edge
+        y_title = navy_bottom - 35 * mm    # start title 35 mm below
 
         avail_w = PAGE_W - LM - RM
-        fsize = 15
+        fsize = 18
         fname = "Helvetica-Bold"
         words = question.split()
         lines = []
@@ -379,20 +378,18 @@ def build_pdf(
             lines.append(" ".join(line))
 
         line_h = fsize * 1.5
-        total_h = len(lines) * line_h
-        y = white_mid + total_h / 2
-
         canvas.setFont(fname, fsize)
         canvas.setFillColor(CAN_NAVY)
+        y = y_title
         for ln in lines:
             canvas.drawString(LM, y, ln)
             y -= line_h
 
-        # Date below question
+        # Date 14 mm below last question line
         canvas.setFont("Helvetica", 11)
-        canvas.setFillColor(HexColor("#555555"))
+        canvas.setFillColor(HexColor("#666666"))
         today_long = datetime.now().strftime("%B %Y")
-        canvas.drawString(LM, white_mid - total_h / 2 - 12 * mm, today_long)
+        canvas.drawString(LM, y - 14 * mm, today_long)
 
         # Footer bar
         canvas.setFillColor(CAN_NAVY)
