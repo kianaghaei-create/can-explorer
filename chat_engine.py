@@ -134,6 +134,7 @@ Examples:
 Return JSON: {{"topics": ["phrase1", "phrase2", ...]}}
 Return a single topic if the question is about one thing."""}],
         temperature=0,
+        seed=42,
         max_tokens=200,
         response_format={"type": "json_object"},
     )
@@ -335,6 +336,7 @@ SQL RULES:
             model="gpt-4o",
             messages=[{"role": "user", "content": step1_prompt}],
             temperature=0,
+            seed=42,
             max_tokens=1500,
             response_format={"type": "json_object"},
         )
@@ -408,6 +410,7 @@ UNITS BY REPORT (use the correct unit when presenting numbers):
             model="gpt-4o",
             messages=[{"role": "user", "content": step2_prompt}],
             temperature=0,
+            seed=42,
             max_tokens=800,
         )
 
