@@ -266,9 +266,10 @@ SQL RULES:
 - ORDER BY year, LIMIT 500
 - For the kolada table use: SELECT year, kpi_title as variable, value, 'KOLADA' as report, kpi_id as table_id, kpi_title as table_title FROM kolada WHERE ...
 - For color grouping, ensure 'variable' column has distinct readable values
-- UNLESS the user asks about a specific time period, focus on the LAST 15 years (year >= 2010). This makes charts readable and data more relevant.
+- YEAR FILTER: If the user mentions a specific year or time period (e.g. "since 2000", "from 1990", "between 2005 and 2015"), use that year range exactly. Otherwise default to year >= 2010.
 - Avoid "ej svar" (no answer) variables — they are not useful.
-- Pick 2-4 variables max for the chart — too many lines makes it unreadable.
+- MULTI-TOPIC QUESTIONS: If the user asks about multiple substances or topics (e.g. "alcohol AND narcotics", "smoking and cannabis"), you MUST include at least 1-2 variables for EACH topic. Do not drop a topic entirely. Use up to 6 variables total when covering multiple topics.
+- For single-topic questions, pick 2-4 variables max for readability.
 - If including a "never used" variable (e.g. "ingen_gång", "dricker_inte") alongside usage variables, that's fine — the chart will auto-detect the scale difference and use dual Y-axes."""
 
         step1_resp = client.chat.completions.create(
