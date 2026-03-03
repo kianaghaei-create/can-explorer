@@ -312,7 +312,7 @@ Respond in JSON:
         "x": "year",
         "y": "value",
         "color": "variable",
-        "title": "Chart title"
+        "title": "Chart title in Swedish"
     }}
 }}
 
@@ -387,7 +387,8 @@ SQL query:
 Results ({len(data)} rows):
 {data_preview}
 
-Write a clear, insightful answer. RULES:
+Write a clear, insightful answer in SWEDISH. RULES:
+- ALWAYS reply in Swedish regardless of the language of the question
 - Use SPECIFIC numbers from the results — exact values, years, percentages
 - Point out trends, peaks, troughs, and surprises
 - Compare across time periods when relevant
