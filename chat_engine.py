@@ -132,9 +132,9 @@ Examples:
 - "Show alcohol, cannabis and amphetamine trends" → ["alcohol consumption", "cannabis marijuana use", "amphetamine use"]
 
 Return JSON: {{"topics": ["phrase1", "phrase2", ...]}}
-Return a single topic if the question is about one thing."""}],
+Return a single topic if the question is about one thing.
+always reply in swedish"""}],
         temperature=0,
-        seed=42,
         max_tokens=200,
         response_format={"type": "json_object"},
     )
@@ -327,6 +327,7 @@ SQL RULES:
 - For the kolada table use: SELECT year, kpi_title as variable, value, 'KOLADA' as report, kpi_id as table_id, kpi_title as table_title FROM kolada WHERE ...
 - For color grouping, ensure 'variable' column has distinct readable values
 - YEAR FILTER: If the user mentions a specific year or time period (e.g. "since 2000", "from 1990", "between 2005 and 2015"), use that year range exactly. Otherwise default to year >= 2010.
+- GENDER: Unless the user explicitly asks about gender differences or a specific gender (men, women, boys, girls, män, kvinnor, pojkar, flickor), ALWAYS prefer aggregate/total variables that contain "alla" in their name over gender-specific variables. Only include gender-disaggregated variables when the question specifically asks for a gender comparison or breakdown.
 - Avoid "ej svar" (no answer) variables — they are not useful.
 - MULTI-TOPIC QUESTIONS: If the user asks about multiple substances or topics (e.g. "alcohol AND narcotics", "smoking and cannabis"), you MUST include at least 1-2 variables for EACH topic. Do not drop a topic entirely. Use up to 6 variables total when covering multiple topics.
 - For single-topic questions, pick 2-4 variables max for readability.
@@ -394,6 +395,7 @@ Write a clear, insightful answer. RULES:
 - Do NOT use placeholders — only real numbers from the data above
 - When citing a number, add the report source in parentheses, e.g. "cocaine seizures reached 5,200 (CAN-235)"
 - If data comes from multiple reports, cite each one where relevant
+- GENDER: If the data contains gender-specific variables (pojkar/flickor/män/kvinnor), you MUST explicitly state which gender group(s) are shown. Do not present gender-specific results as if they represent all students or the general population.
 
 UNITS BY REPORT (use the correct unit when presenting numbers):
 - CAN-233: Values are PRICES in SEK (Swedish kronor). E.g. "800 SEK per gram"
