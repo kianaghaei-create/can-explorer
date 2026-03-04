@@ -324,6 +324,51 @@ def _filter_metadata_hits(hits: list) -> list:
     return [h for h in hits if not _METADATA_VAR_RE.search(h["variable"])]
 
 
+# ── Youth hit booster ────────────────────────────────────────
+# "youth alcohol" semantically scores closest to CAN-237 (adult) variables.
+# Force CAN-239 into the hit list when youth intent is detected.
+
+_YOUTH_RE = re.compile(
+    r'\b(youth|ungdom|unga|young|teenager|grade\s*9|åk\s*9|årskurs\s*9|'
+    r'gymnasie|school\s*survey|skolundersökning|adolescen|elev)\b',
+    re.IGNORECASE,
+)
+_TEMPORAL_STRIP_RE = re.compile(
+    r'\b(since|from|between|changed?|how\s+has|how\s+have|sedan|från|'
+    r'förändrats?|\d{4})\b',
+    re.IGNORECASE,
+)
+
+
+def _boost_youth_hits(hits: list, question: str) -> list:
+    """
+    When the question is about youth and CAN-239 is under-represented
+    (< 4 hits), run a targeted 'ungdomar åk 9 <substance>' search and
+    append any new CAN-239 variables found.
+    """
+    if not _YOUTH_RE.search(question):
+        return hits
+
+    can239_count = sum(1 for h in hits if h.get("report") == "CAN-239")
+    if can239_count >= 4:
+        return hits  # already well-represented
+
+    core = _TEMPORAL_STRIP_RE.sub("", question).strip()
+    targeted = semantic_search_results(f"ungdomar åk 9 skola {core}", top_k=20)
+
+    seen = {(h["report"], h["table_id"], h["variable"]) for h in hits}
+    for h in targeted:
+        if h.get("report") != "CAN-239":
+            continue
+        key = (h["report"], h["table_id"], h["variable"])
+        if key not in seen:
+            seen.add(key)
+            h["topic"] = "youth"
+            hits.append(h)
+
+    return hits
+
+
 # ── Gender-aware hit filtering ───────────────────────────────
 
 _GENDER_QUESTION_RE = re.compile(
@@ -451,6 +496,7 @@ def ask_data(question: str, conversation_history: list = None) -> dict:
         # ── STEP 1: Multi-topic semantic search + SQL generation ────────
         hits = multi_topic_search(question, top_k_per_topic=15)
         hits = _filter_metadata_hits(hits)              # strip survey-admin variables
+        hits = _boost_youth_hits(hits, question)        # ensure CAN-239 for youth questions
         hits, is_enumeration = _expand_enumeration_hits(hits, question)
         if not is_enumeration:
             hits = _filter_gender_hits(hits, question)  # prefer _alla unless gender asked
