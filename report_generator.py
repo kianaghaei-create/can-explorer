@@ -137,7 +137,7 @@ def search_pubmed_multi(topics: list, max_per_topic: int = 8) -> list:
 def filter_relevant_studies(
     studies: list,
     question: str,
-    threshold: float = 0.35,
+    threshold: float = 0.20,
     max_studies: int = 6,
 ) -> list:
     """Score study abstracts vs question via embedding cosine similarity."""

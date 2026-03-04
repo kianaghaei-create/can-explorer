@@ -135,7 +135,8 @@ Examples:
 
 Return JSON: {{"topics": ["phrase1", "phrase2", ...]}}
 Return a single topic if the question is about one thing.
-always reply in swedish"""}],
+IMPORTANT: Always return topics in ENGLISH — these are used as search queries for databases
+that require English terms. Translate Swedish/other-language questions to English."""}],
         temperature=0,
         max_tokens=200,
         response_format={"type": "json_object"},
