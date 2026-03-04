@@ -14,6 +14,7 @@ import re
 import json
 import duckdb
 import numpy as np
+import pandas as pd
 from openai import OpenAI
 
 DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "can_data.duckdb")
@@ -320,6 +321,71 @@ def _filter_gender_hits(hits: list, question: str) -> list:
     return filtered
 
 
+# ── Enumeration detection + table expansion ──────────────────
+
+_ENUMERATION_RE = re.compile(
+    r'\b(vilka\s+specifika|vilka\s+typer|vilken\s+typ|vilka\s+\w+\s+har|'
+    r'which\s+specific|which\s+types?|list\s+all|alla\s+kategorier|'
+    r'alla\s+incidenter|specifika\s+incidenter)\b',
+    re.IGNORECASE,
+)
+
+
+def _expand_enumeration_hits(hits: list, question: str) -> tuple:
+    """
+    When the question asks 'which specific X', expand hits to include ALL
+    variables from the top-matching table (all categories + all genders).
+    Returns (hits, is_enumeration).
+    """
+    if not _ENUMERATION_RE.search(question) or not hits:
+        return hits, False
+
+    top = hits[0]
+    report, table_id = top["report"], top["table_id"]
+
+    try:
+        con = duckdb.connect(DB_PATH, read_only=True)
+        rows = con.execute(
+            """SELECT DISTINCT variable,
+                      MIN(year) AS y_min,
+                      MAX(year) AS y_max
+               FROM timeseries
+               WHERE report = ? AND table_id = ?
+               GROUP BY variable""",
+            [report, table_id],
+        ).fetchdf()
+        con.close()
+    except Exception:
+        return hits, False
+
+    if rows.empty or len(rows) < 5:
+        return hits, False
+
+    table_title = top.get("table_title", "")
+    expanded = []
+    for _, row in rows.iterrows():
+        var = str(row["variable"])
+        if any(skip in var for skip in ("__col_", "ej_svar", "n=", "procent")):
+            continue
+        try:
+            y_min = int(row["y_min"]) if pd.notna(row["y_min"]) else None
+            y_max = int(row["y_max"]) if pd.notna(row["y_max"]) else None
+        except (ValueError, TypeError):
+            y_min = y_max = None
+        expanded.append({
+            "report": report,
+            "table_id": table_id,
+            "table_title": table_title,
+            "variable": var,
+            "y_min": y_min,
+            "y_max": y_max,
+            "score": 1.0,
+            "topic": top.get("topic", question),
+        })
+
+    return (expanded if expanded else hits), bool(expanded)
+
+
 # ── Main chat function ──────────────────────────────────────
 
 def ask_data(question: str, conversation_history: list = None) -> dict:
@@ -332,7 +398,9 @@ def ask_data(question: str, conversation_history: list = None) -> dict:
     try:
         # ── STEP 1: Multi-topic semantic search + SQL generation ────────
         hits = multi_topic_search(question, top_k_per_topic=15)
-        hits = _filter_gender_hits(hits, question)   # prefer _alla unless gender asked
+        hits, is_enumeration = _expand_enumeration_hits(hits, question)
+        if not is_enumeration:
+            hits = _filter_gender_hits(hits, question)  # prefer _alla unless gender asked
         variable_matches = "\n".join(
             f"[{r['score']:.3f}] {r['report']} | table {r['table_id']} | "
             f"{r['variable']} | {r['y_min']}-{r['y_max']} | {(r['table_title'] or '')[:70]}"
@@ -382,7 +450,12 @@ SQL RULES:
 - Avoid "ej svar" (no answer) variables — they are not useful.
 - MULTI-TOPIC QUESTIONS: If the user asks about multiple substances or topics (e.g. "alcohol AND narcotics", "smoking and cannabis"), you MUST include at least 1-2 variables for EACH topic. Do not drop a topic entirely. Use up to 6 variables total when covering multiple topics.
 - For single-topic questions, pick 2-4 variables max for readability.
-- If including a "never used" variable (e.g. "ingen_gång", "dricker_inte") alongside usage variables, that's fine — the chart will auto-detect the scale difference and use dual Y-axes."""
+- If including a "never used" variable (e.g. "ingen_gång", "dricker_inte") alongside usage variables, that's fine — the chart will auto-detect the scale difference and use dual Y-axes.
+- ENUMERATION/SLICER: If the variable list above contains more than 10 variables all from the same table (same report + table_id), this is an enumeration question. In that case:
+  * Include ALL listed variables in the SQL WHERE clause (do not drop any)
+  * Do NOT apply a year filter — fetch ALL available years
+  * Set chart type to "slicer" in the JSON response
+  * Increase LIMIT to 2000"""
 
         step1_resp = client.chat.completions.create(
             model="gpt-4o",
@@ -479,6 +552,7 @@ UNITS BY REPORT (use the correct unit when presenting numbers):
             "sources": sources,
             "error": None,
             "semantic_hits": hits,
+            "is_enumeration": is_enumeration,
         }
 
     except Exception as e:

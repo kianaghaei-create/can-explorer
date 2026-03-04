@@ -37,6 +37,97 @@ def query(sql):
     return con.execute(sql).fetchdf()
 
 
+# ── Slicer chart renderer ──────────────────────────────────────
+
+def _render_slicer_chart(df: pd.DataFrame, title: str, key_prefix: str):
+    """
+    Interactive chart for multi-category gender-split data (e.g. CAN-239 incident tables).
+    Shows gender radio (Alla / Pojkar / Flickor) and view toggle (latest year bar / trend line).
+    """
+    if df is None or "variable" not in df.columns or "value" not in df.columns:
+        return
+
+    GENDER_MAP = {"_alla": "Alla", "_po": "Pojkar", "_fl": "Flickor"}
+    SUFFIX_ORDER = ["_alla", "_po", "_fl"]
+
+    # Parse each variable into (display_label, gender_label)
+    var_info: dict = {}
+    for var in df["variable"].unique():
+        for sfx in SUFFIX_ORDER:
+            if var.endswith(sfx):
+                raw = var[: -len(sfx)].replace("_", " ")
+                label = raw[0].upper() + raw[1:] if raw else var
+                var_info[var] = (label, GENDER_MAP[sfx])
+                break
+        else:
+            var_info[var] = (var.replace("_", " "), "Alla")
+
+    # Which genders exist in the data?
+    available_genders = [
+        GENDER_MAP[sfx]
+        for sfx in SUFFIX_ORDER
+        if any(v.endswith(sfx) for v in df["variable"].unique())
+    ]
+    if not available_genders:
+        return
+
+    col_ctrl, col_chart = st.columns([1, 4])
+
+    with col_ctrl:
+        st.markdown("**Kön**")
+        selected_gender = st.radio(
+            "Kön", available_genders,
+            key=f"{key_prefix}_gender",
+            label_visibility="collapsed",
+        )
+        st.markdown("**Visa**")
+        view_mode = st.radio(
+            "Visa", ["Senaste år", "Trend över tid"],
+            key=f"{key_prefix}_view",
+            label_visibility="collapsed",
+        )
+
+    # Filter to the selected gender suffix
+    gender_suffix = {v: k for k, v in GENDER_MAP.items()}[selected_gender]
+    gender_vars = [v for v in df["variable"].unique() if v.endswith(gender_suffix)]
+    filtered = df[df["variable"].isin(gender_vars)].copy()
+    filtered["kategori"] = filtered["variable"].map(lambda v: var_info.get(v, (v, ""))[0])
+
+    with col_chart:
+        if view_mode == "Senaste år":
+            latest_year = int(filtered["year"].max())
+            bar_df = (
+                filtered[filtered["year"] == latest_year]
+                .groupby("kategori", as_index=False)["value"].mean()
+                .sort_values("value", ascending=True)
+            )
+            fig = px.bar(
+                bar_df,
+                x="value", y="kategori",
+                orientation="h",
+                title=f"{title} — {selected_gender} ({latest_year})",
+                labels={"value": "%", "kategori": ""},
+                color="value",
+                color_continuous_scale="Blues",
+            )
+            fig.update_layout(
+                height=max(420, len(gender_vars) * 32),
+                coloraxis_showscale=False,
+                margin=dict(l=10, r=40, t=50, b=30),
+            )
+            fig.update_traces(texttemplate="%{x:.1f}%", textposition="outside")
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            fig = px.line(
+                filtered, x="year", y="value", color="kategori",
+                title=f"{title} — {selected_gender}",
+                markers=True,
+                labels={"value": "%", "year": "År", "kategori": ""},
+            )
+            fig.update_layout(height=520)
+            st.plotly_chart(fig, use_container_width=True)
+
+
 # ── Report dialog ─────────────────────────────────────────────
 @st.dialog("📄 Create Report", width="large")
 def report_dialog():
@@ -248,10 +339,16 @@ if page == "💬 Ask the Data":
         report_dialog()
 
     # Display chat history
-    for message in st.session_state.messages:
+    for i, message in enumerate(st.session_state.messages):
         with st.chat_message(message["role"]):
             st.markdown(message["content"])
-            if message.get("chart"):
+            if message.get("is_slicer") and message.get("slicer_data") is not None:
+                _render_slicer_chart(
+                    message["slicer_data"],
+                    message.get("slicer_title", ""),
+                    key_prefix=f"hist_{i}",
+                )
+            elif message.get("chart") is not None:
                 st.plotly_chart(message["chart"], use_container_width=True)
             if message.get("sql"):
                 with st.expander("View SQL"):
@@ -301,9 +398,23 @@ if page == "💬 Ask the Data":
                         st.markdown("**📚 Sources:**")
                         st.markdown(result["sources"])
 
-                    # Display chart if we have data
+                    # ── Slicer chart (enumeration questions) ──────────────
                     chart_fig = None
-                    if result["data"] is not None and len(result["data"]) > 0 and result.get("chart_spec"):
+                    is_slicer = (
+                        result.get("is_enumeration", False)
+                        and result["data"] is not None
+                        and len(result["data"]) > 0
+                    )
+                    slicer_title = (result.get("chart_spec") or {}).get("title", "")
+
+                    if is_slicer:
+                        _render_slicer_chart(
+                            result["data"], slicer_title,
+                            key_prefix=f"new_{len(st.session_state.messages)}",
+                        )
+
+                    # Display chart if we have data
+                    elif result["data"] is not None and len(result["data"]) > 0 and result.get("chart_spec"):
                         spec = result["chart_spec"]
                         df = result["data"]
 
@@ -444,7 +555,10 @@ if page == "💬 Ask the Data":
                         "content": result["answer"],
                         "sql": result.get("sql"),
                         "data": result["data"] if result["data"] is not None else None,
-                        "chart": chart_fig,
+                        "chart": chart_fig if not is_slicer else None,
+                        "is_slicer": is_slicer,
+                        "slicer_data": result["data"] if is_slicer else None,
+                        "slicer_title": slicer_title if is_slicer else "",
                     })
 
                     # Store for report generation
