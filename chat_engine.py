@@ -284,7 +284,7 @@ def _build_fallback_sql(failed_sql: str) -> str | None:
     When an exact-variable-name SQL returns 0 rows (usually because the LLM
     truncated a very long Swedish variable name), build a broader fallback:
     keep report + table_id + year filter but drop the variable constraint,
-    limiting to '_alla' aggregate variables.
+    limiting to '_alla' aggregate variables while excluding metadata variables.
     """
     report_m = _REPORT_RE.search(failed_sql)
     table_m  = _TABLE_RE.search(failed_sql)
@@ -299,9 +299,29 @@ def _build_fallback_sql(failed_sql: str) -> str | None:
         f"FROM timeseries "
         f"WHERE report = '{report}' AND table_id = '{table_id}' "
         f"AND variable LIKE '%_alla' "
+        f"AND variable NOT LIKE '%formulär%' "
+        f"AND variable NOT LIKE '%deltagande%' "
+        f"AND variable NOT LIKE '%bortsorterade%' "
+        f"AND variable NOT LIKE '%bortfall%' "
+        f"AND variable NOT LIKE '%svarsfrekvens%' "
         f"AND year >= {year} "
         f"ORDER BY year LIMIT 500"
     )
+
+
+# ── Metadata variable filter ─────────────────────────────────
+# These are administrative/survey-logistics variables, never substance-use data.
+
+_METADATA_VAR_RE = re.compile(
+    r'(formulär|deltagande|bortsorterade|bortfall|svarsfrekvens|bearbetade|'
+    r'antal_elever|antal_skolor|antal_klasser|medverkande)',
+    re.IGNORECASE,
+)
+
+
+def _filter_metadata_hits(hits: list) -> list:
+    """Remove survey-administration variables — they are never meaningful answers."""
+    return [h for h in hits if not _METADATA_VAR_RE.search(h["variable"])]
 
 
 # ── Gender-aware hit filtering ───────────────────────────────
@@ -430,6 +450,7 @@ def ask_data(question: str, conversation_history: list = None) -> dict:
     try:
         # ── STEP 1: Multi-topic semantic search + SQL generation ────────
         hits = multi_topic_search(question, top_k_per_topic=15)
+        hits = _filter_metadata_hits(hits)              # strip survey-admin variables
         hits, is_enumeration = _expand_enumeration_hits(hits, question)
         if not is_enumeration:
             hits = _filter_gender_hits(hits, question)  # prefer _alla unless gender asked
@@ -609,7 +630,8 @@ UNITS BY REPORT (use the correct unit when presenting numbers):
 
     except Exception as e:
         return {
-            "answer": f"Error: {str(e)}",
+            "answer": f"Ett fel uppstod: {str(e)}",
             "sql": None, "data": None, "chart_spec": None, "sources": "", "error": str(e),
             "semantic_hits": [],
+            "is_enumeration": False,
         }
