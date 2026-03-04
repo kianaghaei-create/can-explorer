@@ -560,8 +560,7 @@ SQL RULES:
         step1_resp = client.chat.completions.create(
             model="gpt-4o",
             messages=[{"role": "user", "content": step1_prompt}],
-            temperature=0,
-            seed=42,
+            temperature=0.1,
             max_tokens=1500,
             response_format={"type": "json_object"},
         )
@@ -655,8 +654,7 @@ UNITS BY REPORT (use the correct unit when presenting numbers):
         step2_resp = client.chat.completions.create(
             model="gpt-4o",
             messages=[{"role": "user", "content": step2_prompt}],
-            temperature=0,
-            seed=42,
+            temperature=0.1,
             max_tokens=800,
         )
 
