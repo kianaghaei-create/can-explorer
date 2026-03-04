@@ -261,15 +261,47 @@ REPORTS:
 - CAN-234: Self-reported SMOKING & SNUS habits among adults 17-84. By age/gender. Unit: %. Years 2003-2024.
 - CAN-235: Drug SEIZURES, crime stats, health/mortality. Unit: varies (counts, %, rates). Years 1965-2024.
 - CAN-236: Total ALCOHOL CONSUMPTION in Sweden. Unit: liters pure alcohol per capita. Years 2001-2024.
-- CAN-237: Self-reported ALCOHOL HABITS. Drinking frequency, risk consumption. Unit: %. Years 2002-2024.
+- CAN-237: Self-reported ALCOHOL HABITS among ADULTS aged 17-84. Drinking frequency, risk consumption. Unit: %. Years 2002-2024. NOT for youth questions.
 - CAN-238: Total TOBACCO & NICOTINE consumption. Unit: per capita counts. Years 2003-2024.
-- CAN-239: YOUTH SCHOOL SURVEY. Grade 9 + gymnasium year 2. Unit: %. Years 1971-2025.
+- CAN-239: YOUTH SCHOOL SURVEY (ungdomar/unga). Grade 9 + gymnasium year 2. Alcohol, drugs, smoking among young people. Unit: %. Years 1971-2025. USE THIS for all youth/teenager questions.
 
 Table: kolada (MUNICIPAL-LEVEL DATA from KOLADA API)
 Columns: kpi_id (VARCHAR), municipality_id (VARCHAR), year (INT), gender (VARCHAR: T=total, K=women, M=men), value (DOUBLE), kpi_title (VARCHAR), municipality_name (VARCHAR)
 
 KOLADA KPIs: N07544 (Drug offenses per 100k), N33820 (Youth mental ill-health %), N03921 (Youth unemployment %), N17441 (Gymnasium completion %), N00621 (Drug trafficking problems %), N00620 (Alcohol/drug-affected persons %), and more.
 Municipalities: Stockholm, Malmö, Göteborg, Uppsala, Linköping, Örebro, Jönköping, Kalmar, Karlskrona, Halmstad. Years: 2015-2024."""
+
+
+# ── Fallback SQL builder (handles mangled/truncated variable names) ──────────
+
+_REPORT_RE = re.compile(r"report\s*=\s*'([^']+)'", re.IGNORECASE)
+_TABLE_RE  = re.compile(r"table_id\s*=\s*'([^']+)'", re.IGNORECASE)
+_YEAR_RE   = re.compile(r"year\s*>=\s*(\d{4})", re.IGNORECASE)
+
+
+def _build_fallback_sql(failed_sql: str) -> str | None:
+    """
+    When an exact-variable-name SQL returns 0 rows (usually because the LLM
+    truncated a very long Swedish variable name), build a broader fallback:
+    keep report + table_id + year filter but drop the variable constraint,
+    limiting to '_alla' aggregate variables.
+    """
+    report_m = _REPORT_RE.search(failed_sql)
+    table_m  = _TABLE_RE.search(failed_sql)
+    if not report_m or not table_m:
+        return None
+    report   = report_m.group(1)
+    table_id = table_m.group(1)
+    year_m   = _YEAR_RE.search(failed_sql)
+    year     = int(year_m.group(1)) if year_m else 2000
+    return (
+        f"SELECT year, variable, value, report, table_id, table_title "
+        f"FROM timeseries "
+        f"WHERE report = '{report}' AND table_id = '{table_id}' "
+        f"AND variable LIKE '%_alla' "
+        f"AND year >= {year} "
+        f"ORDER BY year LIMIT 500"
+    )
 
 
 # ── Gender-aware hit filtering ───────────────────────────────
@@ -455,7 +487,8 @@ SQL RULES:
   * Include ALL listed variables in the SQL WHERE clause (do not drop any)
   * Do NOT apply a year filter — fetch ALL available years
   * Set chart type to "slicer" in the JSON response
-  * Increase LIMIT to 2000"""
+  * Increase LIMIT to 2000
+- YOUTH: For any question about youth, teenagers, ungdomar, unga, young people, grade 9 (åk 9/årskurs 9), gymnasium, or school surveys, ALWAYS prefer CAN-239 over any other report. CAN-237 covers adults aged 17-84 and is NOT appropriate for youth questions."""
 
         step1_resp = client.chat.completions.create(
             model="gpt-4o",
@@ -471,9 +504,10 @@ SQL RULES:
 
         if not sql:
             return {
-                "answer": "I couldn't formulate a query. Try rephrasing your question.",
+                "answer": "Kunde inte formulera en databasfråga. Försök omformulera din fråga.",
                 "sql": None, "data": None, "chart_spec": None, "sources": "", "error": None,
                 "semantic_hits": hits,
+                "is_enumeration": is_enumeration,
             }
 
         # ── Execute SQL ─────────────────────────────────────
@@ -482,18 +516,36 @@ SQL RULES:
             data = con.execute(sql).fetchdf()
         except Exception as e:
             return {
-                "answer": f"SQL error: {str(e)}\n\nThe query was:\n```sql\n{sql}\n```\n\nTop matching variables:\n{variable_matches[:500]}",
+                "answer": f"SQL-fel: {str(e)}\n\nFrågan var:\n```sql\n{sql}\n```",
                 "sql": sql, "data": None, "chart_spec": None, "sources": "", "error": str(e),
                 "semantic_hits": hits,
+                "is_enumeration": is_enumeration,
             }
         finally:
             con.close()
 
+        # ── Fallback: retry without variable filter if 0 rows ────────────────
+        # (handles cases where LLM truncated a very long variable name in SQL)
+        if len(data) == 0:
+            fallback_sql = _build_fallback_sql(sql)
+            if fallback_sql:
+                try:
+                    con2 = duckdb.connect(DB_PATH, read_only=True)
+                    data_fb = con2.execute(fallback_sql).fetchdf()
+                    con2.close()
+                    if len(data_fb) > 0:
+                        data = data_fb
+                        sql = fallback_sql  # show corrected SQL in expander
+                except Exception:
+                    pass
+
         if len(data) == 0:
             return {
-                "answer": f"No results found. The most relevant variables I found were:\n{variable_matches[:500]}\n\nTry rephrasing your question.",
+                "answer": "Inga resultat hittades. De mest relevanta variablerna jag fann:\n"
+                          f"{variable_matches[:500]}\n\nFörsök omformulera din fråga.",
                 "sql": sql, "data": data, "chart_spec": None, "sources": "", "error": None,
                 "semantic_hits": hits,
+                "is_enumeration": is_enumeration,
             }
 
         # ── STEP 2: Generate answer from actual results ─────
