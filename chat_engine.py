@@ -483,28 +483,87 @@ def _expand_enumeration_hits(hits: list, question: str) -> tuple:
     return (expanded if expanded else hits), bool(expanded)
 
 
+# ── SQL builder from selected hits (code-side, exact names) ─────────────────
+
+
+def _build_sql_from_selected(
+    selected: list,
+    year_from: int | None = None,
+    is_enumeration: bool = False,
+) -> str:
+    """
+    Build a DuckDB SELECT from a list of hit dicts.
+    Groups variables by (report, table_id) and uses EXACT names from the
+    catalog — no LLM string reproduction, no truncation possible.
+    Uses UNION ALL for multi-report queries.
+    """
+    from collections import defaultdict
+
+    groups: dict = defaultdict(list)
+    for hit in selected:
+        key = (hit["report"], hit["table_id"])
+        groups[key].append(hit["variable"])
+
+    if not groups:
+        return ""
+
+    limit = 2000 if is_enumeration else 500
+    year_clause = f" AND year >= {year_from}" if year_from else ""
+
+    parts = []
+    for (report, table_id), variables in groups.items():
+        # Escape any single quotes defensively (Swedish names rarely have them)
+        var_list = ", ".join(f"'{v.replace(chr(39), chr(39)*2)}'" for v in variables)
+        parts.append(
+            f"SELECT year, variable, value, report, table_id, table_title "
+            f"FROM timeseries "
+            f"WHERE report = '{report}' AND table_id = '{table_id}' "
+            f"AND variable IN ({var_list})"
+            f"{year_clause}"
+        )
+
+    if len(parts) == 1:
+        return parts[0] + f" ORDER BY year LIMIT {limit}"
+
+    # Multiple reports → UNION ALL wrapped in outer ORDER BY + LIMIT
+    combined = " UNION ALL ".join(f"({p})" for p in parts)
+    return f"SELECT * FROM ({combined}) t ORDER BY year LIMIT {limit}"
+
+
 # ── Main chat function ──────────────────────────────────────
 
 def ask_data(question: str, conversation_history: list = None) -> dict:
     """
     Two-step process with semantic search:
-    Step 1: Semantic search finds relevant variables → LLM writes SQL
-    Step 2: Execute SQL → send results back to LLM for natural language answer
+    Step 1: Semantic search → LLM picks variable INDICES → code builds SQL
+            (LLM never reproduces long Swedish variable names — eliminates all
+            truncation, wrong-name, and CAN-237-vs-239 errors in one shot)
+    Step 2: Execute SQL → LLM generates natural-language answer in Swedish
     """
 
     try:
-        # ── STEP 1: Multi-topic semantic search + SQL generation ────────
+        # ── STEP 1: Semantic search + pipeline filters ──────────────────
         hits = multi_topic_search(question, top_k_per_topic=15)
         hits = _filter_metadata_hits(hits)              # strip survey-admin variables
         hits = _boost_youth_hits(hits, question)        # ensure CAN-239 for youth questions
         hits, is_enumeration = _expand_enumeration_hits(hits, question)
         if not is_enumeration:
             hits = _filter_gender_hits(hits, question)  # prefer _alla unless gender asked
-        variable_matches = "\n".join(
-            f"[{r['score']:.3f}] {r['report']} | table {r['table_id']} | "
-            f"{r['variable']} | {r['y_min']}-{r['y_max']} | {(r['table_title'] or '')[:70]}"
-            for r in hits
-        ) if hits else "No matching variables found."
+
+        if not hits:
+            return {
+                "answer": "Kunde inte hitta relevanta variabler för din fråga. Försök omformulera.",
+                "sql": None, "data": None, "chart_spec": None, "sources": "", "error": None,
+                "semantic_hits": [],
+                "is_enumeration": False,
+            }
+
+        # Build a NUMBERED list — LLM picks by index, code supplies the exact names
+        variable_list = "\n".join(
+            f"[{i+1}] {r['report']} | table {r['table_id']} | "
+            f"{r['variable']} | {r['y_min']}-{r['y_max']} | {(r['table_title'] or '')[:60]}"
+            for i, r in enumerate(hits)
+        )
 
         step1_prompt = f"""You are a data analyst for CAN (Swedish Council for Alcohol and Drug Information).
 
@@ -512,61 +571,86 @@ def ask_data(question: str, conversation_history: list = None) -> dict:
 
 User question: "{question}"
 
-I used semantic search to find the most relevant variables in the database.
-The results are ranked by relevance score (higher = more relevant):
+The following variables were found by semantic search (ranked by relevance):
 
-{variable_matches}
+{variable_list}
 
-Write a SQL query using the EXACT variable names from above.
-IMPORTANT: Always include report, table_id, and table_title columns in your SELECT.
-Choose the MOST relevant variables for the user's question — you don't need to use all of them.
-For cross-domain questions, pick the best variable from EACH relevant report.
+Select the BEST variables that directly answer the question. Return their index numbers only —
+the system will look up the exact variable names in the catalog, so you never need to type them.
 
-Respond in JSON:
+SELECTION RULES:
+- YOUTH (ungdomar/unga/åk 9/gymnasium/elev/school/young): ONLY pick CAN-239 variables.
+  CAN-237 covers ADULTS aged 17–84 — NEVER pick CAN-237 for youth questions.
+- GENDER: Unless the user asks about a specific gender (pojkar/flickor/men/women/män/kvinnor),
+  prefer variables ending in "_alla" (aggregate totals). Skip gender-specific variables
+  (_po, _fl, _men, _kv) when an _alla version exists for the same concept.
+- MULTI-TOPIC: For questions covering multiple substances/topics, pick 1–2 per topic (up to 6 total).
+- SINGLE TOPIC: Pick 2–4 variables max for readability.
+- ENUMERATION: If the list contains many variables from one table (>10), include ALL their indices.
+- year_from: Extract the start year if the user mentions one ("since 2000" → 2000,
+  "from 1990" → 1990). If no year is mentioned, use null (show all available data).
+- chart_type: "line" for trends over time, "bar" for single-year comparisons,
+  "slicer" for category breakdowns with many variables.
+- chart_title: A descriptive title in Swedish.
+
+Respond ONLY in JSON:
 {{
-    "sql": "SELECT year, variable, value, report, table_id, table_title FROM timeseries WHERE ... ORDER BY year",
-    "chart": {{
-        "type": "line",
-        "x": "year",
-        "y": "value",
-        "color": "variable",
-        "title": "Chart title in Swedish"
-    }}
+    "variable_indices": [1, 3],
+    "year_from": 2000,
+    "chart_type": "line",
+    "chart_title": "Descriptiv svensk diagramtitel"
 }}
 
-SQL RULES:
-- Use EXACT variable names from the search results. Do NOT invent names.
-- Table is 'timeseries' with columns: year, variable, value, report, table_id, table_title
-- For comparisons across reports, use CASE WHEN to give readable labels:
-  SELECT year, CASE WHEN variable='x' THEN 'Readable Label' END as variable, value, report, table_id, table_title FROM timeseries WHERE (...) ORDER BY year
-- Always include report AND table_id in WHERE clauses
-- IMPORTANT: table_id is just the number, e.g. table_id='4', NOT 'table 4'
-- ORDER BY year, LIMIT 500
-- For the kolada table use: SELECT year, kpi_title as variable, value, 'KOLADA' as report, kpi_id as table_id, kpi_title as table_title FROM kolada WHERE ...
-- For color grouping, ensure 'variable' column has distinct readable values
-- YEAR FILTER: If the user mentions a specific year or time period (e.g. "since 2000", "from 1990", "between 2005 and 2015"), use that year range exactly. Otherwise default to year >= 2010.
-- GENDER: Unless the user explicitly asks about gender differences or a specific gender (men, women, boys, girls, män, kvinnor, pojkar, flickor), ALWAYS prefer aggregate/total variables that contain "alla" in their name over gender-specific variables. Only include gender-disaggregated variables when the question specifically asks for a gender comparison or breakdown.
-- Avoid "ej svar" (no answer) variables — they are not useful.
-- MULTI-TOPIC QUESTIONS: If the user asks about multiple substances or topics (e.g. "alcohol AND narcotics", "smoking and cannabis"), you MUST include at least 1-2 variables for EACH topic. Do not drop a topic entirely. Use up to 6 variables total when covering multiple topics.
-- For single-topic questions, pick 2-4 variables max for readability.
-- If including a "never used" variable (e.g. "ingen_gång", "dricker_inte") alongside usage variables, that's fine — the chart will auto-detect the scale difference and use dual Y-axes.
-- ENUMERATION/SLICER: If the variable list above contains more than 10 variables all from the same table (same report + table_id), this is an enumeration question. In that case:
-  * Include ALL listed variables in the SQL WHERE clause (do not drop any)
-  * Do NOT apply a year filter — fetch ALL available years
-  * Set chart type to "slicer" in the JSON response
-  * Increase LIMIT to 2000
-- YOUTH: For any question about youth, teenagers, ungdomar, unga, young people, grade 9 (åk 9/årskurs 9), gymnasium, or school surveys, ALWAYS prefer CAN-239 over any other report. CAN-237 covers adults aged 17-84 and is NOT appropriate for youth questions."""
+year_from must be an integer or null. variable_indices must be a list of integers."""
 
         step1_resp = client.chat.completions.create(
             model="gpt-4o",
             messages=[{"role": "user", "content": step1_prompt}],
             temperature=0.1,
-            max_tokens=1500,
+            max_tokens=400,
             response_format={"type": "json_object"},
         )
         step1_result = json.loads(step1_resp.choices[0].message.content)
-        sql = step1_result.get("sql", "")
-        chart_spec = step1_result.get("chart")
+
+        # ── Parse LLM response (robust — no crashes on unexpected output) ──
+        raw_indices  = step1_result.get("variable_indices", [])
+        year_from_raw = step1_result.get("year_from")
+        chart_type   = str(step1_result.get("chart_type") or "line")
+        chart_title  = str(step1_result.get("chart_title") or "")
+
+        valid_indices: list[int] = []
+        for idx in raw_indices:
+            try:
+                n = int(idx)
+                if 1 <= n <= len(hits):
+                    valid_indices.append(n)
+            except (TypeError, ValueError):
+                pass
+
+        year_from: int | None = None
+        if year_from_raw is not None:
+            try:
+                year_from = int(year_from_raw)
+            except (TypeError, ValueError):
+                pass
+
+        # Safety fallback: if LLM returned nothing usable, take top 3
+        if not valid_indices:
+            valid_indices = list(range(1, min(4, len(hits) + 1)))
+
+        selected = [hits[i - 1] for i in valid_indices]
+
+        # ── Code builds SQL with EXACT catalog variable names ───────────
+        sql = _build_sql_from_selected(
+            selected, year_from=year_from, is_enumeration=is_enumeration
+        )
+        chart_spec = {
+            "type": "slicer" if is_enumeration else chart_type,
+            "x": "year",
+            "y": "value",
+            "color": "variable",
+            "title": chart_title,
+        }
 
         if not sql:
             return {
@@ -576,7 +660,7 @@ SQL RULES:
                 "is_enumeration": is_enumeration,
             }
 
-        # ── Execute SQL ─────────────────────────────────────
+        # ── Execute SQL ─────────────────────────────────────────────────
         con = duckdb.connect(DB_PATH, read_only=True)
         try:
             data = con.execute(sql).fetchdf()
@@ -590,25 +674,9 @@ SQL RULES:
         finally:
             con.close()
 
-        # ── Fallback: retry without variable filter if 0 rows ────────────────
-        # (handles cases where LLM truncated a very long variable name in SQL)
-        if len(data) == 0:
-            fallback_sql = _build_fallback_sql(sql)
-            if fallback_sql:
-                try:
-                    con2 = duckdb.connect(DB_PATH, read_only=True)
-                    data_fb = con2.execute(fallback_sql).fetchdf()
-                    con2.close()
-                    if len(data_fb) > 0:
-                        data = data_fb
-                        sql = fallback_sql  # show corrected SQL in expander
-                except Exception:
-                    pass
-
         if len(data) == 0:
             return {
-                "answer": "Inga resultat hittades. De mest relevanta variablerna jag fann:\n"
-                          f"{variable_matches[:500]}\n\nFörsök omformulera din fråga.",
+                "answer": "Inga resultat hittades för de valda variablerna. Försök omformulera din fråga.",
                 "sql": sql, "data": data, "chart_spec": None, "sources": "", "error": None,
                 "semantic_hits": hits,
                 "is_enumeration": is_enumeration,
