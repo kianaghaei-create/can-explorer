@@ -8,6 +8,7 @@ Scans all time series in the DuckDB database and finds:
 """
 
 import os
+import re
 import itertools
 import numpy as np
 import pandas as pd
@@ -17,8 +18,21 @@ from scipy import stats as scipy_stats
 DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "can_data.duckdb")
 
 
+
+# Variables to exclude from all insight calculations.
+# Same logic as chat_engine._filter_metadata_hits — keep in sync.
+_EXCLUDE_VAR_RE = re.compile(
+    r'__col_'                                                    # pivot-artefact columns
+    r'|formulär|deltagande|bortsorterade|bortfall|svarsfrekvens'
+    r'|bearbetade|medverkande'                                   # survey-logistics
+    r'|^n_|_n$|^n\d|antal_elever|antal_skolor|antal_klasser'    # count-of-respondents
+    r'|ej_svar|no_answer',                                       # non-response codes
+    re.IGNORECASE,
+)
+
+
 def load_all_series():
-    """Load all time series from DuckDB, pivoted as year x series."""
+    """Load all time series from DuckDB, excluding junk/metadata variables."""
     con = duckdb.connect(DB_PATH, read_only=True)
 
     df = con.execute("""
@@ -28,6 +42,13 @@ def load_all_series():
     """).fetchdf()
 
     con.close()
+
+    # Strip artefact and metadata variables before any computation
+    mask = df["variable"].str.contains(_EXCLUDE_VAR_RE, regex=True)
+    excluded = mask.sum()
+    if excluded:
+        print(f"  Excluding {excluded:,} rows matching junk/metadata variable patterns")
+    df = df[~mask].copy()
 
     # Create a unique series identifier
     df["series_id"] = df["report"] + "|" + df["table_id"].astype(str) + "|" + df["variable"]
