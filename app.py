@@ -1023,6 +1023,235 @@ elif page == "🏘️ Municipal Context (KOLADA)":
                     st.metric("Correlation", f"r = {r:.3f}", delta=f"p = {p:.4f}")
                 else:
                     st.warning("Not enough overlapping data for this year.")
+
+            # ── Social Determinants × CAN Data ─────────────────────────────
+            st.divider()
+            st.header("📊 Social Determinants × CAN Data")
+            st.markdown(
+                "How do municipal social indicators correlate with national substance use trends? "
+                "KOLADA indicators are averaged across all loaded municipalities."
+            )
+
+            CAN_SOCIAL_INDICATORS = [
+                {
+                    "label": "Youth drug use – Grade 9, last 12 months (%)",
+                    "report": "CAN-239", "table_id": "61",
+                    "variable": "senaste_12_månaderna_alla", "unit": "%",
+                },
+                {
+                    "label": "Youth drug use – Gymnasium Yr 2, last 12 months (%)",
+                    "report": "CAN-239", "table_id": "62",
+                    "variable": "senaste_12_månaderna_alla", "unit": "%",
+                },
+                {
+                    "label": "Youth alcohol consumers – Grade 9 (%)",
+                    "report": "CAN-239", "table_id": "2",
+                    "variable": "konsumenter_alla", "unit": "%",
+                },
+                {
+                    "label": "Youth alcohol use last 12 months – Grade 9 (%)",
+                    "report": "CAN-239", "table_id": "4",
+                    "variable": "senaste_12_månaderna_alla", "unit": "%",
+                },
+                {
+                    "label": "Adult risk alcohol consumption (%)",
+                    "report": "CAN-237", "table_id": "14",
+                    "variable": "andelen_som_riskkonsumerat_a_alkohol_under_de_senaste_30_dagarna_i_befolkningen_1784_år_b_efter_ålder_och_kön_20042024_alla",
+                    "unit": "%",
+                },
+                {
+                    "label": "Daily smokers – Population (%)",
+                    "report": "CAN-234", "table_id": "3",
+                    "variable": "andelen_som_rökt_dagligen_de_senaste_30_dagarna_i_befolkningen_1784a_år_efter_åldersgrupper_och_kön_20032024_alla",
+                    "unit": "%",
+                },
+            ]
+
+            sd_tab1, sd_tab2 = st.tabs(["📈 Trend Correlation", "🕸️ Municipal Risk Profile"])
+
+            with sd_tab1:
+                sd_col1, sd_col2 = st.columns(2)
+                with sd_col1:
+                    sd_kpi = st.selectbox(
+                        "Social Indicator (KOLADA — municipal avg)",
+                        kpi_options["kpi_id"].tolist(),
+                        format_func=lambda x: kpi_options[kpi_options["kpi_id"] == x]["kpi_title"].iloc[0],
+                        key="sd_kpi",
+                    )
+                with sd_col2:
+                    sd_can_idx = st.selectbox(
+                        "Substance Use Indicator (CAN — national)",
+                        range(len(CAN_SOCIAL_INDICATORS)),
+                        format_func=lambda i: CAN_SOCIAL_INDICATORS[i]["label"],
+                        key="sd_can",
+                    )
+
+                sd_lag = st.slider(
+                    "Time lag — KOLADA leads CAN by N years",
+                    0, 5, 0,
+                    help="Lag=2: does today's school completion predict drug use 2 years later?",
+                    key="sd_lag",
+                )
+
+                # Aggregate KOLADA to national avg per year (Total gender)
+                kolada_agg = (
+                    kolada[(kolada["kpi_id"] == sd_kpi) & (kolada["gender"] == "T")]
+                    .groupby("year")["value"]
+                    .mean()
+                    .reset_index()
+                    .rename(columns={"value": "kolada_val"})
+                )
+
+                # Apply lag: shift KOLADA years forward so they align with future CAN
+                kolada_lagged = kolada_agg.copy()
+                if sd_lag > 0:
+                    kolada_lagged["year"] = kolada_lagged["year"] + sd_lag
+
+                # Fetch CAN indicator
+                can_def = CAN_SOCIAL_INDICATORS[sd_can_idx]
+                can_ts = query(
+                    f"""SELECT year, AVG(value) as can_val FROM timeseries
+                    WHERE report = '{can_def["report"]}' AND table_id = '{can_def["table_id"]}'
+                    AND variable = '{can_def["variable"]}' AND year >= 2010
+                    GROUP BY year ORDER BY year"""
+                )
+
+                if len(can_ts) == 0:
+                    st.warning(f"No CAN data found for: {can_def['label']}")
+                else:
+                    merged_sd = kolada_lagged.merge(can_ts, on="year")
+                    kpi_label = kpi_options[kpi_options["kpi_id"] == sd_kpi]["kpi_title"].iloc[0]
+                    can_label = can_def["label"]
+                    lag_note = f" (lagged +{sd_lag}y)" if sd_lag > 0 else ""
+
+                    if len(merged_sd) >= 3:
+                        fig_sd = go.Figure()
+                        fig_sd.add_trace(go.Scatter(
+                            x=merged_sd["year"], y=merged_sd["kolada_val"],
+                            name=f"{kpi_label}{lag_note}",
+                            yaxis="y1",
+                            line=dict(color="#00b4d8", width=2.5),
+                            mode="lines+markers",
+                        ))
+                        fig_sd.add_trace(go.Scatter(
+                            x=merged_sd["year"], y=merged_sd["can_val"],
+                            name=can_label,
+                            yaxis="y2",
+                            line=dict(color="#ff6b6b", width=2.5),
+                            mode="lines+markers",
+                        ))
+                        fig_sd.update_layout(
+                            title=f"{kpi_label}{lag_note}  ×  {can_label}",
+                            yaxis=dict(title=kpi_label, side="left", color="#00b4d8"),
+                            yaxis2=dict(title=can_label, side="right", overlaying="y", color="#ff6b6b"),
+                            hovermode="x unified",
+                            height=450,
+                            legend=dict(orientation="h", y=-0.25),
+                        )
+                        st.plotly_chart(fig_sd, use_container_width=True)
+
+                        from scipy.stats import pearsonr as _pearsonr
+                        r_sd, p_sd = _pearsonr(merged_sd["kolada_val"], merged_sd["can_val"])
+                        mc1, mc2, mc3 = st.columns(3)
+                        mc1.metric("Pearson r", f"{r_sd:.3f}")
+                        mc2.metric("p-value", f"{p_sd:.4f}")
+                        mc3.metric("Overlapping years", str(len(merged_sd)))
+
+                        # Lag sweep
+                        with st.expander("Lag sweep — Pearson r at each lag 0–5 years"):
+                            sweep_rows = []
+                            for L in range(6):
+                                kt = kolada_agg.copy()
+                                if L > 0:
+                                    kt["year"] = kt["year"] + L
+                                m = kt.merge(can_ts, on="year")
+                                if len(m) >= 3:
+                                    r_l, p_l = _pearsonr(m["kolada_val"], m["can_val"])
+                                    sweep_rows.append({
+                                        "Lag (years)": L,
+                                        "Pearson r": round(r_l, 3),
+                                        "p-value": round(p_l, 4),
+                                        "N": len(m),
+                                    })
+                            if sweep_rows:
+                                sweep_df = pd.DataFrame(sweep_rows)
+                                fig_sweep = px.bar(
+                                    sweep_df, x="Lag (years)", y="Pearson r",
+                                    color="Pearson r",
+                                    color_continuous_scale="RdBu",
+                                    range_color=[-1, 1],
+                                    title="Pearson r at each lag",
+                                    height=300,
+                                )
+                                fig_sweep.add_hline(y=0, line_dash="dot", line_color="grey")
+                                st.plotly_chart(fig_sweep, use_container_width=True)
+                                st.dataframe(sweep_df, use_container_width=True, hide_index=True)
+                    else:
+                        st.warning(f"Only {len(merged_sd)} overlapping years — need ≥ 3 to compute correlation.")
+
+            with sd_tab2:
+                st.subheader("Municipal Risk Profile")
+                st.markdown(
+                    "Z-scores for each KOLADA indicator per municipality (2020–2024 avg). "
+                    "**Red = higher risk** (signs flipped for positive indicators like graduation rate)."
+                )
+
+                recent_k = kolada[(kolada["gender"] == "T") & (kolada["year"] >= 2020)].copy()
+                pivot_data = (
+                    recent_k.groupby(["municipality_name", "kpi_title"])["value"]
+                    .mean()
+                    .reset_index()
+                )
+                heatmap_pivot = pivot_data.pivot_table(
+                    index="municipality_name", columns="kpi_title", values="value"
+                )
+
+                from scipy.stats import zscore as _zscore
+                heatmap_norm = heatmap_pivot.apply(
+                    lambda col: _zscore(col.values, nan_policy="omit"), axis=0
+                )
+                heatmap_norm.index = heatmap_pivot.index
+                heatmap_norm.columns = heatmap_pivot.columns
+
+                # Flip sign: higher score on these = better, so invert for risk display
+                positive_kpis = [
+                    "Few problems with alcohol/drug-affected persons (%)",
+                    "Few problems with drug trafficking (citizen survey %)",
+                    "Gymnasium completion rate within 3 years (%)",
+                    "University eligibility within 3 years (%)",
+                ]
+                for col in heatmap_norm.columns:
+                    if col in positive_kpis:
+                        heatmap_norm[col] = -heatmap_norm[col]
+
+                # Shorten column labels for display
+                short_labels = {c: c.replace(" (%)", "").replace(" per 100,000 inhabitants", "/100k") for c in heatmap_norm.columns}
+                heatmap_display = heatmap_norm.rename(columns=short_labels)
+
+                fig_heat = px.imshow(
+                    heatmap_display,
+                    color_continuous_scale="RdBu_r",
+                    color_continuous_midpoint=0,
+                    zmin=-2, zmax=2,
+                    title="Municipal Social Risk Profile — 2020–2024 avg (red = higher risk)",
+                    labels={"color": "Risk Z-score"},
+                    aspect="auto",
+                )
+                fig_heat.update_layout(height=480)
+                fig_heat.update_xaxes(tickangle=-35)
+                st.plotly_chart(fig_heat, use_container_width=True)
+
+                # Overall risk ranking
+                risk_score = (
+                    heatmap_norm.mean(axis=1)
+                    .sort_values(ascending=False)
+                    .reset_index()
+                )
+                risk_score.columns = ["Municipality", "Avg Risk Z-score"]
+                risk_score["Avg Risk Z-score"] = risk_score["Avg Risk Z-score"].round(3)
+                st.markdown("**Overall risk ranking** (average across all indicators):")
+                st.dataframe(risk_score, use_container_width=True, hide_index=True)
+
         else:
             st.info("No KOLADA data loaded. Run `python kolada.py` first.")
     except Exception as e:
