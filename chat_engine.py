@@ -305,44 +305,64 @@ def multi_topic_search(question: str, top_k_per_topic: int = 15) -> list:
         topics = [question]
 
     # ── Stage 1: find relevant tables ────────────────────────────────────
-    # Use the ORIGINAL question (not decomposed topics) for table selection.
-    # Decomposed topics lose compound context — "flickor åk9 snusat" becomes
-    # "proportion of girls" + "snus trends", neither of which finds the youth
-    # snus table. The full question preserves the combination.
-    # For multi-topic questions, also add per-topic tables (e.g. alcohol + drugs).
+    # Use ONLY the full original question for table selection — never the
+    # decomposed per-topic sub-queries.
+    #
+    # Why: decomposed topics lose compound context. "flickor åk9 snusat"
+    # becomes ["proportion of girls in grade 9", "snus use trends", ...].
+    # The "proportion of girls" topic finds t103 (drug access by gender),
+    # t121 (truancy by gender), t49 (vaping by gender) — all wrong for snus.
+    # The full compound question correctly finds t37 ("snusat, åk9") at rank 4.
+    # Adding per-topic tables to allowed_tables pollutes the candidate pool
+    # and causes the LLM to pick vaping/truancy/wellbeing tables instead of snus.
+    #
+    # Cross-report queries ("youth e-cig vs adult cigarettes") work fine with
+    # the full question because both concepts are preserved in the embedding.
     _load_table_embeddings()
     allowed_tables = None  # None = no filter (fallback if table index not built)
     topic_vecs = {}        # cache vectors so Stage 2 reuses them without re-embedding
 
+    full_q_vec = None
     if _table_embeddings_matrix is not None:
-        # Primary: full question gives best table recall for compound concepts
         full_q_vec = _embed_query(question)
-        allowed_tables = find_relevant_tables(full_q_vec, top_k=8)
+        allowed_tables = find_relevant_tables(full_q_vec, top_k=12)
+    else:
+        full_q_vec = _embed_query(question)
 
-        # Secondary: add 2-3 tables per decomposed topic to cover cross-report queries
-        n_per_topic = max(2, 4 // len(topics))
-        for topic in topics:
-            q_vec = _embed_query(topic)
-            topic_vecs[topic] = q_vec
-            allowed_tables |= find_relevant_tables(q_vec, top_k=n_per_topic)
+    # Embed per-topic queries for Stage 2 (do NOT add their tables to allowed_tables)
+    for topic in topics:
+        topic_vecs[topic] = _embed_query(topic)
 
     # ── Stage 2: variable search within allowed tables ────────────────────
+    # Run a search with the FULL original question first — this preserves
+    # compound context ("andelen flickor som snusat 12 månader") that decomposed
+    # topics lose, and ranks prevalence variables (t37) above procurement
+    # variables (t43) that happen to contain the same substance keyword.
     seen = set()
     merged = []
-    for topic in topics:
-        q_vec = topic_vecs[topic] if topic in topic_vecs else _embed_query(topic)
-        hits = semantic_search_results(
-            topic,
-            top_k=top_k_per_topic,
-            allowed_tables=allowed_tables,
-            query_vec=q_vec,
-        )
+
+    def _add_hits(hits, label):
         for hit in hits:
             key = (hit["report"], hit["table_id"], hit["variable"])
             if key not in seen:
                 seen.add(key)
-                hit["topic"] = topic
+                hit["topic"] = label
                 merged.append(hit)
+
+    # Full-question search (compound context → best variable ranking)
+    _add_hits(
+        semantic_search_results(question, top_k=top_k_per_topic,
+                                allowed_tables=allowed_tables, query_vec=full_q_vec),
+        question,
+    )
+    # Per-topic searches (for multi-topic cross-report queries)
+    for topic in topics:
+        q_vec = topic_vecs[topic]
+        _add_hits(
+            semantic_search_results(topic, top_k=top_k_per_topic,
+                                    allowed_tables=allowed_tables, query_vec=q_vec),
+            topic,
+        )
 
     # Sort merged list by score descending
     merged.sort(key=lambda x: x["score"], reverse=True)
@@ -756,7 +776,11 @@ the system will look up the exact variable names in the catalog, so you never ne
 
 SELECTION RULES:
 - YOUTH (ungdomar/unga/åk 9/gymnasium/elev/school/young): ONLY pick CAN-239 variables.
-  CAN-237 covers ADULTS aged 17–84 — NEVER pick CAN-237 for youth questions.
+  CAN-237 AND CAN-234 cover ADULTS aged 17–84 — NEVER pick them for youth/school questions.
+- TABLE TITLE MATCH: Always read the table title (last column) and match it to the question topic.
+  snus/snusat → pick tables with "snus" in title. DO NOT pick "vejpar"(vaping), "sniffat"(huffing),
+  "trivs i skolan"(wellbeing), "skolka"(truancy), or "alkohol" tables for snus questions.
+  vejpar/e-cigarett → pick tables with "vejpar". Cannabis → "cannabis/hasch". Alkohol → "alkohol/dricker".
 - GENDER: Unless the user asks about a specific gender (pojkar/flickor/men/women/män/kvinnor),
   prefer variables ending in "_alla" (aggregate totals). Skip gender-specific variables
   (_po, _fl, _men, _kv) when an _alla version exists for the same concept.
