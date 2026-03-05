@@ -165,10 +165,11 @@ Examples:
 
 
 def search_pubmed_multi(topics: list, max_per_topic: int = 8,
-                        question: str = "", answer: str = "") -> list:
+                        question: str = "", answer: str = "") -> tuple:
     """
     Run PubMed search using GPT-generated targeted queries (not raw decomposed topics).
-    Falls back to topic-based search if query generation fails.
+    Returns (studies, queries) so the caller can use the English queries as
+    the cosine-similarity anchor in filter_relevant_studies.
     """
     # Generate targeted queries from the full question + answer
     if question:
@@ -189,7 +190,7 @@ def search_pubmed_multi(topics: list, max_per_topic: int = 8,
                 s["search_topic"] = query
                 all_studies.append(s)
         time.sleep(0.35)
-    return all_studies
+    return all_studies, queries
 
 
 # ── Relevance filter ───────────────────────────────────────────────────────────
@@ -197,21 +198,29 @@ def search_pubmed_multi(topics: list, max_per_topic: int = 8,
 def filter_relevant_studies(
     studies: list,
     question: str,
-    threshold: float = 0.38,
+    threshold: float = 0.30,
     max_studies: int = 6,
+    anchor_texts: list = None,
 ) -> list:
     """
-    Score study abstracts vs question via embedding cosine similarity.
+    Score study abstracts via embedding cosine similarity.
 
-    Threshold of 0.38 is calibrated for Swedish-question vs English-abstract
-    cosine similarity using text-embedding-3-small (normalized vectors):
-    - Truly irrelevant (HIV/cancer/concussions): typically 0.30–0.36
-    - On-topic (snus/tobacco/youth Sweden):       typically 0.40–0.60
-    The 0.20 threshold passed everything; 0.50 was too strict (nothing passed).
+    Uses anchor_texts (the English PubMed queries) as the comparison anchor
+    rather than the raw question, which may be in Swedish. Comparing English
+    queries to English abstracts gives much better cosine scores than
+    comparing a Swedish question to English abstracts.
+
+    Threshold 0.30 calibrated for English-query vs English-abstract cosine:
+    - Truly irrelevant (HIV/cancer/concussions): typically 0.20–0.28
+    - On-topic (snus/tobacco/youth Sweden):       typically 0.32–0.60
     """
     if not studies:
         return []
-    texts = [question] + [f"{s['title']} {s['abstract']}" for s in studies]
+
+    # Build anchor: use English queries if available, otherwise fall back to question
+    anchor = " ".join(anchor_texts) if anchor_texts else question
+
+    texts = [anchor] + [f"{s['title']} {s['abstract']}" for s in studies]
     try:
         response = client.embeddings.create(
             input=texts, model="text-embedding-3-small"

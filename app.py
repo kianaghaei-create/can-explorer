@@ -157,11 +157,13 @@ def report_dialog():
                 topics = [question]
             answer_text = info.get("answer", "")
             from report_generator import search_pubmed_multi, filter_relevant_studies
-            raw = search_pubmed_multi(
+            raw, pubmed_queries = search_pubmed_multi(
                 topics, max_per_topic=8,
                 question=question, answer=answer_text,
             )
-            filtered = filter_relevant_studies(raw, question)
+            filtered = filter_relevant_studies(
+                raw, question, anchor_texts=pubmed_queries
+            )
             st.session_state.rg_studies = filtered
             st.session_state.rg_phase = "configure"
         st.rerun()
