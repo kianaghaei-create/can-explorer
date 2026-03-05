@@ -20,6 +20,8 @@ from openai import OpenAI
 DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "can_data.duckdb")
 EMBEDDINGS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "variable_embeddings.npz")
 CATALOG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "variable_catalog.json")
+TABLE_EMBEDDINGS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "table_embeddings.npz")
+TABLE_CATALOG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "table_catalog.json")
 
 # Read API key from env or from file
 _api_key = os.environ.get("OPENAI_API_KEY", "")
@@ -35,64 +37,197 @@ client = OpenAI(api_key=_api_key)
 
 _embeddings_matrix = None
 _catalog = None
+_table_embeddings_matrix = None
+_table_catalog = None
 
 
 def _load_embeddings():
-    """Load pre-computed embeddings and catalog. Cached after first call."""
+    """Load pre-computed variable embeddings and catalog. Cached after first call."""
     global _embeddings_matrix, _catalog
     if _embeddings_matrix is not None:
         return
 
     data = np.load(EMBEDDINGS_PATH)
-    _embeddings_matrix = data["embeddings"]  # shape: (N, 1536)
+    _embeddings_matrix = data["embeddings"]  # shape: (N_vars, dim)
 
     with open(CATALOG_PATH, "r", encoding="utf-8") as f:
         _catalog = json.load(f)
 
 
-def semantic_search_results(query: str, top_k: int = 25) -> list:
-    """
-    Embed the user's question and find the most relevant variables
-    via cosine similarity. Returns a list of dicts with structured data.
-    """
-    _load_embeddings()
+def _load_table_embeddings():
+    """Load pre-computed table-level embeddings. Cached after first call."""
+    global _table_embeddings_matrix, _table_catalog
+    if _table_embeddings_matrix is not None:
+        return
+    if not os.path.exists(TABLE_EMBEDDINGS_PATH):
+        return  # graceful fallback: table index not built yet
 
+    data = np.load(TABLE_EMBEDDINGS_PATH)
+    _table_embeddings_matrix = data["embeddings"]  # shape: (N_tables, dim)
+
+    with open(TABLE_CATALOG_PATH, "r", encoding="utf-8") as f:
+        _table_catalog = json.load(f)
+
+
+def _embed_query(query: str) -> np.ndarray:
+    """Embed a single query string and return as float32 array."""
     response = client.embeddings.create(
         input=[query],
         model="text-embedding-3-small",
     )
-    query_vec = np.array(response.data[0].embedding, dtype=np.float32)
+    return np.array(response.data[0].embedding, dtype=np.float32)
+
+
+def find_relevant_tables(query_vec: np.ndarray, top_k: int = 6) -> set:
+    """
+    Stage 1: Find the top-k most relevant TABLES for a query vector.
+
+    Compares the query against 236 table-level embeddings (one per table).
+    Returns a set of (report, table_id) tuples.
+
+    Falls back to returning None (= search all tables) if table embeddings
+    are not built yet.
+    """
+    _load_table_embeddings()
+    if _table_embeddings_matrix is None:
+        return None  # fallback: no table index available
+
+    scores = _table_embeddings_matrix @ query_vec
+    top_indices = np.argsort(scores)[::-1][:top_k]
+
+    allowed = set()
+    for idx in top_indices:
+        entry = _table_catalog[idx]
+        allowed.add((entry["report"], str(entry["table_id"])))
+
+    return allowed
+
+
+def semantic_search_results(query: str, top_k: int = 25,
+                            allowed_tables: set = None,
+                            query_vec: np.ndarray = None) -> list:
+    """
+    Stage 2: Find the most relevant variables via cosine similarity.
+
+    When allowed_tables is provided (set of (report, table_id) tuples from Stage 1):
+    - Only variables from those tables are considered (eliminates off-topic noise)
+    - At least MIN_PER_TABLE variables from EACH Stage-1 table are included,
+      regardless of their cosine score. This guarantees that a table found by
+      Stage 1 (e.g. the CAN-239 youth snus table) is always represented in the
+      candidate list shown to the LLM — even if its variable names are generic
+      (like "senaste_12_månaderna_flickor") and score lower than adult-data
+      variables with more descriptive names.
+
+    query_vec can be passed in to avoid re-embedding (reused from Stage 1).
+    Falls back to searching all variables when allowed_tables is None.
+    """
+    _load_embeddings()
+
+    if query_vec is None:
+        query_vec = _embed_query(query)
 
     scores = _embeddings_matrix @ query_vec
-    top_indices = np.argsort(scores)[::-1][:top_k * 2]  # oversample before dedup
 
-    results = []
+    if not allowed_tables:
+        # Fallback: no table filter — score all variables
+        candidate_indices = [
+            i for i in np.argsort(scores)[::-1]
+            if "__col_" not in _catalog[i]["variable"]
+        ]
+        results = []
+        seen = set()
+        for idx in candidate_indices:
+            if len(results) >= top_k:
+                break
+            entry = _catalog[idx]
+            key = (entry["report"], entry["table_id"], entry["variable"])
+            if key in seen:
+                continue
+            seen.add(key)
+            results.append({
+                "report": entry["report"],
+                "table_id": entry["table_id"],
+                "table_title": entry.get("table_title", ""),
+                "variable": entry["variable"],
+                "y_min": entry.get("y_min"),
+                "y_max": entry.get("y_max"),
+                "score": float(scores[idx]),
+            })
+        return results
+
+    # ── Table-filtered Stage 2 with guaranteed per-table representation ──
+    MIN_PER_TABLE = 3   # at least this many variables per Stage-1 table
+    MAX_PER_TABLE = 8   # cap per table so one big table doesn't dominate
+
+    # Group all candidate variable indices by table
+    from collections import defaultdict
+    table_to_indices = defaultdict(list)
+    for i, entry in enumerate(_catalog):
+        if "__col_" in entry["variable"]:
+            continue
+        key = (entry["report"], str(entry["table_id"]))
+        if key in allowed_tables:
+            table_to_indices[key].append(i)
+
+    # For each table: sort its variables by cosine score, keep top MAX_PER_TABLE
+    # Guarantee at least MIN_PER_TABLE are included in the final list
+    top_by_score = []         # (score, idx) — best variable per table first
+    guaranteed = []           # indices that must appear regardless of global rank
+
+    for tkey, indices in table_to_indices.items():
+        sorted_indices = sorted(indices, key=lambda i: scores[i], reverse=True)
+        # Best MAX_PER_TABLE from this table enter the pool
+        pool = sorted_indices[:MAX_PER_TABLE]
+        top_by_score.extend(pool)
+        # First MIN_PER_TABLE are guaranteed to appear
+        guaranteed.extend(sorted_indices[:MIN_PER_TABLE])
+
+    # Sort pool by score globally
+    top_by_score.sort(key=lambda i: scores[i], reverse=True)
+
+    # Sort guaranteed by score globally — best-matching tables come first.
+    # This is critical: with N allowed tables × MIN_PER_TABLE guaranteed entries
+    # the total guaranteed count often exceeds top_k. If we added them in dict
+    # iteration order and then sliced to [:top_k], the last tables in the dict
+    # would lose all their guaranteed entries. Sorting by score ensures every
+    # table's best variable survives the eventual sort-by-score at the end.
+    guaranteed.sort(key=lambda i: scores[i], reverse=True)
+    guaranteed_set = set(guaranteed)
+
     seen = set()
-    for idx in top_indices:
-        if len(results) >= top_k:
-            break
+    results = []
+
+    def add(idx):
         entry = _catalog[idx]
-        var = entry["variable"]
-
-        if "__col_" in var:
-            continue
-
-        key = (entry["report"], entry["table_id"], var)
+        key = (entry["report"], entry["table_id"], entry["variable"])
         if key in seen:
-            continue
+            return
         seen.add(key)
-
         results.append({
             "report": entry["report"],
             "table_id": entry["table_id"],
             "table_title": entry.get("table_title", ""),
-            "variable": var,
+            "variable": entry["variable"],
             "y_min": entry.get("y_min"),
             "y_max": entry.get("y_max"),
             "score": float(scores[idx]),
         })
 
-    return results
+    # First: add ALL guaranteed variables (MIN_PER_TABLE per Stage-1 table).
+    # No [:top_k] cap here — every Stage-1 table must be represented so the
+    # LLM can pick the correct variable even when its name is generic.
+    for idx in guaranteed:
+        add(idx)
+
+    # Then: fill remaining slots with best-scoring pool variables
+    for idx in top_by_score:
+        if len(results) >= top_k:
+            break
+        add(idx)
+
+    # Sort final list by score descending for LLM presentation
+    results.sort(key=lambda x: x["score"], reverse=True)
+    return results  # no [:top_k] slice — guaranteed entries must not be cut
 
 
 def semantic_search(query: str, top_k: int = 25) -> str:
@@ -148,25 +283,65 @@ that require English terms. Translate Swedish/other-language questions to Englis
 
 def multi_topic_search(question: str, top_k_per_topic: int = 15) -> list:
     """
-    Decompose the question into topics, run semantic search per topic,
-    and merge results — guaranteeing coverage of all topics.
-    Falls back to a single search if decomposition fails.
+    Two-stage retrieval:
+
+    Stage 1 — Table selection (NEW):
+      Embed each topic, find the top-N most relevant TABLES from the
+      236-entry table index. This filters out irrelevant reports/tables
+      before variable search.  E.g. "snus åk9 flickor" finds the youth
+      snus table, not the truancy or school-wellbeing tables.
+
+    Stage 2 — Variable selection (within allowed tables):
+      Run variable-level semantic search restricted to variables belonging
+      to the Stage-1 tables. With a clean candidate pool the LLM can
+      reliably pick the right variable.
+
+    Falls back to full variable search (Stage 2 only) when table embeddings
+    are not yet built (run build_table_embeddings.py once).
     """
     try:
         topics = decompose_query(question)
     except Exception:
         topics = [question]
 
+    # ── Stage 1: find relevant tables ────────────────────────────────────
+    # Use the ORIGINAL question (not decomposed topics) for table selection.
+    # Decomposed topics lose compound context — "flickor åk9 snusat" becomes
+    # "proportion of girls" + "snus trends", neither of which finds the youth
+    # snus table. The full question preserves the combination.
+    # For multi-topic questions, also add per-topic tables (e.g. alcohol + drugs).
+    _load_table_embeddings()
+    allowed_tables = None  # None = no filter (fallback if table index not built)
+    topic_vecs = {}        # cache vectors so Stage 2 reuses them without re-embedding
+
+    if _table_embeddings_matrix is not None:
+        # Primary: full question gives best table recall for compound concepts
+        full_q_vec = _embed_query(question)
+        allowed_tables = find_relevant_tables(full_q_vec, top_k=8)
+
+        # Secondary: add 2-3 tables per decomposed topic to cover cross-report queries
+        n_per_topic = max(2, 4 // len(topics))
+        for topic in topics:
+            q_vec = _embed_query(topic)
+            topic_vecs[topic] = q_vec
+            allowed_tables |= find_relevant_tables(q_vec, top_k=n_per_topic)
+
+    # ── Stage 2: variable search within allowed tables ────────────────────
     seen = set()
     merged = []
-
     for topic in topics:
-        hits = semantic_search_results(topic, top_k=top_k_per_topic)
+        q_vec = topic_vecs[topic] if topic in topic_vecs else _embed_query(topic)
+        hits = semantic_search_results(
+            topic,
+            top_k=top_k_per_topic,
+            allowed_tables=allowed_tables,
+            query_vec=q_vec,
+        )
         for hit in hits:
             key = (hit["report"], hit["table_id"], hit["variable"])
             if key not in seen:
                 seen.add(key)
-                hit["topic"] = topic  # tag which sub-query found it
+                hit["topic"] = topic
                 merged.append(hit)
 
     # Sort merged list by score descending

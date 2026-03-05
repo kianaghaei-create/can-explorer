@@ -1,0 +1,2126 @@
+[
+  {
+    "report": "CAN-233",
+    "table_id": "1",
+    "table_title": "Gatuprisutvecklingen för hasch. Priser i kronor per gram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 1988,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 1: Gatuprisutvecklingen för hasch. Priser i kronor per gram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 1988–2024. Key terms: hasch=hashish, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "2",
+    "table_title": "Gatuprisutvecklingen för marijuana. Priser i kronor per gram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 1988,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 2: Gatuprisutvecklingen för marijuana. Priser i kronor per gram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 1988–2024. Key terms: marijuana=marijuana, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "3",
+    "table_title": "Gatuprisutvecklingen för amfetamin. Priser i kronor per gram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 1988,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 3: Gatuprisutvecklingen för amfetamin. Priser i kronor per gram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 1988–2024. Key terms: amfetamin=amphetamine, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "4",
+    "table_title": "Gatuprisutvecklingen för kokain. Priser i kronor per gram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 1988,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 4: Gatuprisutvecklingen för kokain. Priser i kronor per gram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 1988–2024. Key terms: kokain=cocaine, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "5",
+    "table_title": "Gatuprisutvecklingen för vitt heroin/heroina). Priser i kronor per gram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 1988,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 5: Gatuprisutvecklingen för vitt heroin/heroina). Priser i kronor per gram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 1988–2024. Key terms: heroin=heroin, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "6",
+    "table_title": "Gatuprisutvecklingen för brunt heroin/heroina). Priser i kronor per gram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 1988,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 6: Gatuprisutvecklingen för brunt heroin/heroina). Priser i kronor per gram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 1988–2024. Key terms: heroin=heroin, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "7",
+    "table_title": "Gatuprisutvecklingen för ecstasy. Priser i kronor per tablett. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 2000,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 7: Gatuprisutvecklingen för ecstasy. Priser i kronor per tablett. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 2000–2024. Key terms: ecstasy=ecstasy, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "8",
+    "table_title": "Gatuprisutvecklingen för LSD. Priser i kronor per dos. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 2000,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 8: Gatuprisutvecklingen för LSD. Priser i kronor per dos. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 2000–2024. Key terms: antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "9",
+    "table_title": "Gatupriset för tramadola). Pris i kronor per 100 milligram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 2018,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 9: Gatupriset för tramadola). Pris i kronor per 100 milligram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 2018–2024. Key terms: tramadol=tramadol, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "10",
+    "table_title": "Gatupriset för alprazolama). Pris i kronor per 1 milligram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 2018,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 10: Gatupriset för alprazolama). Pris i kronor per 1 milligram. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 2018–2024. Key terms: antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "11",
+    "table_title": "Gatuprisutvecklingen för hasch, marijuana, amfetamin, kokain samt vitt och brunt heroin. Indexerade realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024. Index 1988=100.",
+    "y_min": 1988,
+    "y_max": 2024,
+    "n_variables": 6,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 11: Gatuprisutvecklingen för hasch, marijuana, amfetamin, kokain samt vitt och brunt heroin. Indexerade realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024. Index 1988=100.. Years: 1988–2024. Key terms: kokain=cocaine, amfetamin=amphetamine, hasch=hashish, heroin=heroin, marijuana=marijuana, pris=price, median=median, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "12",
+    "table_title": "Gatuprisutvecklingen för hasch, marijuana, amfetamin, kokain, brunt heroin, ecstasy och LSD. Indexerade realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024. Index 2000=100.",
+    "y_min": 2000,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 12: Gatuprisutvecklingen för hasch, marijuana, amfetamin, kokain, brunt heroin, ecstasy och LSD. Indexerade realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024. Index 2000=100.. Years: 2000–2024. Key terms: kokain=cocaine, amfetamin=amphetamine, hasch=hashish, heroin=heroin, ecstasy=ecstasy, marijuana=marijuana, pris=price, median=median, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "13",
+    "table_title": "Grossistprisutvecklingen för hasch. Priser i kronor per kilo. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 2010,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 13: Grossistprisutvecklingen för hasch. Priser i kronor per kilo. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 2010–2024. Key terms: hasch=hashish, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "14",
+    "table_title": "Grossistprisutvecklingen för marijuana. Priser i kronor per kilo. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 2010,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 14: Grossistprisutvecklingen för marijuana. Priser i kronor per kilo. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 2010–2024. Key terms: marijuana=marijuana, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "15",
+    "table_title": "Grossistprisutvecklingen för amfetamin. Priser i kronor per kilo. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 2010,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 15: Grossistprisutvecklingen för amfetamin. Priser i kronor per kilo. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 2010–2024. Key terms: amfetamin=amphetamine, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "16",
+    "table_title": "Grossistprisutvecklingen för kokain. Priser i kronor per kilo. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 2010,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 16: Grossistprisutvecklingen för kokain. Priser i kronor per kilo. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 2010–2024. Key terms: kokain=cocaine, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "17",
+    "table_title": "Grossistprisutvecklingen för brunt heroin. Priser i kronor per kilo. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 2010,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 17: Grossistprisutvecklingen för brunt heroin. Priser i kronor per kilo. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 2010–2024. Key terms: heroin=heroin, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "18",
+    "table_title": "Grossistprisutvecklingen för ecstasy. Priser i kronor per tusental tabletter. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 2010,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 18: Grossistprisutvecklingen för ecstasy. Priser i kronor per tusental tabletter. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 2010–2024. Key terms: ecstasy=ecstasy, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "19",
+    "table_title": "Grossistprisutvecklingen för tramadol. Priser i kronor per tusental tabletter. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 2023,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 19: Grossistprisutvecklingen för tramadol. Priser i kronor per tusental tabletter. Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 2023–2024. Key terms: tramadol=tramadol, antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, realprisjusterad=inflation-adjusted price."
+  },
+  {
+    "report": "CAN-233",
+    "table_id": "20",
+    "table_title": "Gatuprisutvecklingen för smugglade cigaretter och alkoholdrycker. Priser i kronor per limpaa), liter respektive flakb). Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.",
+    "y_min": 2013,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-233: Drug street and wholesale prices in Sweden. Unit: SEK (Swedish kronor). Table 20: Gatuprisutvecklingen för smugglade cigaretter och alkoholdrycker. Priser i kronor per limpaa), liter respektive flakb). Antal och andel prissvar, prisintervall, medel- och medianpriser samt realprisjusterade medianpriser (senaste årets penningvärde). 1988–2024.. Years: 2013–2024. Key terms: antal=count/number, andel=proportion/share, pris=price, median=median, medel=average/mean, alkohol=alcohol, cigaretter=cigarettes, realprisjusterad=inflation-adjusted price, smuggl=smuggled."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "1",
+    "table_title": "Antal respondenter efter ålder och kön, samt svarsbortfall i procent. 2003–2024.",
+    "y_min": 2003,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 1: Antal respondenter efter ålder och kön, samt svarsbortfall i procent. 2003–2024.. Years: 2003–2024. Key terms: antal=count/number, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "2",
+    "table_title": "Andelen som rökt minst en cigarett de senaste 30 dagarna, i befolkningen 17–84a) år, efter åldersgrupper och kön.  2003–2024.",
+    "y_min": 2003,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 2: Andelen som rökt minst en cigarett de senaste 30 dagarna, i befolkningen 17–84a) år, efter åldersgrupper och kön.  2003–2024.. Years: 2003–2024. Key terms: andel=proportion/share, rökt=smoked cigarettes, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "3",
+    "table_title": "Andelen som rökt dagligen de senaste 30 dagarna, i befolkningen 17–84a) år, efter åldersgrupper och kön. 2003–2024.",
+    "y_min": 2003,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 3: Andelen som rökt dagligen de senaste 30 dagarna, i befolkningen 17–84a) år, efter åldersgrupper och kön. 2003–2024.. Years: 2003–2024. Key terms: andel=proportion/share, rökt=smoked cigarettes, dagligen=daily, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "4",
+    "table_title": "Andelen som rökt sporadiskt de senaste 30 dagarna, i befolkningen 17–84a) år, efter åldersgrupper och kön.  2003–2024.",
+    "y_min": 2003,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 4: Andelen som rökt sporadiskt de senaste 30 dagarna, i befolkningen 17–84a) år, efter åldersgrupper och kön.  2003–2024.. Years: 2003–2024. Key terms: andel=proportion/share, rökt=smoked cigarettes, sporadiskt=occasionally, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "5",
+    "table_title": "Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.",
+    "y_min": 2003,
+    "y_max": 2024,
+    "n_variables": 18,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 5: Självrapporterad dag-/veckokonsumtion av antal cigaretter (medelvärde) per rökare totalt, dagligrökare samt sporadisk rökare 17–84a) år, efter kön. 2003–2024.. Years: 2003–2024. Key terms: antal=count/number, medel=average/mean, cigaretter=cigarettes, konsumtion=consumption, dagligen=daily, alla=all/everyone, kvinnor=women."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "6",
+    "table_title": "Självrapporterad årskonsumtion av antal cigaretter (medelvärde) per rökare 17–84a) år, efter åldersgrupper och kön. 2003–2024.",
+    "y_min": 2003,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 6: Självrapporterad årskonsumtion av antal cigaretter (medelvärde) per rökare 17–84a) år, efter åldersgrupper och kön. 2003–2024.. Years: 2003–2024. Key terms: antal=count/number, medel=average/mean, cigaretter=cigarettes, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "7",
+    "table_title": "Självrapporterad årskonsumtion av antal cigaretter (medelvärde) per dagligrökare 17–84a) år, efter åldersgrupper och kön. 2003–2024.",
+    "y_min": 2003,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 7: Självrapporterad årskonsumtion av antal cigaretter (medelvärde) per dagligrökare 17–84a) år, efter åldersgrupper och kön. 2003–2024.. Years: 2003–2024. Key terms: antal=count/number, medel=average/mean, cigaretter=cigarettes, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "8",
+    "table_title": "Självrapporterad årskonsumtion av antal cigaretter (medelvärde) i befolkningen 17–84a) år, efter åldersgrupper och kön. 2003–2024.",
+    "y_min": 2003,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 8: Självrapporterad årskonsumtion av antal cigaretter (medelvärde) i befolkningen 17–84a) år, efter åldersgrupper och kön. 2003–2024.. Years: 2003–2024. Key terms: antal=count/number, medel=average/mean, cigaretter=cigarettes, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "9",
+    "table_title": "Andelen som snusata) minst någon gång under de senaste 30 dagarna, i befolkningen 17–84b) år, efter åldersgrupper och kön. 2007–2024.",
+    "y_min": 2007,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 9: Andelen som snusata) minst någon gång under de senaste 30 dagarna, i befolkningen 17–84b) år, efter åldersgrupper och kön. 2007–2024.. Years: 2007–2024. Key terms: andel=proportion/share, snusat=used snus/snuff, snus=snus/Swedish snuff (smokeless tobacco), alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "10",
+    "table_title": "Andelen som snusata) dagligen de senaste 30 dagarna, i befolkningen 17–84b) år, efter åldersgrupper och kön. 2007–2024.",
+    "y_min": 2007,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 10: Andelen som snusata) dagligen de senaste 30 dagarna, i befolkningen 17–84b) år, efter åldersgrupper och kön. 2007–2024.. Years: 2007–2024. Key terms: andel=proportion/share, snusat=used snus/snuff, snus=snus/Swedish snuff (smokeless tobacco), dagligen=daily, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "11",
+    "table_title": "Andelen som snusata) sporadiskt de senaste 30 dagarna, i befolkningen 17–84b) år, efter åldersgrupper och kön 2007–2024.",
+    "y_min": 2007,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 11: Andelen som snusata) sporadiskt de senaste 30 dagarna, i befolkningen 17–84b) år, efter åldersgrupper och kön 2007–2024.. Years: 2007–2024. Key terms: andel=proportion/share, snusat=used snus/snuff, snus=snus/Swedish snuff (smokeless tobacco), sporadiskt=occasionally, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "12",
+    "table_title": "Andelen som snusat vitt snus minst någon gång under de senaste 30 dagarna, i befolkningen 17–84 år, efter åldersgrupper och kön. 2021–2024.",
+    "y_min": 2021,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 12: Andelen som snusat vitt snus minst någon gång under de senaste 30 dagarna, i befolkningen 17–84 år, efter åldersgrupper och kön. 2021–2024.. Years: 2021–2024. Key terms: andel=proportion/share, snusat=used snus/snuff, snus=snus/Swedish snuff (smokeless tobacco), alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "13",
+    "table_title": "Andelen som snusat vitt snus dagligen under de senaste 30 dagarna, i befolkningen 17–84 år, efter åldersgrupper och kön. 2021–2024.",
+    "y_min": 2021,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 13: Andelen som snusat vitt snus dagligen under de senaste 30 dagarna, i befolkningen 17–84 år, efter åldersgrupper och kön. 2021–2024.. Years: 2021–2024. Key terms: andel=proportion/share, snusat=used snus/snuff, snus=snus/Swedish snuff (smokeless tobacco), dagligen=daily, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "14",
+    "table_title": "Andelen som snusat vitt snus sporadiskt under de senaste 30 dagarna, i befolkningen 17–84 år, efter åldersgrupper och kön. 2021–2024.",
+    "y_min": 2021,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 14: Andelen som snusat vitt snus sporadiskt under de senaste 30 dagarna, i befolkningen 17–84 år, efter åldersgrupper och kön. 2021–2024.. Years: 2021–2024. Key terms: andel=proportion/share, snusat=used snus/snuff, snus=snus/Swedish snuff (smokeless tobacco), sporadiskt=occasionally, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "15",
+    "table_title": "Självrapporterad vecko-/årskonsumtion av antal snusdosora) (medelvärde) per snusare totalt, dagligsnusare samt sporadiska snusare 17–84b) år, efter kön. 2007–2024.",
+    "y_min": 2007,
+    "y_max": 2024,
+    "n_variables": 18,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 15: Självrapporterad vecko-/årskonsumtion av antal snusdosora) (medelvärde) per snusare totalt, dagligsnusare samt sporadiska snusare 17–84b) år, efter kön. 2007–2024.. Years: 2007–2024. Key terms: antal=count/number, medel=average/mean, snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "16",
+    "table_title": "Självrapporterad årskonsumtion av antal snusdosora) (medelvärde) per snusareb) 17–84c) år, efter åldersgrupper och kön. 2007–2024.",
+    "y_min": 2007,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 16: Självrapporterad årskonsumtion av antal snusdosora) (medelvärde) per snusareb) 17–84c) år, efter åldersgrupper och kön. 2007–2024.. Years: 2007–2024. Key terms: antal=count/number, medel=average/mean, snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "17",
+    "table_title": "Självrapporterad årskonsumtion av antal snusdosora) (medelvärde) per dagligsnusareb) 17–84c) år, efter åldersgrupper och kön. 2007–2024.",
+    "y_min": 2007,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 17: Självrapporterad årskonsumtion av antal snusdosora) (medelvärde) per dagligsnusareb) 17–84c) år, efter åldersgrupper och kön. 2007–2024.. Years: 2007–2024. Key terms: antal=count/number, medel=average/mean, snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "18",
+    "table_title": "Självrapporterad årskonsumtion av antal snusdosora) (medelvärde)b), i befolkningen 17–84c) år, efter åldersgrupper och kön. 2007–2024.",
+    "y_min": 2007,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 18: Självrapporterad årskonsumtion av antal snusdosora) (medelvärde)b), i befolkningen 17–84c) år, efter åldersgrupper och kön. 2007–2024.. Years: 2007–2024. Key terms: antal=count/number, medel=average/mean, snus=snus/Swedish snuff (smokeless tobacco), konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "19",
+    "table_title": "Andelen som använt e-cigaretter minst någon gång de senaste 30 dagarna, i befolkningen 17–84 år, efter åldersgrupper och kön. 2017–2024.",
+    "y_min": 2017,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 19: Andelen som använt e-cigaretter minst någon gång de senaste 30 dagarna, i befolkningen 17–84 år, efter åldersgrupper och kön. 2017–2024.. Years: 2017–2024. Key terms: andel=proportion/share, cigaretter=cigarettes, e-cigaretter=e-cigarettes/vaping, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "20",
+    "table_title": "Andelen som använt e-cigaretter dagligen de senaste 30 dagarna, i befolkningen 17–84 år, efter åldersgrupper och kön. 2017–2024.",
+    "y_min": 2017,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 20: Andelen som använt e-cigaretter dagligen de senaste 30 dagarna, i befolkningen 17–84 år, efter åldersgrupper och kön. 2017–2024.. Years: 2017–2024. Key terms: andel=proportion/share, dagligen=daily, cigaretter=cigarettes, e-cigaretter=e-cigarettes/vaping, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "21",
+    "table_title": "Andelen som använt e-cigaretter sporadiskt de senaste 30 dagarna, i befolkningen 17–84 år, efter åldersgrupper och kön. 2017–2024.",
+    "y_min": 2017,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 21: Andelen som använt e-cigaretter sporadiskt de senaste 30 dagarna, i befolkningen 17–84 år, efter åldersgrupper och kön. 2017–2024.. Years: 2017–2024. Key terms: andel=proportion/share, sporadiskt=occasionally, cigaretter=cigarettes, e-cigaretter=e-cigarettes/vaping, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "22",
+    "table_title": "Andelen som har använt någon nikotinprodukta) under de senaste 30 dagarna, i befolkningen 17-84b), efter åldersgrupper och kön. 2007-2024.",
+    "y_min": 2007,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 22: Andelen som har använt någon nikotinprodukta) under de senaste 30 dagarna, i befolkningen 17-84b), efter åldersgrupper och kön. 2007-2024.. Years: 2007–2024. Key terms: andel=proportion/share, alla=all/everyone."
+  },
+  {
+    "report": "CAN-234",
+    "table_id": "23",
+    "table_title": "Andelen som har använt en enskild nikotinprodukt eller flera under de senaste 30 dagarna, i befolkningen 17-84. 2019-2024.",
+    "y_min": 2019,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-234: Self-reported smoking and snus habits among adults 17-84 years. Unit: percentage. Table 23: Andelen som har använt en enskild nikotinprodukt eller flera under de senaste 30 dagarna, i befolkningen 17-84. 2019-2024.. Years: 2019–2024. Key terms: andel=proportion/share, snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, vejp=vape/e-cigarette."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "1",
+    "table_title": "Narkotikabeslag av tull och polis, olika preparat. a) Antal. 1965–2024.",
+    "y_min": 1965,
+    "y_max": 2024,
+    "n_variables": 17,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 1: Narkotikabeslag av tull och polis, olika preparat. a) Antal. 1965–2024.. Years: 1965–2024. Key terms: beslag=seizures/confiscations, antal=count/number, narkotika=drugs/narcotics, amfetamin=amphetamine, cannabis=cannabis."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "2",
+    "table_title": "Cannabisbeslag av tull och polis. Antal och mängd. a) 1970–2024.",
+    "y_min": 1970,
+    "y_max": 2024,
+    "n_variables": 11,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 2: Cannabisbeslag av tull och polis. Antal och mängd. a) 1970–2024.. Years: 1970–2024. Key terms: cannabis=cannabis, beslag=seizures/confiscations, antal=count/number, män=men, hasch=hashish."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "3",
+    "table_title": "Amfetaminbeslag a) av tull och polis. Antal och mängd. 1970–2024. b)",
+    "y_min": 1970,
+    "y_max": 2024,
+    "n_variables": 12,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 3: Amfetaminbeslag a) av tull och polis. Antal och mängd. 1970–2024. b). Years: 1970–2024. Key terms: amfetamin=amphetamine, beslag=seizures/confiscations, antal=count/number, män=men."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "4",
+    "table_title": "Kokainbeslag av tull och polis. Antal och mängd. a) 1974–2024.",
+    "y_min": 1974,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 4: Kokainbeslag av tull och polis. Antal och mängd. a) 1974–2024.. Years: 1974–2024. Key terms: kokain=cocaine, beslag=seizures/confiscations, antal=count/number, män=men."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "5",
+    "table_title": "Ecstasy/MDMA-beslag a) av tull och polis. Antal och mängd. 1997–2024 b).",
+    "y_min": 1997,
+    "y_max": 2024,
+    "n_variables": 10,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 5: Ecstasy/MDMA-beslag a) av tull och polis. Antal och mängd. 1997–2024 b).. Years: 1997–2024. Key terms: ecstasy=ecstasy, beslag=seizures/confiscations, antal=count/number, män=men."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "6",
+    "table_title": "Heroinbeslag av tull och polis. Antal och mängd. a) 1970–2024.",
+    "y_min": 1970,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 6: Heroinbeslag av tull och polis. Antal och mängd. a) 1970–2024.. Years: 1970–2024. Key terms: heroin=heroin, beslag=seizures/confiscations, antal=count/number, män=men."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "7",
+    "table_title": "Läkemedelsbeslag av tull och polis. Antal och mängd. a) 1990–2024 b).",
+    "y_min": 1990,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 7: Läkemedelsbeslag av tull och polis. Antal och mängd. a) 1990–2024 b).. Years: 1990–2024. Key terms: beslag=seizures/confiscations, antal=count/number, medel=average/mean, män=men."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "8",
+    "table_title": "Gatupriser i 2024 års penningvärde för hasch, marijuana, amfetamin, kokain, brunt heroin och ecstasy. Kronor per gram/tablett, realprisjusteardea) medianvärden. 1988–2024.",
+    "y_min": 1988,
+    "y_max": 2024,
+    "n_variables": 12,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 8: Gatupriser i 2024 års penningvärde för hasch, marijuana, amfetamin, kokain, brunt heroin och ecstasy. Kronor per gram/tablett, realprisjusteardea) medianvärden. 1988–2024.. Years: 1988–2024. Key terms: kokain=cocaine, amfetamin=amphetamine, hasch=hashish, heroin=heroin, ecstasy=ecstasy, marijuana=marijuana, pris=price, median=median."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "9",
+    "table_title": "Anmälda brott och lagföringsbeslut (huvudbrott) för rattfylleri under påverkan av enbart narkotika a) (4 §). Antal. 2000–2024.",
+    "y_min": 2000,
+    "y_max": 2024,
+    "n_variables": 5,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 9: Anmälda brott och lagföringsbeslut (huvudbrott) för rattfylleri under påverkan av enbart narkotika a) (4 §). Antal. 2000–2024.. Years: 2000–2024. Key terms: antal=count/number, narkotika=drugs/narcotics, rattfylleri=drunk driving, andel=proportion/share, kvinnor=women."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "10",
+    "table_title": "Anmälda brott enligt varusmugglingslagen (VSL) gällande narkotika respektive narkotikastrafflagen (NSL). Antal. 1965–2024a).",
+    "y_min": 1965,
+    "y_max": 2024,
+    "n_variables": 6,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 10: Anmälda brott enligt varusmugglingslagen (VSL) gällande narkotika respektive narkotikastrafflagen (NSL). Antal. 1965–2024a).. Years: 1965–2024. Key terms: antal=count/number, narkotika=drugs/narcotics, smuggl=smuggled."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "11",
+    "table_title": "Anmälda brott enligt narkotikastrafflagen (NSL) efter brottstyp, respektive samtliga anmälda brott. Antal och procentandelar. 1975–2024.",
+    "y_min": 1975,
+    "y_max": 2024,
+    "n_variables": 18,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 11: Anmälda brott enligt narkotikastrafflagen (NSL) efter brottstyp, respektive samtliga anmälda brott. Antal och procentandelar. 1975–2024.. Years: 1975–2024. Key terms: antal=count/number, andel=proportion/share, narkotika=drugs/narcotics."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "12",
+    "table_title": "Personer misstänkta för brott mot narkotikastrafflagen (NSL) eller varusmugglingslagen, narkotika (VSL). Antal. 1970–2024 a).",
+    "y_min": 1970,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 12: Personer misstänkta för brott mot narkotikastrafflagen (NSL) eller varusmugglingslagen, narkotika (VSL). Antal. 1970–2024 a).. Years: 1970–2024. Key terms: antal=count/number, narkotika=drugs/narcotics, smuggl=smuggled."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "13",
+    "table_title": "Personer misstänkta för brott mot narkotikastrafflagen (NSL) fördelat på ålder och kön. Antal och procentandelar. 1975–2024a).",
+    "y_min": 1975,
+    "y_max": 2024,
+    "n_variables": 13,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 13: Personer misstänkta för brott mot narkotikastrafflagen (NSL) fördelat på ålder och kön. Antal och procentandelar. 1975–2024a).. Years: 1975–2024. Key terms: antal=count/number, andel=proportion/share, narkotika=drugs/narcotics."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "14",
+    "table_title": "Personer misstänka för brott mot narkotikastrafflagen (NSL) fördelat efter polisregion a). Antal och procentandelar. 1977–2024b).",
+    "y_min": 1977,
+    "y_max": 2024,
+    "n_variables": 10,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 14: Personer misstänka för brott mot narkotikastrafflagen (NSL) fördelat efter polisregion a). Antal och procentandelar. 1977–2024b).. Years: 1977–2024. Key terms: antal=count/number, andel=proportion/share, narkotika=drugs/narcotics."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "15",
+    "table_title": "Lagföringsbeslut (huvudbrott) och huvudpåföljd för brott mot narkotikastrafflagen (NSL), respektive samtliga lagföringsbeslut. Antal och procentandelar. 1993–2024.",
+    "y_min": 1993,
+    "y_max": 2024,
+    "n_variables": 14,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 15: Lagföringsbeslut (huvudbrott) och huvudpåföljd för brott mot narkotikastrafflagen (NSL), respektive samtliga lagföringsbeslut. Antal och procentandelar. 1993–2024.. Years: 1993–2024. Key terms: antal=count/number, andel=proportion/share, narkotika=drugs/narcotics."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "16",
+    "table_title": "Vårdtillfällen, vårdade patienter och patienter vårdade för första gången sedan 1998 i slutenvård med narkotikarelaterad bi- eller huvuddiagnos.a) Antal och procentandelar. 1998–2023.",
+    "y_min": 1998,
+    "y_max": 2023,
+    "n_variables": 13,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 16: Vårdtillfällen, vårdade patienter och patienter vårdade för första gången sedan 1998 i slutenvård med narkotikarelaterad bi- eller huvuddiagnos.a) Antal och procentandelar. 1998–2023.. Years: 1998–2023. Key terms: antal=count/number, andel=proportion/share, narkotika=drugs/narcotics, kvinnor=women."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "17",
+    "table_title": "Vårdtillfällen, vårdade patienter och patienter vårdade för första gången sedan 2008 i slutenvård och/eller specialiserad öppenvård med narkotikarelaterad bi- eller huvuddiagnos. a) Antal och procentandelar. 2008–2023.",
+    "y_min": 2008,
+    "y_max": 2023,
+    "n_variables": 13,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 17: Vårdtillfällen, vårdade patienter och patienter vårdade för första gången sedan 2008 i slutenvård och/eller specialiserad öppenvård med narkotikarelaterad bi- eller huvuddiagnos. a) Antal och procentandelar. 2008–2023.. Years: 2008–2023. Key terms: antal=count/number, andel=proportion/share, narkotika=drugs/narcotics, kvinnor=women."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "18",
+    "table_title": "Patienter vårdade i slutenvård med narkotikarelaterad bi- eller huvuddiagnos fördelat på ålder.a) Antal och procentandelar. 1998–2023.",
+    "y_min": 1998,
+    "y_max": 2023,
+    "n_variables": 12,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 18: Patienter vårdade i slutenvård med narkotikarelaterad bi- eller huvuddiagnos fördelat på ålder.a) Antal och procentandelar. 1998–2023.. Years: 1998–2023. Key terms: antal=count/number, andel=proportion/share, narkotika=drugs/narcotics."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "19",
+    "table_title": "Patienter vårdade i slutenvård med narkotikarelaterad bi- eller huvuddiagnos i Stockholm, Västra Götaland, Skåne samt övriga län.a) Antal och procentandelar. 1998–2023.",
+    "y_min": 1998,
+    "y_max": 2023,
+    "n_variables": 10,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 19: Patienter vårdade i slutenvård med narkotikarelaterad bi- eller huvuddiagnos i Stockholm, Västra Götaland, Skåne samt övriga län.a) Antal och procentandelar. 1998–2023.. Years: 1998–2023. Key terms: antal=count/number, andel=proportion/share, narkotika=drugs/narcotics."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "20",
+    "table_title": "Kliniskt anmälda fall av hepatit C med intravenös smittväg per region a) respektive samtliga anmälda fall. Antal. 1990–2024.",
+    "y_min": 1990,
+    "y_max": 2024,
+    "n_variables": 10,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 20: Kliniskt anmälda fall av hepatit C med intravenös smittväg per region a) respektive samtliga anmälda fall. Antal. 1990–2024.. Years: 1990–2024. Key terms: antal=count/number, andel=proportion/share, kvinnor=women."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "21",
+    "table_title": "Kliniskt anmälda fall av hiv-positiva med intravenös smittväg per region a) respektive samtliga anmälda fall. Antal. 1990–2024.",
+    "y_min": 1983,
+    "y_max": 2024,
+    "n_variables": 10,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 21: Kliniskt anmälda fall av hiv-positiva med intravenös smittväg per region a) respektive samtliga anmälda fall. Antal. 1990–2024.. Years: 1983–2024. Key terms: antal=count/number, andel=proportion/share, kvinnor=women."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "22",
+    "table_title": "Förgiftningar med läkemedel och narkotika, underliggande dödsorsak, fördelat på kön och ålder. Antal. 1997–2023.",
+    "y_min": 1997,
+    "y_max": 2023,
+    "n_variables": 12,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 22: Förgiftningar med läkemedel och narkotika, underliggande dödsorsak, fördelat på kön och ålder. Antal. 1997–2023.. Years: 1997–2023. Key terms: antal=count/number, medel=average/mean, narkotika=drugs/narcotics, män=men, kvinnor=women."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "23",
+    "table_title": "Förgiftningar med läkemedel och narkotika, underliggande dödsorsak, fördelat på storstadslän respektive övriga län. Antal och procentandelar. 1987–2023.",
+    "y_min": 1997,
+    "y_max": 2023,
+    "n_variables": 15,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 23: Förgiftningar med läkemedel och narkotika, underliggande dödsorsak, fördelat på storstadslän respektive övriga län. Antal och procentandelar. 1987–2023.. Years: 1997–2023. Key terms: antal=count/number, andel=proportion/share, medel=average/mean, narkotika=drugs/narcotics."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "24",
+    "table_title": "Narkotikarelaterad dödlighet, underliggande dödsorsaker, EUDA:s definition. Antal. 2000–2023.",
+    "y_min": 2000,
+    "y_max": 2023,
+    "n_variables": 7,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 24: Narkotikarelaterad dödlighet, underliggande dödsorsaker, EUDA:s definition. Antal. 2000–2023.. Years: 2000–2023. Key terms: antal=count/number, narkotika=drugs/narcotics, dödlighet=mortality, män=men, kvinnor=women."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "25",
+    "table_title": "Elever i årskurs 9 som använt narkotika, efter kön. Procent. 1971–2024.",
+    "y_min": 1971,
+    "y_max": 2024,
+    "n_variables": 15,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 25: Elever i årskurs 9 som använt narkotika, efter kön. Procent. 1971–2024.. Years: 1971–2024. Key terms: narkotika=drugs/narcotics, elever=pupils/students, årskurs=school grade, alla=all/everyone."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "26",
+    "table_title": "Elever i gymnasiets år 2 som använt narkotika, efter kön. Procent. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 15,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 26: Elever i gymnasiets år 2 som använt narkotika, efter kön. Procent. 2004–2024.. Years: 2004–2024. Key terms: narkotika=drugs/narcotics, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), alla=all/everyone."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "27",
+    "table_title": "Elever i årskurs 9 som som använt olika narkotikasorter. Procent. 1989–2024.",
+    "y_min": 1989,
+    "y_max": 2024,
+    "n_variables": 12,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 27: Elever i årskurs 9 som som använt olika narkotikasorter. Procent. 1989–2024.. Years: 1989–2024. Key terms: narkotika=drugs/narcotics, elever=pupils/students, årskurs=school grade, cannabis=cannabis."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "28",
+    "table_title": "Elever i gymnasiets år 2 som som använt olika narkotikasorter. Procent. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 12,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 28: Elever i gymnasiets år 2 som som använt olika narkotikasorter. Procent. 2004–2024.. Years: 2004–2024. Key terms: narkotika=drugs/narcotics, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), cannabis=cannabis."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "29",
+    "table_title": "Vuxna (16–84 åringar) som någon gång använt cannabis, efter kön och ålder. Procent. 2004–2024.",
+    "y_min": 2005,
+    "y_max": 2024,
+    "n_variables": 15,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 29: Vuxna (16–84 åringar) som någon gång använt cannabis, efter kön och ålder. Procent. 2004–2024.. Years: 2005–2024. Key terms: cannabis=cannabis."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "30",
+    "table_title": "Vuxna (16–84 åringar) som använt cannabis senaste 12 månaderna a), efter kön och ålder. Procent. 2004–2024.",
+    "y_min": 2005,
+    "y_max": 2024,
+    "n_variables": 15,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 30: Vuxna (16–84 åringar) som använt cannabis senaste 12 månaderna a), efter kön och ålder. Procent. 2004–2024.. Years: 2005–2024. Key terms: cannabis=cannabis."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "31",
+    "table_title": "Vuxna (16–84 åringar) som under de senaste 12 månaderna använt annan narkotika än cannabis, narkotika totalt (exklusive läkemedel) respektive narkotikaklassade läkemedel, efter kön. Procent. 2014–2024.",
+    "y_min": 2014,
+    "y_max": 2024,
+    "n_variables": 9,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 31: Vuxna (16–84 åringar) som under de senaste 12 månaderna använt annan narkotika än cannabis, narkotika totalt (exklusive läkemedel) respektive narkotikaklassade läkemedel, efter kön. Procent. 2014–2024.. Years: 2014–2024. Key terms: cannabis=cannabis, medel=average/mean, narkotika=drugs/narcotics, alla=all/everyone, män=men, kvinnor=women."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "32",
+    "table_title": "Vuxna (16–84 åringar) som använt cannabis senaste 30 dagarna a), efter kön och ålder. Procent. 2004–2024.",
+    "y_min": 2005,
+    "y_max": 2024,
+    "n_variables": 15,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 32: Vuxna (16–84 åringar) som använt cannabis senaste 30 dagarna a), efter kön och ålder. Procent. 2004–2024.. Years: 2005–2024. Key terms: cannabis=cannabis."
+  },
+  {
+    "report": "CAN-235",
+    "table_id": "33",
+    "table_title": "Vuxna (17–84 åringar) som använt olika narkotikaklassade preparat och läkemedel under de senaste 12 månaderna respektive senaste 30 dagarna samt andelen med narkotikarelaterat substansbrukssyndrom. Procent. 2013, 2017 och 2021.",
+    "y_min": 2013,
+    "y_max": 2021,
+    "n_variables": 15,
+    "description": "Report CAN-235: Drug seizures, drug-related crime, health and mortality statistics. Unit: varies. Table 33: Vuxna (17–84 åringar) som använt olika narkotikaklassade preparat och läkemedel under de senaste 12 månaderna respektive senaste 30 dagarna samt andelen med narkotikarelaterat substansbrukssyndrom. Procent. 2013, 2017 och 2021.. Years: 2013–2021. Key terms: andel=proportion/share, medel=average/mean, narkotika=drugs/narcotics, kokain=cocaine, amfetamin=amphetamine, cannabis=cannabis, ecstasy=ecstasy."
+  },
+  {
+    "report": "CAN-236",
+    "table_id": "18",
+    "table_title": "Tabell 18. Alkoholanskaffningens olika delmängder i liter ren alkohol per invånare 15 år och äldre, 2001–2024.",
+    "y_min": 2001,
+    "y_max": 2024,
+    "n_variables": 10,
+    "description": "Report CAN-236: Total alcohol consumption in Sweden. Unit: liters of pure alcohol per capita. Table 18: Tabell 18. Alkoholanskaffningens olika delmängder i liter ren alkohol per invånare 15 år och äldre, 2001–2024.. Years: 2001–2024. Key terms: alkohol=alcohol, män=men, smuggl=smuggled."
+  },
+  {
+    "report": "CAN-236",
+    "table_id": "19",
+    "table_title": "Tabell 19. De olika delmängdernas andelar i procent av den totala alkoholanskaffningen, baserat på liter ren alkohol per invånare 15 år och äldre, 2001–2024.",
+    "y_min": 2001,
+    "y_max": 2024,
+    "n_variables": 10,
+    "description": "Report CAN-236: Total alcohol consumption in Sweden. Unit: liters of pure alcohol per capita. Table 19: Tabell 19. De olika delmängdernas andelar i procent av den totala alkoholanskaffningen, baserat på liter ren alkohol per invånare 15 år och äldre, 2001–2024.. Years: 2001–2024. Key terms: andel=proportion/share, alkohol=alcohol, män=men, smuggl=smuggled."
+  },
+  {
+    "report": "CAN-236",
+    "table_id": "20",
+    "table_title": "Tabell 20. Den totala alkoholanskaffningen uppdelad på dryck och anskaffningskälla, i liter ren alkohol per invånare 15 år och äldre, 2001–2024.",
+    "y_min": 2001,
+    "y_max": 2024,
+    "n_variables": 12,
+    "description": "Report CAN-236: Total alcohol consumption in Sweden. Unit: liters of pure alcohol per capita. Table 20: Tabell 20. Den totala alkoholanskaffningen uppdelad på dryck och anskaffningskälla, i liter ren alkohol per invånare 15 år och äldre, 2001–2024.. Years: 2001–2024. Key terms: alkohol=alcohol."
+  },
+  {
+    "report": "CAN-236",
+    "table_id": "21",
+    "table_title": "Tabell 21. Den totala alkoholanskaffningen uppdelad på anskaffningskälla och dryck, i liter ren alkohol per invånare 15 år och äldre, 2001–2024.",
+    "y_min": 2001,
+    "y_max": 2024,
+    "n_variables": 30,
+    "description": "Report CAN-236: Total alcohol consumption in Sweden. Unit: liters of pure alcohol per capita. Table 21: Tabell 21. Den totala alkoholanskaffningen uppdelad på anskaffningskälla och dryck, i liter ren alkohol per invånare 15 år och äldre, 2001–2024.. Years: 2001–2024. Key terms: alkohol=alcohol."
+  },
+  {
+    "report": "CAN-236",
+    "table_id": "22",
+    "table_title": "Tabell 22. Registrerad, oregistrerad och total alkoholanskaffning i liter ren alkohol per invånare 15 år och äldre, totalt och per dryck. 2001–2024.",
+    "y_min": 2001,
+    "y_max": 2024,
+    "n_variables": 10,
+    "description": "Report CAN-236: Total alcohol consumption in Sweden. Unit: liters of pure alcohol per capita. Table 22: Tabell 22. Registrerad, oregistrerad och total alkoholanskaffning i liter ren alkohol per invånare 15 år och äldre, totalt och per dryck. 2001–2024.. Years: 2001–2024. Key terms: alkohol=alcohol."
+  },
+  {
+    "report": "CAN-236",
+    "table_id": "23",
+    "table_title": "Tabell 23. Registrerade och oregistrerade andelar av totalen och respektive dryck, 2001-2024.",
+    "y_min": 2001,
+    "y_max": 2024,
+    "n_variables": 4,
+    "description": "Report CAN-236: Total alcohol consumption in Sweden. Unit: liters of pure alcohol per capita. Table 23: Tabell 23. Registrerade och oregistrerade andelar av totalen och respektive dryck, 2001-2024.. Years: 2001–2024. Key terms: andel=proportion/share."
+  },
+  {
+    "report": "CAN-236",
+    "table_id": "24",
+    "table_title": "Tabell 24. Anskaffningen utifrån typ av dryck och dess källa. Procentuella andelar av den totala alkoholanskaffningen 2001–2024, rangordnade efter fördelningen 2024.",
+    "y_min": 2001,
+    "y_max": 2024,
+    "n_variables": 16,
+    "description": "Report CAN-236: Total alcohol consumption in Sweden. Unit: liters of pure alcohol per capita. Table 24: Tabell 24. Anskaffningen utifrån typ av dryck och dess källa. Procentuella andelar av den totala alkoholanskaffningen 2001–2024, rangordnade efter fördelningen 2024.. Years: 2001–2024. Key terms: andel=proportion/share, alkohol=alcohol."
+  },
+  {
+    "report": "CAN-236",
+    "table_id": "25",
+    "table_title": "Tabell 25. Registrerad alkoholförsäljning. Per anskaffningskälla och dryck i miljoner volymliter, 2001–2024.",
+    "y_min": 2001,
+    "y_max": 2024,
+    "n_variables": 9,
+    "description": "Report CAN-236: Total alcohol consumption in Sweden. Unit: liters of pure alcohol per capita. Table 25: Tabell 25. Registrerad alkoholförsäljning. Per anskaffningskälla och dryck i miljoner volymliter, 2001–2024.. Years: 2001–2024. Key terms: alkohol=alcohol, försäljning=sales, systembolaget=state alcohol monopoly."
+  },
+  {
+    "report": "CAN-236",
+    "table_id": "26",
+    "table_title": "Tabell 26. Skattad resandeinförsel, hemtillverkning, internethandel och köp av smugglad alkohol. Per anskaffningskälla och dryck i miljoner volymliter, 2001–2024.",
+    "y_min": 2001,
+    "y_max": 2024,
+    "n_variables": 17,
+    "description": "Report CAN-236: Total alcohol consumption in Sweden. Unit: liters of pure alcohol per capita. Table 26: Tabell 26. Skattad resandeinförsel, hemtillverkning, internethandel och köp av smugglad alkohol. Per anskaffningskälla och dryck i miljoner volymliter, 2001–2024.. Years: 2001–2024. Key terms: andel=proportion/share, alkohol=alcohol, smuggl=smuggled."
+  },
+  {
+    "report": "CAN-236",
+    "table_id": "27",
+    "table_title": "Tabell 27. Dryckernas andelar av den totala alkoholkonsumtionen, baserat på anskaffad volym i liter ren alkohol per invånare 15 år och äldre. 2001–2024.",
+    "y_min": 2001,
+    "y_max": 2024,
+    "n_variables": 6,
+    "description": "Report CAN-236: Total alcohol consumption in Sweden. Unit: liters of pure alcohol per capita. Table 27: Tabell 27. Dryckernas andelar av den totala alkoholkonsumtionen, baserat på anskaffad volym i liter ren alkohol per invånare 15 år och äldre. 2001–2024.. Years: 2001–2024. Key terms: andel=proportion/share, alkohol=alcohol, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "1",
+    "table_title": "Antal respondenter efter ålder och kön, samt svarsbortfall i procent. 2002–2024.",
+    "y_min": 2002,
+    "y_max": 2024,
+    "n_variables": 8,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 1: Antal respondenter efter ålder och kön, samt svarsbortfall i procent. 2002–2024.. Years: 2002–2024. Key terms: antal=count/number, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "2",
+    "table_title": "Andelen som ej druckit alkohol under de senaste 30 dagarna, i befolkningen 17–84 år a), efter ålder och kön. 2002–2024.",
+    "y_min": 2002,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 2: Andelen som ej druckit alkohol under de senaste 30 dagarna, i befolkningen 17–84 år a), efter ålder och kön. 2002–2024.. Years: 2002–2024. Key terms: andel=proportion/share, alkohol=alcohol, druckit=drank alcohol, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "3",
+    "table_title": "Andelen som druckit alkohol under de senaste 30 dagarna, i befolkningen 17–84 år a), efter ålder och kön. 2002–2024.",
+    "y_min": 2002,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 3: Andelen som druckit alkohol under de senaste 30 dagarna, i befolkningen 17–84 år a), efter ålder och kön. 2002–2024.. Years: 2002–2024. Key terms: andel=proportion/share, alkohol=alcohol, druckit=drank alcohol, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "4",
+    "table_title": "Andelen som druckit alkohol minst 1 gång i veckan under de senaste 30 dagarna, i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 4: Andelen som druckit alkohol minst 1 gång i veckan under de senaste 30 dagarna, i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: andel=proportion/share, alkohol=alcohol, druckit=drank alcohol, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "5",
+    "table_title": "Genomsnittligt antal alkoholkonsumtionstillfällen under de senaste 30 dagarna, i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 5: Genomsnittligt antal alkoholkonsumtionstillfällen under de senaste 30 dagarna, i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: antal=count/number, alkohol=alcohol, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "6",
+    "table_title": "Självrapporterad  årskonsumtion i liter ren (100 %) alkohol per år, i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 15,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 6: Självrapporterad  årskonsumtion i liter ren (100 %) alkohol per år, i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: alkohol=alcohol, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "7",
+    "table_title": "Självrapporterad årskonsumtion i liter ren (100 %) alkohol per år bland alkoholkonsumenter 17–84 år a), uppdelat på ålder för respektive kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 15,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 7: Självrapporterad årskonsumtion i liter ren (100 %) alkohol per år bland alkoholkonsumenter 17–84 år a), uppdelat på ålder för respektive kön. 2004–2024.. Years: 2004–2024. Key terms: alkohol=alcohol, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "8",
+    "table_title": "Självrapporterad alkoholvolym i centiliter ren (100 %) alkohol per konsumtionstillfälle bland alkoholkonsumenter 17–84 år a), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 8: Självrapporterad alkoholvolym i centiliter ren (100 %) alkohol per konsumtionstillfälle bland alkoholkonsumenter 17–84 år a), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: alkohol=alcohol, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "9",
+    "table_title": "Andelen som intensivkonsumerat a) alkohol under de senaste 30 dagarna, i befolkningen 17–84 år b), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 9: Andelen som intensivkonsumerat a) alkohol under de senaste 30 dagarna, i befolkningen 17–84 år b), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "10",
+    "table_title": "Andelen som intensivkonsumerat alkohol minst en gång i veckan under de senaste 30 dagarna, i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 10: Andelen som intensivkonsumerat alkohol minst en gång i veckan under de senaste 30 dagarna, i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "11",
+    "table_title": "Genomsnittligt antal intensivkonsumtionstillfällen a) under de senaste 30 dagarna i befolkningen 17–84 år b), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 11: Genomsnittligt antal intensivkonsumtionstillfällen a) under de senaste 30 dagarna i befolkningen 17–84 år b), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: antal=count/number, intensivkonsumtion=heavy episodic drinking/binge drinking, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "12",
+    "table_title": "Andelen alkoholkonsumtionstillfällen som innefattat intensivkonsumtion a), bland alkoholkonsumenter 17–84 år b), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 12: Andelen alkoholkonsumtionstillfällen som innefattat intensivkonsumtion a), bland alkoholkonsumenter 17–84 år b), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: andel=proportion/share, alkohol=alcohol, intensivkonsumtion=heavy episodic drinking/binge drinking, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "13",
+    "table_title": "Andelen som högkonsumerat a) alkohol varje vecka under de senaste 30 dagarna, i befolkningen 17–84 år b), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 13: Andelen som högkonsumerat a) alkohol varje vecka under de senaste 30 dagarna, i befolkningen 17–84 år b), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "14",
+    "table_title": "Andelen som riskkonsumerat a) alkohol under de senaste 30 dagarna, i befolkningen 17–84 år b), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 14: Andelen som riskkonsumerat a) alkohol under de senaste 30 dagarna, i befolkningen 17–84 år b), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: andel=proportion/share, alkohol=alcohol, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "18",
+    "table_title": "Självrapporterad spritkonsumtion i liter ren (100 %) alkohol per år i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 18: Självrapporterad spritkonsumtion i liter ren (100 %) alkohol per år i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: alkohol=alcohol, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "19",
+    "table_title": "Självrapporterad vinkonsumtion a) i liter ren (100 %) alkohol per år i befolkningen 17–84 årb), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 19: Självrapporterad vinkonsumtion a) i liter ren (100 %) alkohol per år i befolkningen 17–84 årb), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: alkohol=alcohol, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "20",
+    "table_title": "Självrapporterad cider- och alkoläskkonsumtion i liter ren (100 %) alkohol per år i befolkningen 17–84 år a) efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 20: Självrapporterad cider- och alkoläskkonsumtion i liter ren (100 %) alkohol per år i befolkningen 17–84 år a) efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: alkohol=alcohol, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "21",
+    "table_title": "Självrapporterad starkölkonsumtion i liter ren (100 %) alkohol per år i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 21: Självrapporterad starkölkonsumtion i liter ren (100 %) alkohol per år i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: alkohol=alcohol, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "22",
+    "table_title": "Självrapporterad folkölkonsumtion i liter ren (100 %) alkohol per år i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 7,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 22: Självrapporterad folkölkonsumtion i liter ren (100 %) alkohol per år i befolkningen 17–84 år a), efter ålder och kön. 2004–2024.. Years: 2004–2024. Key terms: alkohol=alcohol, konsumtion=consumption, alla=all/everyone."
+  },
+  {
+    "report": "CAN-237",
+    "table_id": "27",
+    "table_title": "Årskonsumtion i ren (100%) alkohol i befolkningen 17–84 år fördelat på SKR-huvudgruppera). 2004-2024.",
+    "y_min": 2004,
+    "y_max": 2024,
+    "n_variables": 3,
+    "description": "Report CAN-237: Self-reported alcohol habits and drinking patterns among adults. Unit: percentage. Table 27: Årskonsumtion i ren (100%) alkohol i befolkningen 17–84 år fördelat på SKR-huvudgruppera). 2004-2024.. Years: 2004–2024. Key terms: alkohol=alcohol, konsumtion=consumption."
+  },
+  {
+    "report": "CAN-238",
+    "table_id": "1",
+    "table_title": "Konsumtion av cigaretter per invånare 15 år och äldre. 2003–2024.",
+    "y_min": 2003,
+    "y_max": 2024,
+    "n_variables": 9,
+    "description": "Report CAN-238: Total tobacco and nicotine product consumption volumes. Unit: per capita counts. Table 1: Konsumtion av cigaretter per invånare 15 år och äldre. 2003–2024.. Years: 2003–2024. Key terms: cigaretter=cigarettes, konsumtion=consumption, andel=proportion/share."
+  },
+  {
+    "report": "CAN-238",
+    "table_id": "2",
+    "table_title": "Registrerad konsumtion av  e-vätskor i liter totalt och per invånare 15 år och äldre samt självrapporterad användning av e-cigaretter. 2021–2024.",
+    "y_min": 2021,
+    "y_max": 2024,
+    "n_variables": 4,
+    "description": "Report CAN-238: Total tobacco and nicotine product consumption volumes. Unit: per capita counts. Table 2: Registrerad konsumtion av  e-vätskor i liter totalt och per invånare 15 år och äldre samt självrapporterad användning av e-cigaretter. 2021–2024.. Years: 2021–2024. Key terms: cigaretter=cigarettes, e-cigaretter=e-cigarettes/vaping, konsumtion=consumption, antal=count/number, vejp=vape/e-cigarette."
+  },
+  {
+    "report": "CAN-238",
+    "table_id": "3",
+    "table_title": "Konsumtion av snus i antal kg per invånare 15 år och äldre. 2003–2024.",
+    "y_min": 2003,
+    "y_max": 2024,
+    "n_variables": 6,
+    "description": "Report CAN-238: Total tobacco and nicotine product consumption volumes. Unit: per capita counts. Table 3: Konsumtion av snus i antal kg per invånare 15 år och äldre. 2003–2024.. Years: 2003–2024. Key terms: antal=count/number, snus=snus/Swedish snuff (smokeless tobacco), konsumtion=consumption, andel=proportion/share, försäljning=sales."
+  },
+  {
+    "report": "CAN-238",
+    "table_id": "4",
+    "table_title": "Konsumtion av snus i antal dosor per invånare 15 år och äldre. 2003–2024.",
+    "y_min": 2003,
+    "y_max": 2024,
+    "n_variables": 6,
+    "description": "Report CAN-238: Total tobacco and nicotine product consumption volumes. Unit: per capita counts. Table 4: Konsumtion av snus i antal dosor per invånare 15 år och äldre. 2003–2024.. Years: 2003–2024. Key terms: antal=count/number, snus=snus/Swedish snuff (smokeless tobacco), konsumtion=consumption, andel=proportion/share, försäljning=sales."
+  },
+  {
+    "report": "CAN-238",
+    "table_id": "5",
+    "table_title": "Andelen som tagit in cigaretter och snus i samband med utlandsresor samt har köpt smuggelcigaretter under de senaste 30 dagarna i befolkningen 17–84a) år. 2003–2024.",
+    "y_min": 2003,
+    "y_max": 2024,
+    "n_variables": 3,
+    "description": "Report CAN-238: Total tobacco and nicotine product consumption volumes. Unit: per capita counts. Table 5: Andelen som tagit in cigaretter och snus i samband med utlandsresor samt har köpt smuggelcigaretter under de senaste 30 dagarna i befolkningen 17–84a) år. 2003–2024.. Years: 2003–2024. Key terms: andel=proportion/share, snus=snus/Swedish snuff (smokeless tobacco), cigaretter=cigarettes."
+  },
+  {
+    "report": "CAN-238",
+    "table_id": "6",
+    "table_title": "Konsumtion av tobakssnus i antal dosor per invånare 15 år och äldre. 2003–2024.",
+    "y_min": 2003,
+    "y_max": 2024,
+    "n_variables": 5,
+    "description": "Report CAN-238: Total tobacco and nicotine product consumption volumes. Unit: per capita counts. Table 6: Konsumtion av tobakssnus i antal dosor per invånare 15 år och äldre. 2003–2024.. Years: 2003–2024. Key terms: antal=count/number, snus=snus/Swedish snuff (smokeless tobacco), konsumtion=consumption, andel=proportion/share, försäljning=sales."
+  },
+  {
+    "report": "CAN-238",
+    "table_id": "7",
+    "table_title": "Skattad konsumtion av vitt snus, tobakssnus och totalt i antal kg per invånare 15 år och äldre. 2021–2024.",
+    "y_min": 2021,
+    "y_max": 2024,
+    "n_variables": 4,
+    "description": "Report CAN-238: Total tobacco and nicotine product consumption volumes. Unit: per capita counts. Table 7: Skattad konsumtion av vitt snus, tobakssnus och totalt i antal kg per invånare 15 år och äldre. 2021–2024.. Years: 2021–2024. Key terms: antal=count/number, snus=snus/Swedish snuff (smokeless tobacco), konsumtion=consumption, andel=proportion/share."
+  },
+  {
+    "report": "CAN-238",
+    "table_id": "8",
+    "table_title": "Skattad konsumtion av vitt snus, tobakssnus och totalt i antal dosor per invånare 15 år och äldre. 2021–2024.",
+    "y_min": 2021,
+    "y_max": 2024,
+    "n_variables": 6,
+    "description": "Report CAN-238: Total tobacco and nicotine product consumption volumes. Unit: per capita counts. Table 8: Skattad konsumtion av vitt snus, tobakssnus och totalt i antal dosor per invånare 15 år och äldre. 2021–2024.. Years: 2021–2024. Key terms: antal=count/number, snus=snus/Swedish snuff (smokeless tobacco), konsumtion=consumption, andel=proportion/share."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "1",
+    "table_title": "Antal deltagande, andel bortsorterade formulära), andel ej deltagande elever i de medverkande klasserna samt klassbortfallet i procent. 1971–2025b).",
+    "y_min": 1971,
+    "y_max": 2025,
+    "n_variables": 12,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 1: Antal deltagande, andel bortsorterade formulära), andel ej deltagande elever i de medverkande klasserna samt klassbortfallet i procent. 1971–2025b).. Years: 1971–2025. Key terms: antal=count/number, andel=proportion/share, elever=pupils/students, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "2",
+    "table_title": "Andelen alkoholkonsumentera). Efter kön, årskurs 9. 1971–2025.",
+    "y_min": 1971,
+    "y_max": 2025,
+    "n_variables": 9,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 2: Andelen alkoholkonsumentera). Efter kön, årskurs 9. 1971–2025.. Years: 1971–2025. Key terms: andel=proportion/share, alkohol=alcohol, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "3",
+    "table_title": "Andelen alkoholkonsumentera). Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 9,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 3: Andelen alkoholkonsumentera). Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, alkohol=alcohol, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "4",
+    "table_title": "Andelen elever som druckit alkohol någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, årskurs 9. 2007–2025.",
+    "y_min": 2007,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 4: Andelen elever som druckit alkohol någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, årskurs 9. 2007–2025.. Years: 2007–2025. Key terms: andel=proportion/share, alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "5",
+    "table_title": "Andelen elever som druckit alkohol någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, gymnasiets år 2. 2007–2025.",
+    "y_min": 2007,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 5: Andelen elever som druckit alkohol någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, gymnasiets år 2. 2007–2025.. Years: 2007–2025. Key terms: andel=proportion/share, alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "6",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.",
+    "y_min": 1977,
+    "y_max": 2025,
+    "n_variables": 36,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 6: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionena). Efter kön, årskurs 9. 1977–2025.. Years: 1977–2025. Key terms: andel=proportion/share, alkohol=alcohol, årskurs=school grade, konsumtion=consumption, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "7",
+    "table_title": "Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 36,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 7: Genomsnittlig total årskonsumtion mätt i liter ren alkohol (100%) samt olika dryckers andel av den totala alkoholkonsumtionen. Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, alkohol=alcohol, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), konsumtion=consumption, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "8",
+    "table_title": "Andelen elever som vid ett och samma tillfälle druckit alkohol motsvarande minst fyra stora burkar starköl/starkcider eller 18 cl (en halv kvarting) sprit eller en helflaska vin eller sex burkar folköla). Efter kön, årskurs 9. 1972–2012A.",
+    "y_min": 1972,
+    "y_max": 2012,
+    "n_variables": 24,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 8: Andelen elever som vid ett och samma tillfälle druckit alkohol motsvarande minst fyra stora burkar starköl/starkcider eller 18 cl (en halv kvarting) sprit eller en helflaska vin eller sex burkar folköla). Efter kön, årskurs 9. 1972–2012A.. Years: 1972–2012. Key terms: andel=proportion/share, alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "9",
+    "table_title": "Andelen elever som, under de senaste 12 månaderna, vid ett och samma tillfälle druckit alkohol motsvarande minst fyra stora burkar starköl/starkcider eller 25 cl sprit eller en helflaska vin eller sex burkar folköl (sk. \"intensivkonsumtion\"). Efter kön, årskurs 9. 2012–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 27,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 9: Andelen elever som, under de senaste 12 månaderna, vid ett och samma tillfälle druckit alkohol motsvarande minst fyra stora burkar starköl/starkcider eller 25 cl sprit eller en helflaska vin eller sex burkar folköl (sk. \"intensivkonsumtion\"). Efter kön, årskurs 9. 2012–2025.. Years: 2012–2025. Key terms: andel=proportion/share, alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, årskurs=school grade, intensivkonsumtion=heavy episodic drinking/binge drinking, konsumtion=consumption, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "10",
+    "table_title": "Andelen elever som vid ett och samma tillfälle druckit alkohol motsvarande minst 18 cl sprit (en halv kvarting) eller en helflaska vin eller fyra stora flaskor stark cider/alkoläsk eller fyra burkar starköl eller sex burkar folköl. Efter kön, gymnasiets år 2. 2004–2012A.",
+    "y_min": 2004,
+    "y_max": 2012,
+    "n_variables": 24,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 10: Andelen elever som vid ett och samma tillfälle druckit alkohol motsvarande minst 18 cl sprit (en halv kvarting) eller en helflaska vin eller fyra stora flaskor stark cider/alkoläsk eller fyra burkar starköl eller sex burkar folköl. Efter kön, gymnasiets år 2. 2004–2012A.. Years: 2004–2012. Key terms: andel=proportion/share, alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "11",
+    "table_title": "Andelen elever som, under de senaste 12 månaderna, vid ett och samma tillfälle druckit alkohol motsvarande minst fyra stora burkar starköl/starkcider eller 25 cl sprit eller en helflaska vin eller sex burkar folköl (sk. \"intensivkonsumtion\"). Efter kön, gymnasiets år 2. 2012–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 27,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 11: Andelen elever som, under de senaste 12 månaderna, vid ett och samma tillfälle druckit alkohol motsvarande minst fyra stora burkar starköl/starkcider eller 25 cl sprit eller en helflaska vin eller sex burkar folköl (sk. \"intensivkonsumtion\"). Efter kön, gymnasiets år 2. 2012–2025.. Years: 2012–2025. Key terms: andel=proportion/share, alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), intensivkonsumtion=heavy episodic drinking/binge drinking, konsumtion=consumption, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "12",
+    "table_title": "Andelen högkonsumenter (flickor; minst 9 standardglas, pojkar; minst 14 standardglasa) i veckan). Efter kön, årskurs 9. 1989–2025.",
+    "y_min": 1989,
+    "y_max": 2025,
+    "n_variables": 9,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 12: Andelen högkonsumenter (flickor; minst 9 standardglas, pojkar; minst 14 standardglasa) i veckan). Efter kön, årskurs 9. 1989–2025.. Years: 1989–2025. Key terms: andel=proportion/share, pojkar=boys, flickor=girls, årskurs=school grade, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "13",
+    "table_title": "Andelen högkonsumenter (flickor; minst 9 standardglas, pojkar; minst 14 standardglasa) i veckan. Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 9,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 13: Andelen högkonsumenter (flickor; minst 9 standardglas, pojkar; minst 14 standardglasa) i veckan. Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, pojkar=boys, flickor=girls, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "14",
+    "table_title": "Andelen riskkonsumenter (druckit minst 9 standardglas (flickor) eller 14 standardglasa) (pojkar) i veckan och/eller intensivkonsumeratb) månatligen). Efter kön, årskurs 9. 1989–2025.",
+    "y_min": 1989,
+    "y_max": 2025,
+    "n_variables": 9,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 14: Andelen riskkonsumenter (druckit minst 9 standardglas (flickor) eller 14 standardglasa) (pojkar) i veckan och/eller intensivkonsumeratb) månatligen). Efter kön, årskurs 9. 1989–2025.. Years: 1989–2025. Key terms: andel=proportion/share, druckit=drank alcohol, pojkar=boys, flickor=girls, årskurs=school grade, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "15",
+    "table_title": "Andelen riskkonsumenter (druckit minst 9 standardglas (flickor) eller 14 standardglas a) (pojkar) i veckan och/eller intensivkonsumerat b) månatligen). Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 9,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 15: Andelen riskkonsumenter (druckit minst 9 standardglas (flickor) eller 14 standardglas a) (pojkar) i veckan och/eller intensivkonsumerat b) månatligen). Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, druckit=drank alcohol, pojkar=boys, flickor=girls, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "16",
+    "table_title": "Senaste gången du drack alkohol. Från vem fick du alkoholen? Procentuell fördelning efter kön bland elever som druckit alkohol senaste 12 månaderna. Årskurs 9. 2022-2025.",
+    "y_min": 2022,
+    "y_max": 2025,
+    "n_variables": 30,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 16: Senaste gången du drack alkohol. Från vem fick du alkoholen? Procentuell fördelning efter kön bland elever som druckit alkohol senaste 12 månaderna. Årskurs 9. 2022-2025.. Years: 2022–2025. Key terms: alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "17",
+    "table_title": "Senaste gången du drack alkohol. Från vem fick du alkoholen? Procentuell fördelning efter kön bland elever som druckit alkohol senaste 12 månaderna. Gymnasiets år 2. 2022-2025.",
+    "y_min": 2022,
+    "y_max": 2025,
+    "n_variables": 30,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 17: Senaste gången du drack alkohol. Från vem fick du alkoholen? Procentuell fördelning efter kön bland elever som druckit alkohol senaste 12 månaderna. Gymnasiets år 2. 2022-2025.. Years: 2022–2025. Key terms: alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "18",
+    "table_title": "Andelen elever som under de senaste 12 månaderna druckit alkohol från oregistrerade källora). Efter kön, årskurs 9. 1997–2025.",
+    "y_min": 1991,
+    "y_max": 2025,
+    "n_variables": 9,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 18: Andelen elever som under de senaste 12 månaderna druckit alkohol från oregistrerade källora). Efter kön, årskurs 9. 1997–2025.. Years: 1991–2025. Key terms: andel=proportion/share, alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone, smuggl=smuggled."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "19",
+    "table_title": "Andelen elever som under de senaste 12 månaderna druckit alkohol från oregistrerade källora). Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 9,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 19: Andelen elever som under de senaste 12 månaderna druckit alkohol från oregistrerade källora). Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone, smuggl=smuggled."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "20",
+    "table_title": "Andelen elever som serverats alkohol på restaurang eller liknande i Sverige före sin 18-årsdag. Efter kön, gymnasiets år 2. 2008–2025.",
+    "y_min": 2008,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 20: Andelen elever som serverats alkohol på restaurang eller liknande i Sverige före sin 18-årsdag. Efter kön, gymnasiets år 2. 2008–2025.. Years: 2008–2025. Key terms: andel=proportion/share, alkohol=alcohol, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "21",
+    "table_title": "Andelen elever som köpt alkohol från konton som säljer det via sociala medier. Procentuell fördelning efter kön bland elever som druckit alkohol senaste 12 månaderna. Årskurs 9. 2022-2025.",
+    "y_min": 2022,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 21: Andelen elever som köpt alkohol från konton som säljer det via sociala medier. Procentuell fördelning efter kön bland elever som druckit alkohol senaste 12 månaderna. Årskurs 9. 2022-2025.. Years: 2022–2025. Key terms: andel=proportion/share, alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "22",
+    "table_title": "Andelen elever som köpt alkohol från konton som säljer det via sociala medier. Procentuell fördelning efter kön bland elever som druckit alkohol senaste 12 månaderna. Gymnasiets år 2. 2022-2025.",
+    "y_min": 2022,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 22: Andelen elever som köpt alkohol från konton som säljer det via sociala medier. Procentuell fördelning efter kön bland elever som druckit alkohol senaste 12 månaderna. Gymnasiets år 2. 2022-2025.. Years: 2022–2025. Key terms: andel=proportion/share, alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "23",
+    "table_title": "Andelen elever som blivit bjudna på alkohol av sina föräldrar/vårdnadshavare under de senaste 12 månadernaa). Efter kön, årskurs 9. 2006–2025.",
+    "y_min": 2006,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 23: Andelen elever som blivit bjudna på alkohol av sina föräldrar/vårdnadshavare under de senaste 12 månadernaa). Efter kön, årskurs 9. 2006–2025.. Years: 2006–2025. Key terms: andel=proportion/share, alkohol=alcohol, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "24",
+    "table_title": "Andelen elever som blivit bjudna på alkohol av sina föräldrar/vårdnadshavare under de senaste 12 månadernaa). Efter kön, gymnasiets år 2. 2006–2025.",
+    "y_min": 2006,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 24: Andelen elever som blivit bjudna på alkohol av sina föräldrar/vårdnadshavare under de senaste 12 månadernaa). Efter kön, gymnasiets år 2. 2006–2025.. Years: 2006–2025. Key terms: andel=proportion/share, alkohol=alcohol, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "25",
+    "table_title": "Har något av följande hänt i samband med att du druckit alkohol under de senaste 12 månaderna? Procentuell fördelning efter kön. Årskurs 9. 2012B–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 63,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 25: Har något av följande hänt i samband med att du druckit alkohol under de senaste 12 månaderna? Procentuell fördelning efter kön. Årskurs 9. 2012B–2025.. Years: 2012–2025. Key terms: alkohol=alcohol, druckit=drank alcohol, årskurs=school grade, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "26",
+    "table_title": "Har något av följande hänt i samband med att du druckit alkohol under de senaste 12 månaderna? Procentuell fördelning efter kön bland elever som druckit alkohol senaste 12 månaderna. Årskurs 9. 2012B–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 51,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 26: Har något av följande hänt i samband med att du druckit alkohol under de senaste 12 månaderna? Procentuell fördelning efter kön bland elever som druckit alkohol senaste 12 månaderna. Årskurs 9. 2012B–2025.. Years: 2012–2025. Key terms: alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, årskurs=school grade, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "27",
+    "table_title": "Har något av följande hänt i samband med att du druckit alkohol under de senaste 12 månaderna? Procentuell fördelning efter kön. Gymnasiets år 2. 2012B–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 63,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 27: Har något av följande hänt i samband med att du druckit alkohol under de senaste 12 månaderna? Procentuell fördelning efter kön. Gymnasiets år 2. 2012B–2025.. Years: 2012–2025. Key terms: alkohol=alcohol, druckit=drank alcohol, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "28",
+    "table_title": "Har något av följande hänt i samband med att du druckit alkohol under de senaste 12 månaderna? Procentuell fördelning efter kön bland elever som druckit alkohol senaste 12 månaderna. Gymnasiet år 2. 2012B–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 51,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 28: Har något av följande hänt i samband med att du druckit alkohol under de senaste 12 månaderna? Procentuell fördelning efter kön bland elever som druckit alkohol senaste 12 månaderna. Gymnasiet år 2. 2012B–2025.. Years: 2012–2025. Key terms: alkohol=alcohol, druckit=drank alcohol, elever=pupils/students, gymnasiet=upper secondary school, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "29",
+    "table_title": "Andelen elever som rökt cigaretter någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, årskurs 9. 1989–2025.",
+    "y_min": 1989,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 29: Andelen elever som rökt cigaretter någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, årskurs 9. 1989–2025.. Years: 1989–2025. Key terms: andel=proportion/share, rökt=smoked cigarettes, elever=pupils/students, årskurs=school grade, cigaretter=cigarettes, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "30",
+    "table_title": "Andelen elever som rökt cigaretter någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 30: Andelen elever som rökt cigaretter någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, rökt=smoked cigarettes, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), cigaretter=cigarettes, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "31",
+    "table_title": "Andelen elever som röker cigarettera). Efter kön, årskurs 9. 1971–2025.",
+    "y_min": 1971,
+    "y_max": 2025,
+    "n_variables": 21,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 31: Andelen elever som röker cigarettera). Efter kön, årskurs 9. 1971–2025.. Years: 1971–2025. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, cigaretter=cigarettes, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "32",
+    "table_title": "Andelen elever som röker cigarettera). Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 21,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 32: Andelen elever som röker cigarettera). Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), cigaretter=cigarettes, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "33",
+    "table_title": "Anskaffning av cigaretter bland elever som rökera). Procentuell fördelning efter kön. Årskurs 9. 1997–2024b).",
+    "y_min": 1997,
+    "y_max": 2024,
+    "n_variables": 39,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 33: Anskaffning av cigaretter bland elever som rökera). Procentuell fördelning efter kön. Årskurs 9. 1997–2024b).. Years: 1997–2024. Key terms: elever=pupils/students, årskurs=school grade, cigaretter=cigarettes, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "34",
+    "table_title": "Anskaffning av cigaretter bland elever under 18 år som röker. Procentuell fördelning efter kön. Gymnasiets år 2. 2012–2024b).",
+    "y_min": 2012,
+    "y_max": 2024,
+    "n_variables": 21,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 34: Anskaffning av cigaretter bland elever under 18 år som röker. Procentuell fördelning efter kön. Gymnasiets år 2. 2012–2024b).. Years: 2012–2024. Key terms: elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), cigaretter=cigarettes, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "35",
+    "table_title": "Andelen som vill sluta röka bland elever som röker cigaretter. Efter kön, årskurs 9. 2012–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 35: Andelen som vill sluta röka bland elever som röker cigaretter. Efter kön, årskurs 9. 2012–2025.. Years: 2012–2025. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, cigaretter=cigarettes, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "36",
+    "table_title": "Andelen som vill sluta röka bland elever som röker cigaretter. Efter kön, gymnasiets år 2. 2012–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 36: Andelen som vill sluta röka bland elever som röker cigaretter. Efter kön, gymnasiets år 2. 2012–2025.. Years: 2012–2025. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), cigaretter=cigarettes, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "37",
+    "table_title": "Andelen elever som snusata) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 1991–2025.",
+    "y_min": 1991,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 37: Andelen elever som snusata) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 1991–2025.. Years: 1991–2025. Key terms: andel=proportion/share, snusat=used snus/snuff, snus=snus/Swedish snuff (smokeless tobacco), elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "38",
+    "table_title": "Andelen elever som snusata) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 38: Andelen elever som snusata) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, snusat=used snus/snuff, snus=snus/Swedish snuff (smokeless tobacco), elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "39",
+    "table_title": "Andelen elever som någon gång snusat vitt snus, brunt snus eller både och. Årskurs 9. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 12,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 39: Andelen elever som någon gång snusat vitt snus, brunt snus eller både och. Årskurs 9. 2024–2025.. Years: 2024–2025. Key terms: andel=proportion/share, snusat=used snus/snuff, snus=snus/Swedish snuff (smokeless tobacco), elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "40",
+    "table_title": "Andelen elever som någon gång snusat vitt snus, brunt snus eller både och. Gymnasiets år 2. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 12,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 40: Andelen elever som någon gång snusat vitt snus, brunt snus eller både och. Gymnasiets år 2. 2024–2025.. Years: 2024–2025. Key terms: andel=proportion/share, snusat=used snus/snuff, snus=snus/Swedish snuff (smokeless tobacco), elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "41",
+    "table_title": "Andelen elever som snusara). Efter kön, årskurs 9. 1974–2025.",
+    "y_min": 1974,
+    "y_max": 2025,
+    "n_variables": 21,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 41: Andelen elever som snusara). Efter kön, årskurs 9. 1974–2025.. Years: 1974–2025. Key terms: andel=proportion/share, snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "42",
+    "table_title": "Andelen elever som snusara). Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 21,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 42: Andelen elever som snusara). Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "43",
+    "table_title": "Anskaffning av snus bland elever som snusara). Procentuell fördelning efter kön. Årskurs 9. 1997–2024b).",
+    "y_min": 1997,
+    "y_max": 2024,
+    "n_variables": 36,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 43: Anskaffning av snus bland elever som snusara). Procentuell fördelning efter kön. Årskurs 9. 1997–2024b).. Years: 1997–2024. Key terms: snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "44",
+    "table_title": "Anskaffning av snus bland elever under 18 år som snusar. Procentuell fördelning efter kön. Gymnasiets år 2. 2012–2024b).",
+    "y_min": 2012,
+    "y_max": 2024,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 44: Anskaffning av snus bland elever under 18 år som snusar. Procentuell fördelning efter kön. Gymnasiets år 2. 2012–2024b).. Years: 2012–2024. Key terms: snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "45",
+    "table_title": "Andelen som vill sluta snusa bland elever som snusar. Efter kön, årskurs 9. 2012–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 45: Andelen som vill sluta snusa bland elever som snusar. Efter kön, årskurs 9. 2012–2025.. Years: 2012–2025. Key terms: andel=proportion/share, snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "46",
+    "table_title": "Andelen som vill sluta snusa bland elever som snusar. Efter kön, gymnasiets år 2. 2012–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 46: Andelen som vill sluta snusa bland elever som snusar. Efter kön, gymnasiets år 2. 2012–2025.. Years: 2012–2025. Key terms: andel=proportion/share, snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "47",
+    "table_title": "Andelen elever som använt e-cigaretter/vejps någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 2014–2025.",
+    "y_min": 2014,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 47: Andelen elever som använt e-cigaretter/vejps någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 2014–2025.. Years: 2014–2025. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, cigaretter=cigarettes, vejp=vape/e-cigarette, e-cigaretter=e-cigarettes/vaping, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "48",
+    "table_title": "Andelen elever som använt e-cigaretter/vejps någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2014–2025.",
+    "y_min": 2014,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 48: Andelen elever som använt e-cigaretter/vejps någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2014–2025.. Years: 2014–2025. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), cigaretter=cigarettes, vejp=vape/e-cigarette, e-cigaretter=e-cigarettes/vaping, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "49",
+    "table_title": "Andelen elever som vejpar. Efter kön, årskurs 9. 2018–2025a).",
+    "y_min": 2018,
+    "y_max": 2025,
+    "n_variables": 21,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 49: Andelen elever som vejpar. Efter kön, årskurs 9. 2018–2025a).. Years: 2018–2025. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, vejp=vape/e-cigarette, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "50",
+    "table_title": "Andelen elever som vejpar. Efter kön, gymnasiets år 2. 2018–2025a).",
+    "y_min": 2018,
+    "y_max": 2025,
+    "n_variables": 21,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 50: Andelen elever som vejpar. Efter kön, gymnasiets år 2. 2018–2025a).. Years: 2018–2025. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), vejp=vape/e-cigarette, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "51",
+    "table_title": "Andelen som vill sluta vejpa bland elever som vejpar. Efter kön, årskurs 9. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 51: Andelen som vill sluta vejpa bland elever som vejpar. Efter kön, årskurs 9. 2024–2025.. Years: 2024–2025. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, vejp=vape/e-cigarette, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "52",
+    "table_title": "Andelen som vill sluta vejpa bland elever som vejpar. Efter kön, gymnasiets år 2. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 52: Andelen som vill sluta vejpa bland elever som vejpar. Efter kön, gymnasiets år 2. 2024–2025.. Years: 2024–2025. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), vejp=vape/e-cigarette, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "53",
+    "table_title": "Andelen elever som använt minst en nikotinprodukta) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 1991–2025.",
+    "y_min": 1991,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 53: Andelen elever som använt minst en nikotinprodukta) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 1991–2025.. Years: 1991–2025. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "54",
+    "table_title": "Andelen elever som använt minst en nikotinprodukta) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 54: Andelen elever som använt minst en nikotinprodukta) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "55",
+    "table_title": "Anskaffning av nikotinprodukter bland elever som röker cigaretter, snusar eller vejpar. Procentuell fördelning efter kön. Årskurs 9. 2025.",
+    "y_min": 2025,
+    "y_max": 2025,
+    "n_variables": 27,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 55: Anskaffning av nikotinprodukter bland elever som röker cigaretter, snusar eller vejpar. Procentuell fördelning efter kön. Årskurs 9. 2025.. Years: 2025–2025. Key terms: snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, elever=pupils/students, årskurs=school grade, cigaretter=cigarettes, vejp=vape/e-cigarette, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "56",
+    "table_title": "Anskaffning av nikotinprodukter bland elever under 18 år som röker cigaretter, snusar elle vejpar. Procentuell fördelning efter kön. Gymnasiets år 2. 2025.",
+    "y_min": 2025,
+    "y_max": 2025,
+    "n_variables": 27,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 56: Anskaffning av nikotinprodukter bland elever under 18 år som röker cigaretter, snusar elle vejpar. Procentuell fördelning efter kön. Gymnasiets år 2. 2025.. Years: 2025–2025. Key terms: snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), cigaretter=cigarettes, vejp=vape/e-cigarette, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "57",
+    "table_title": "Andelen elever som under de senaste 12 månaderna blivit erbjudna att prova eller köpa narkotika. Efter kön, årskurs 9. 2012–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 9,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 57: Andelen elever som under de senaste 12 månaderna blivit erbjudna att prova eller köpa narkotika. Efter kön, årskurs 9. 2012–2025.. Years: 2012–2025. Key terms: andel=proportion/share, narkotika=drugs/narcotics, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "58",
+    "table_title": "Andelen elever som under de senaste 12 månaderna blivit erbjudna att prova eller köpa narkotika, efter kön. Gymnasiets år 2. 2012–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 9,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 58: Andelen elever som under de senaste 12 månaderna blivit erbjudna att prova eller köpa narkotika, efter kön. Gymnasiets år 2. 2012–2025.. Years: 2012–2025. Key terms: andel=proportion/share, narkotika=drugs/narcotics, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "59",
+    "table_title": "Andelen elever som ej använt narkotika som någon gång haft lust att prova narkotika. Efter kön, årskurs 9. 1971–2025.",
+    "y_min": 1971,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 59: Andelen elever som ej använt narkotika som någon gång haft lust att prova narkotika. Efter kön, årskurs 9. 1971–2025.. Years: 1971–2025. Key terms: andel=proportion/share, narkotika=drugs/narcotics, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "60",
+    "table_title": "Andelen elever som ej använt narkotika som någon gång haft lust att prova narkotika. Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 60: Andelen elever som ej använt narkotika som någon gång haft lust att prova narkotika. Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, narkotika=drugs/narcotics, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "61",
+    "table_title": "Andelen elever som använt narkotika någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 1971–2025.",
+    "y_min": 1971,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 61: Andelen elever som använt narkotika någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 1971–2025.. Years: 1971–2025. Key terms: andel=proportion/share, narkotika=drugs/narcotics, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "62",
+    "table_title": "Andelen elever som använt narkotika någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 62: Andelen elever som använt narkotika någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, narkotika=drugs/narcotics, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "63",
+    "table_title": "Frekvensen av narkotikaanvändning. Procentuell fördelning efter kön. Årskurs 9. 1989–2025.",
+    "y_min": 1989,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 63: Frekvensen av narkotikaanvändning. Procentuell fördelning efter kön. Årskurs 9. 1989–2025.. Years: 1989–2025. Key terms: narkotika=drugs/narcotics, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "64",
+    "table_title": "Frekvensen av narkotikaanvändning. Procentuell fördelning efter kön. Gymnasiet år 2. 1989–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 64: Frekvensen av narkotikaanvändning. Procentuell fördelning efter kön. Gymnasiet år 2. 1989–2025.. Years: 2004–2025. Key terms: narkotika=drugs/narcotics, gymnasiet=upper secondary school, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "65",
+    "table_title": "Andelen elever som uppger erfarenhet av olika narkotikasorter. Efter kön, årskurs 9. 1989–2025.",
+    "y_min": 1989,
+    "y_max": 2025,
+    "n_variables": 51,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 65: Andelen elever som uppger erfarenhet av olika narkotikasorter. Efter kön, årskurs 9. 1989–2025.. Years: 1989–2025. Key terms: andel=proportion/share, narkotika=drugs/narcotics, elever=pupils/students, årskurs=school grade, amfetamin=amphetamine, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "66",
+    "table_title": "Andelen elever som uppger erfarenhet av olika narkotikasorter. Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 51,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 66: Andelen elever som uppger erfarenhet av olika narkotikasorter. Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, narkotika=drugs/narcotics, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), amfetamin=amphetamine, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "67",
+    "table_title": "Andelen narkotikaerfarna elever som enbart använt cannabispreparat, enbart använt annan narkotika respektive använt både cannabispreparat och annan narkotikaa). Efter kön, årskurs 9. 1989–2025.",
+    "y_min": 1989,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 67: Andelen narkotikaerfarna elever som enbart använt cannabispreparat, enbart använt annan narkotika respektive använt både cannabispreparat och annan narkotikaa). Efter kön, årskurs 9. 1989–2025.. Years: 1989–2025. Key terms: cannabis=cannabis, andel=proportion/share, narkotika=drugs/narcotics, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "68",
+    "table_title": "Andelen narkotikaerfarna elever som enbart använt cannabispreparat, enbart använt annan narkotika respektive använt både cannabispreparat och annan narkotikaa). Efter kön, gymnasiets år 2. 1989–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 68: Andelen narkotikaerfarna elever som enbart använt cannabispreparat, enbart använt annan narkotika respektive använt både cannabispreparat och annan narkotikaa). Efter kön, gymnasiets år 2. 1989–2025.. Years: 2004–2025. Key terms: cannabis=cannabis, andel=proportion/share, narkotika=drugs/narcotics, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "69",
+    "table_title": "Frekvens av cannabisanvändning. Procentuell fördelning efter kön. Årskurs 9. 1989–2025.",
+    "y_min": 1989,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 69: Frekvens av cannabisanvändning. Procentuell fördelning efter kön. Årskurs 9. 1989–2025.. Years: 1989–2025. Key terms: cannabis=cannabis, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "70",
+    "table_title": "Frekvens av cannabisanvändning. Procentuell fördelning efter kön. Gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 70: Frekvens av cannabisanvändning. Procentuell fördelning efter kön. Gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: cannabis=cannabis, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "71",
+    "table_title": "Genomsnittligt (medelvärde) antal användningstillfällen av narkotika, bland de som någon gång använt narkotika. Efter kön, årskurs 9. 1989–2025.",
+    "y_min": 1989,
+    "y_max": 2025,
+    "n_variables": 6,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 71: Genomsnittligt (medelvärde) antal användningstillfällen av narkotika, bland de som någon gång använt narkotika. Efter kön, årskurs 9. 1989–2025.. Years: 1989–2025. Key terms: antal=count/number, medel=average/mean, narkotika=drugs/narcotics, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "72",
+    "table_title": "Genomsnittligt (medelvärde) antal användningstillfällen av narkotika, bland de som någon gång använt narkotika. Efter kön, gymnasiet år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 6,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 72: Genomsnittligt (medelvärde) antal användningstillfällen av narkotika, bland de som någon gång använt narkotika. Efter kön, gymnasiet år 2. 2004–2025.. Years: 2004–2025. Key terms: antal=count/number, medel=average/mean, narkotika=drugs/narcotics, gymnasiet=upper secondary school, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "73",
+    "table_title": "Senaste gången du använde narkotika, hur fick du då tag på den? Procentuell fördelning efter kön bland de som använt narkotika. Årskurs 9. 2022–2024.",
+    "y_min": 2022,
+    "y_max": 2024,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 73: Senaste gången du använde narkotika, hur fick du då tag på den? Procentuell fördelning efter kön bland de som använt narkotika. Årskurs 9. 2022–2024.. Years: 2022–2024. Key terms: narkotika=drugs/narcotics, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "74",
+    "table_title": "Senaste gången du använde narkotika, hur fick du då tag på den? Procentuell fördelning efter kön bland de som använt narkotika. Gymnasiet år 2. 2022–2024.",
+    "y_min": 2022,
+    "y_max": 2024,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 74: Senaste gången du använde narkotika, hur fick du då tag på den? Procentuell fördelning efter kön bland de som använt narkotika. Gymnasiet år 2. 2022–2024.. Years: 2022–2024. Key terms: narkotika=drugs/narcotics, gymnasiet=upper secondary school, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "75",
+    "table_title": "Andelen elever som använt narkotika och/eller icke förskrivna narkotikaklassade läkemedela) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 2019–2025.",
+    "y_min": 2019,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 75: Andelen elever som använt narkotika och/eller icke förskrivna narkotikaklassade läkemedela) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 2019–2025.. Years: 2019–2025. Key terms: andel=proportion/share, medel=average/mean, narkotika=drugs/narcotics, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "76",
+    "table_title": "Andelen elever som använt narkotika och/eller icke förskrivna narkotikaklassade läkemedela) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2019–2025.",
+    "y_min": 2019,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 76: Andelen elever som använt narkotika och/eller icke förskrivna narkotikaklassade läkemedela) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2019–2025.. Years: 2019–2025. Key terms: andel=proportion/share, medel=average/mean, narkotika=drugs/narcotics, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "77",
+    "table_title": "Andelen elever som använt receptbelagda sömnmedel eller lugnande medel utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, årskurs 9. 1989–2025.",
+    "y_min": 1989,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 77: Andelen elever som använt receptbelagda sömnmedel eller lugnande medel utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, årskurs 9. 1989–2025.. Years: 1989–2025. Key terms: andel=proportion/share, medel=average/mean, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "78",
+    "table_title": "Andelen elever som använt receptbelagda sömnmedel eller lugnande medel utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 78: Andelen elever som använt receptbelagda sömnmedel eller lugnande medel utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, medel=average/mean, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "79",
+    "table_title": "Andelen elever som använt receptbelagda smärtstillande medel utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9.  2015–2025.",
+    "y_min": 2015,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 79: Andelen elever som använt receptbelagda smärtstillande medel utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9.  2015–2025.. Years: 2015–2025. Key terms: andel=proportion/share, medel=average/mean, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "80",
+    "table_title": "Andelen elever som använt receptbelagda smärtstillande medel utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiet år 2. 2015–2025.",
+    "y_min": 2015,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 80: Andelen elever som använt receptbelagda smärtstillande medel utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiet år 2. 2015–2025.. Years: 2015–2025. Key terms: andel=proportion/share, medel=average/mean, elever=pupils/students, gymnasiet=upper secondary school, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "81",
+    "table_title": "Andelen elever som använt receptbelagda centralstimulerande läkemedel utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 2019–2025.",
+    "y_min": 2019,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 81: Andelen elever som använt receptbelagda centralstimulerande läkemedel utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 2019–2025.. Years: 2019–2025. Key terms: andel=proportion/share, medel=average/mean, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "82",
+    "table_title": "Andelen elever som använt receptbelagda centralstimulerande läkemedel utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiet år 2. 2019–2025.",
+    "y_min": 2019,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 82: Andelen elever som använt receptbelagda centralstimulerande läkemedel utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiet år 2. 2019–2025.. Years: 2019–2025. Key terms: andel=proportion/share, medel=average/mean, elever=pupils/students, gymnasiet=upper secondary school, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "83",
+    "table_title": "Andelen elever som använt receptbelagda narkotikaklassade läkemedela) utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9.  2015–2025.",
+    "y_min": 2015,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 83: Andelen elever som använt receptbelagda narkotikaklassade läkemedela) utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9.  2015–2025.. Years: 2015–2025. Key terms: andel=proportion/share, medel=average/mean, narkotika=drugs/narcotics, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "84",
+    "table_title": "Andelen elever som använt receptbelagda narkotikaklassade läkemedela) utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2.  2015–2025.",
+    "y_min": 2015,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 84: Andelen elever som använt receptbelagda narkotikaklassade läkemedela) utan läkarordination någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2.  2015–2025.. Years: 2015–2025. Key terms: andel=proportion/share, medel=average/mean, narkotika=drugs/narcotics, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "85",
+    "table_title": "Andelen elever som använt läkemedel tillsammans med alkohol i berusningssyfte någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, årskurs 9. 1989–2025.",
+    "y_min": 1989,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 85: Andelen elever som använt läkemedel tillsammans med alkohol i berusningssyfte någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, årskurs 9. 1989–2025.. Years: 1989–2025. Key terms: andel=proportion/share, medel=average/mean, alkohol=alcohol, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "86",
+    "table_title": "Andelen elever som använt läkemedel tillsammans med alkohol i berusningssyfte någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2.  2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 86: Andelen elever som använt läkemedel tillsammans med alkohol i berusningssyfte någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2.  2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, medel=average/mean, alkohol=alcohol, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "87",
+    "table_title": "Andelen elever som sniffat/boffat någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, årskurs 9. 1971–2025.",
+    "y_min": 1971,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 87: Andelen elever som sniffat/boffat någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, årskurs 9. 1971–2025.. Years: 1971–2025. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "88",
+    "table_title": "Andelen elever som sniffat/boffat någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 88: Andelen elever som sniffat/boffat någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "89",
+    "table_title": "Andelen elever som använt lustgas någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 2022–2025.",
+    "y_min": 2022,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 89: Andelen elever som använt lustgas någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 2022–2025.. Years: 2022–2025. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, lustgas=nitrous oxide/laughing gas, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "90",
+    "table_title": "Andelen elever som använt lustgas någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2022–2025.",
+    "y_min": 2022,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 90: Andelen elever som använt lustgas någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2022–2025.. Years: 2022–2025. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), lustgas=nitrous oxide/laughing gas, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "91",
+    "table_title": "Andelen elever som använt anabola androgena steroider (AAS) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, årskurs 9. 1993–2025.",
+    "y_min": 1993,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 91: Andelen elever som använt anabola androgena steroider (AAS) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarnaa). Efter kön, årskurs 9. 1993–2025.. Years: 1993–2025. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "92",
+    "table_title": "Andelen elever som använt anabola androgena steroider (AAS) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 92: Andelen elever som använt anabola androgena steroider (AAS) någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "93",
+    "table_title": "Andelen elever som spelat om pengar någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 2012–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 93: Andelen elever som spelat om pengar någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, årskurs 9. 2012–2025.. Years: 2012–2025. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, spel=gambling, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "94",
+    "table_title": "Andelen elever som spelat om pengar någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2012–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 94: Andelen elever som spelat om pengar någon gång, de senaste 12 månaderna respektive de senaste 30 dagarna. Efter kön, gymnasiets år 2. 2012–2025.. Years: 2012–2025. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), spel=gambling, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "95",
+    "table_title": "Andelen elever som spelat något av följande spel om pengar flera gånger i månaden eller oftare, de senaste 12 månaderna. Årskurs 9. År 2019–2023.",
+    "y_min": 2020,
+    "y_max": 2023,
+    "n_variables": 42,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 95: Andelen elever som spelat något av följande spel om pengar flera gånger i månaden eller oftare, de senaste 12 månaderna. Årskurs 9. År 2019–2023.. Years: 2020–2023. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, spel=gambling."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "96",
+    "table_title": "Andelen elever som spelat något av följande spel om pengar flera gånger i månaden eller oftare, de senaste 12 månaderna. Gymnasiets år 2. År 2019-2023.",
+    "y_min": 2021,
+    "y_max": 2023,
+    "n_variables": 42,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 96: Andelen elever som spelat något av följande spel om pengar flera gånger i månaden eller oftare, de senaste 12 månaderna. Gymnasiets år 2. År 2019-2023.. Years: 2021–2023. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), spel=gambling."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "97",
+    "table_title": "Andelen som spelat för olika belopp de senaste 30 dagarna. Procent. Årskurs 9. 2001–2025.",
+    "y_min": 2001,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 97: Andelen som spelat för olika belopp de senaste 30 dagarna. Procent. Årskurs 9. 2001–2025.. Years: 2001–2025. Key terms: andel=proportion/share, årskurs=school grade, spel=gambling, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "98",
+    "table_title": "Andelen som spelat för olika belopp de senaste 30 dagarna. Gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 15,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 98: Andelen som spelat för olika belopp de senaste 30 dagarna. Gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), spel=gambling, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "99",
+    "table_title": "Andelen elever som uppvisat spelproblem de senaste 12 månaderna enligt PGSI. Årskurs 9. 2019–2025.",
+    "y_min": 2021,
+    "y_max": 2025,
+    "n_variables": 9,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 99: Andelen elever som uppvisat spelproblem de senaste 12 månaderna enligt PGSI. Årskurs 9. 2019–2025.. Years: 2021–2025. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, spel=gambling."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "100",
+    "table_title": "Andelen elever som uppvisat spelproblem de senaste 12 månaderna enligt PGSI. Gymnasiets år 2. 2019–2025.",
+    "y_min": 2021,
+    "y_max": 2025,
+    "n_variables": 9,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 100: Andelen elever som uppvisat spelproblem de senaste 12 månaderna enligt PGSI. Gymnasiets år 2. 2019–2025.. Years: 2021–2025. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), spel=gambling."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "101",
+    "table_title": "Andelen elever som debuterat med respektive beteende vid 13 års ålder eller tidigarea). Efter kön, årskurs 9. 1989–2025.",
+    "y_min": 1989,
+    "y_max": 2025,
+    "n_variables": 27,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 101: Andelen elever som debuterat med respektive beteende vid 13 års ålder eller tidigarea). Efter kön, årskurs 9. 1989–2025.. Years: 1989–2025. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, hasch=hashish, marijuana=marijuana, alkohol=alcohol, druckit=drank alcohol, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "102",
+    "table_title": "Andelen elever som debuterat med respektive beteende vid 13 års ålder eller tidigarea). Efter kön, gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 27,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 102: Andelen elever som debuterat med respektive beteende vid 13 års ålder eller tidigarea). Efter kön, gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), hasch=hashish, marijuana=marijuana, alkohol=alcohol, druckit=drank alcohol, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "103",
+    "table_title": "Andelen elever som uppgett att de kan få tag på något av följande inom 24 timmar. Efter kön, årskurs 9. 2012–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 24,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 103: Andelen elever som uppgett att de kan få tag på något av följande inom 24 timmar. Efter kön, årskurs 9. 2012–2025.. Years: 2012–2025. Key terms: andel=proportion/share, elever=pupils/students, årskurs=school grade, alkohol=alcohol, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "104",
+    "table_title": "Andelen elever som uppgett att de kan få tag på något av följande inom 24 timmar. Efter kön, gymnasiets år 2. 2012–2025.",
+    "y_min": 2012,
+    "y_max": 2025,
+    "n_variables": 24,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 104: Andelen elever som uppgett att de kan få tag på något av följande inom 24 timmar. Efter kön, gymnasiets år 2. 2012–2025.. Years: 2012–2025. Key terms: andel=proportion/share, elever=pupils/students, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), alkohol=alcohol, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "105",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de röker 10 cigaretter eller mer per daga). Procentuell fördelning efter kön. Årskurs 9. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 105: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de röker 10 cigaretter eller mer per daga). Procentuell fördelning efter kön. Årskurs 9. 2024–2025.. Years: 2024–2025. Key terms: män=men, årskurs=school grade, cigaretter=cigarettes, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "106",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de röker 10 cigaretter eller mer per daga). Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 106: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de röker 10 cigaretter eller mer per daga). Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.. Years: 2024–2025. Key terms: män=men, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), cigaretter=cigarettes, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "107",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de snusar 3 dosor per veckaa). Procentuell fördelning efter kön. Årskurs 9. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 107: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de snusar 3 dosor per veckaa). Procentuell fördelning efter kön. Årskurs 9. 2024–2025.. Years: 2024–2025. Key terms: snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, män=men, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "108",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de snusar 3 dosor per veckaa). Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 108: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de snusar 3 dosor per veckaa). Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.. Years: 2024–2025. Key terms: snus=snus/Swedish snuff (smokeless tobacco), snusar=uses snus, män=men, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "109",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de berusar sig på alkohol varje helga).  Procentuell fördelning efter kön. Årskurs 9. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 109: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de berusar sig på alkohol varje helga).  Procentuell fördelning efter kön. Årskurs 9. 2024–2025.. Years: 2024–2025. Key terms: alkohol=alcohol, män=men, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "110",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt om de berusar sig på alkohol varje helga). Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 110: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt om de berusar sig på alkohol varje helga). Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.. Years: 2024–2025. Key terms: alkohol=alcohol, män=men, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "111",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de provar marijuana eller hasch 1–2 gångera).  Procentuell fördelning efter kön. Årskurs 9. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 111: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de provar marijuana eller hasch 1–2 gångera).  Procentuell fördelning efter kön. Årskurs 9. 2024–2025.. Years: 2024–2025. Key terms: hasch=hashish, marijuana=marijuana, män=men, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "112",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de provar marijuana eller hasch 1–2 gångera).  Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 112: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de provar marijuana eller hasch 1–2 gångera).  Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.. Years: 2024–2025. Key terms: hasch=hashish, marijuana=marijuana, män=men, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "113",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de använder marijuana eller hasch varje helga)?  Procentuell fördelning efter kön. Årskurs 9. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 113: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de använder marijuana eller hasch varje helga)?  Procentuell fördelning efter kön. Årskurs 9. 2024–2025.. Years: 2024–2025. Key terms: hasch=hashish, marijuana=marijuana, män=men, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "114",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de använder marijuana eller hasch varje helga)?  Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 114: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de använder marijuana eller hasch varje helga)?  Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.. Years: 2024–2025. Key terms: hasch=hashish, marijuana=marijuana, män=men, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "115",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, sätt om de provar heroin 1–2 gångera). Procentuell fördelning efter kön. Årskurs 9. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 115: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, sätt om de provar heroin 1–2 gångera). Procentuell fördelning efter kön. Årskurs 9. 2024–2025.. Years: 2024–2025. Key terms: heroin=heroin, män=men, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "116",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de provar heroin 1–2 gångera). Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 116: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de provar heroin 1–2 gångera). Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.. Years: 2024–2025. Key terms: heroin=heroin, män=men, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "117",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de provar att sniffa/boffa 1–2 gångera). Procentuell fördelning efter kön. Årskurs 9. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 117: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de provar att sniffa/boffa 1–2 gångera). Procentuell fördelning efter kön. Årskurs 9. 2024–2025.. Years: 2024–2025. Key terms: män=men, årskurs=school grade, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "118",
+    "table_title": "Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de provar att sniffa/boffa 1–2 gångera). Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.",
+    "y_min": 2024,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 118: Hur stor risk tror du det är att människors hälsa skadas, fysiskt eller på annat sätt, om de provar att sniffa/boffa 1–2 gångera). Procentuell fördelning efter kön. Gymnasiets år 2. 2024–2025.. Years: 2024–2025. Key terms: män=men, gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "119",
+    "table_title": "Hur trivs du i skolan? Procentuell fördelning efter kön. Årskurs 9. 1984–2025.",
+    "y_min": 1984,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 119: Hur trivs du i skolan? Procentuell fördelning efter kön. Årskurs 9. 1984–2025.. Years: 1984–2025. Key terms: årskurs=school grade, trivs=wellbeing/how they feel at school, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "120",
+    "table_title": "Hur trivs du i skolan? Procentuell fördelning efter kön. Gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 18,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 120: Hur trivs du i skolan? Procentuell fördelning efter kön. Gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), trivs=wellbeing/how they feel at school, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "121",
+    "table_title": "Brukar du skolka/ha ogiltig frånvaroa)?  Procentuell fördelning efter kön. Årskurs 9. 1984–2025.",
+    "y_min": 1984,
+    "y_max": 2025,
+    "n_variables": 24,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 121: Brukar du skolka/ha ogiltig frånvaroa)?  Procentuell fördelning efter kön. Årskurs 9. 1984–2025.. Years: 1984–2025. Key terms: årskurs=school grade, skolka=truancy/skipping school, pojkar=boys, flickor=girls, alla=all/everyone."
+  },
+  {
+    "report": "CAN-239",
+    "table_id": "122",
+    "table_title": "Brukar du skolka/ha ogiltig frånvaroa)?  Procentuell fördelning efter kön. Gymnasiets år 2. 2004–2025.",
+    "y_min": 2004,
+    "y_max": 2025,
+    "n_variables": 24,
+    "description": "Report CAN-239: Youth school survey grade 9 and gymnasium year 2. Alcohol, tobacco, drugs, gambling. Unit: percentage. Table 122: Brukar du skolka/ha ogiltig frånvaroa)?  Procentuell fördelning efter kön. Gymnasiets år 2. 2004–2025.. Years: 2004–2025. Key terms: gymnasiet=upper secondary school, gymnasiets år 2=gymnasium year 2 (age 17), skolka=truancy/skipping school, pojkar=boys, flickor=girls, alla=all/everyone."
+  }
+]
