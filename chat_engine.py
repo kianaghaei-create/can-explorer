@@ -684,7 +684,7 @@ year_from must be an integer or null. variable_indices must be a list of integer
             }
 
         # ── STEP 2: Generate answer from actual results ─────
-        data_preview = data.head(50).to_markdown(index=False)
+        data_preview = data.head(300).to_markdown(index=False)
 
         step2_prompt = f"""You are a data analyst for CAN (Swedish Council for Alcohol and Drug Information).
 

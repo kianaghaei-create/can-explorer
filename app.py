@@ -463,7 +463,7 @@ if page == "💬 Ask the Data":
                                     chart_fig.add_trace(
                                         go.Scatter(
                                             x=gdata[x_col], y=gdata[y_col],
-                                            name=str(gname)[:50],
+                                            name=str(gname)[:70],
                                             mode="lines+markers",
                                             line=dict(color=all_colors[color_idx % len(all_colors)]),
                                         ),
@@ -475,7 +475,7 @@ if page == "💬 Ask the Data":
                                     chart_fig.add_trace(
                                         go.Scatter(
                                             x=gdata[x_col], y=gdata[y_col],
-                                            name=str(gname)[:50],
+                                            name=str(gname)[:70],
                                             mode="lines+markers",
                                             line=dict(color=all_colors[color_idx % len(all_colors)], dash="dash"),
                                         ),
@@ -483,8 +483,8 @@ if page == "💬 Ask the Data":
                                     )
                                     color_idx += 1
                                 chart_fig.update_layout(height=450, title=title)
-                                primary_label = ", ".join(str(g)[:20] for g in primary_groups[:2])
-                                secondary_label = ", ".join(str(g)[:20] for g in secondary_groups[:2])
+                                primary_label = ", ".join(str(g)[:45] for g in primary_groups[:2])
+                                secondary_label = ", ".join(str(g)[:45] for g in secondary_groups[:2])
                                 chart_fig.update_yaxes(title_text=primary_label, secondary_y=False)
                                 chart_fig.update_yaxes(title_text=secondary_label, secondary_y=True)
                                 st.plotly_chart(chart_fig, use_container_width=True)
@@ -638,11 +638,11 @@ elif page == "📡 Signal Board":
 
                     fig = make_subplots(specs=[[{"secondary_y": True}]])
                     fig.add_trace(
-                        go.Scatter(x=s1["year"], y=s1["value"], name=row["variable_1"][:40], line=dict(color="#636EFA")),
+                        go.Scatter(x=s1["year"], y=s1["value"], name=row["variable_1"][:60], line=dict(color="#636EFA")),
                         secondary_y=False,
                     )
                     fig.add_trace(
-                        go.Scatter(x=s2["year"], y=s2["value"], name=row["variable_2"][:40], line=dict(color="#EF553B")),
+                        go.Scatter(x=s2["year"], y=s2["value"], name=row["variable_2"][:60], line=dict(color="#EF553B")),
                         secondary_y=True,
                     )
                     fig.update_layout(height=350, margin=dict(t=30, b=30))
@@ -663,7 +663,7 @@ elif page == "📡 Signal Board":
                 arrow = "📈" if row["direction"] == "increase" else "📉"
                 with st.expander(
                     f"{arrow} {row['break_year']} | {row['change_pct']:+.1f}% | "
-                    f"{row['report']} / {row['variable'][:50]}"
+                    f"{row['report']} / {row['variable'][:70]}"
                 ):
                     st.markdown(f"**{REPORT_LABELS.get(row['report'], row['report'])}** — Table {row['table_id']}")
                     st.markdown(f"*{row['table_title']}*")
@@ -676,7 +676,7 @@ elif page == "📡 Signal Board":
                     """)
 
                     fig = go.Figure()
-                    fig.add_trace(go.Scatter(x=ts["year"], y=ts["value"], mode="lines+markers", name=row["variable"][:40]))
+                    fig.add_trace(go.Scatter(x=ts["year"], y=ts["value"], mode="lines+markers", name=row["variable"][:60]))
                     fig.add_vline(x=row["break_year"], line_dash="dash", line_color="red", annotation_text=f"Break: {row['break_year']}")
                     fig.update_layout(height=300, margin=dict(t=30, b=30))
                     st.plotly_chart(fig, use_container_width=True)
@@ -694,7 +694,7 @@ elif page == "📡 Signal Board":
             for i, (_, row) in enumerate(movers.head(9).iterrows()):
                 with cols[i % 3]:
                     st.metric(
-                        label=f"{row['report']} / {row['variable'][:30]}",
+                        label=f"{row['report']} / {row['variable'][:55]}",
                         value=f"{row['recent_mean']:.1f}",
                         delta=f"{row['z_score']:+.1f}σ from historical",
                     )
@@ -759,7 +759,7 @@ elif page == "🔀 Compare Series":
             fig.add_trace(
                 go.Scatter(
                     x=data["year"], y=data["value"],
-                    name=f"{sel['report']} / {sel['variable'][:40]}",
+                    name=f"{sel['report']} / {sel['variable'][:60]}",
                     mode="lines+markers",
                     line=dict(color=colors[i]),
                 ),
