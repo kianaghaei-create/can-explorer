@@ -155,8 +155,12 @@ def report_dialog():
                 topics = decompose_query(question)
             except Exception:
                 topics = [question]
+            answer_text = info.get("answer", "")
             from report_generator import search_pubmed_multi, filter_relevant_studies
-            raw = search_pubmed_multi(topics, max_per_topic=8)
+            raw = search_pubmed_multi(
+                topics, max_per_topic=8,
+                question=question, answer=answer_text,
+            )
             filtered = filter_relevant_studies(raw, question)
             st.session_state.rg_studies = filtered
             st.session_state.rg_phase = "configure"

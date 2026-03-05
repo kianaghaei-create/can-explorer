@@ -114,19 +114,79 @@ def search_pubmed(query: str, max_results: int = 10) -> list:
         return []
 
 
-def search_pubmed_multi(topics: list, max_per_topic: int = 8) -> list:
-    """Run PubMed search for each topic, deduplicate by PMID."""
+def build_pubmed_queries(question: str, answer: str = "") -> list:
+    """
+    Use GPT-4o-mini to generate 2-3 focused, substance-specific PubMed queries
+    from the user's question and data answer.
+
+    Returns a list of query strings ready for the PubMed esearch API.
+    Each query is targeted (substance + population + geography where relevant)
+    instead of using raw decomposed topics that match irrelevant papers.
+    """
+    context = f"Question: {question}"
+    if answer:
+        context += f"\n\nData finding: {answer[:500]}"
+    try:
+        resp = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=[{"role": "user", "content": f"""You are a PubMed search expert.
+Based on this CAN (Swedish alcohol & drug statistics) question and finding, generate
+2-3 specific PubMed search queries to find genuinely relevant peer-reviewed studies.
+
+{context}
+
+Rules:
+- Focus on the SUBSTANCE/TOPIC (e.g. snus, smokeless tobacco, nicotine, alcohol, cannabis)
+- Include the POPULATION when relevant (adolescents, youth, students, adults)
+- Include Sweden/Scandinavia/Nordic when the data is Sweden-specific
+- Use MeSH terms and boolean operators
+- Do NOT include irrelevant demographic filters (e.g. don't search for "girls" alone)
+- Return JSON: {{"queries": ["query1", "query2", "query3"]}}
+
+Examples:
+- "snus use among Swedish adolescents" →
+  ["(snus OR smokeless tobacco) AND (adolescents OR youth) AND (Sweden OR Scandinavia)",
+   "nicotine pouches youth prevalence Sweden"]
+- "alcohol consumption Sweden 2024" →
+  ["alcohol consumption trends Sweden",
+   "alcohol use disorder Sweden epidemiology"]"""}],
+            temperature=0,
+            max_tokens=300,
+            response_format={"type": "json_object"},
+        )
+        result = json.loads(resp.choices[0].message.content)
+        queries = result.get("queries", [])
+        if queries:
+            return queries[:3]
+    except Exception:
+        pass
+    # Fallback: simple keyword extraction
+    return [question[:200]]
+
+
+def search_pubmed_multi(topics: list, max_per_topic: int = 8,
+                        question: str = "", answer: str = "") -> list:
+    """
+    Run PubMed search using GPT-generated targeted queries (not raw decomposed topics).
+    Falls back to topic-based search if query generation fails.
+    """
+    # Generate targeted queries from the full question + answer
+    if question:
+        queries = build_pubmed_queries(question, answer)
+    else:
+        # Legacy fallback: use topics with substance MeSH filter
+        queries = [
+            f"({t}) AND (substance use OR alcohol OR tobacco OR narcotics)[MeSH Terms]"
+            for t in topics[:2]
+        ]
+
     seen = set()
     all_studies = []
-    for topic in topics:
-        query = (
-            f"({topic}) AND "
-            "(substance use OR alcohol OR drug abuse OR tobacco OR narcotics)[MeSH Terms]"
-        )
+    for query in queries:
         for s in search_pubmed(query, max_results=max_per_topic):
             if s["pmid"] not in seen:
                 seen.add(s["pmid"])
-                s["search_topic"] = topic
+                s["search_topic"] = query
                 all_studies.append(s)
         time.sleep(0.35)
     return all_studies
@@ -137,10 +197,17 @@ def search_pubmed_multi(topics: list, max_per_topic: int = 8) -> list:
 def filter_relevant_studies(
     studies: list,
     question: str,
-    threshold: float = 0.20,
+    threshold: float = 0.50,
     max_studies: int = 6,
 ) -> list:
-    """Score study abstracts vs question via embedding cosine similarity."""
+    """
+    Score study abstracts vs question via embedding cosine similarity.
+
+    Threshold of 0.50 filters out genuinely irrelevant studies — OpenAI
+    embeddings for unrelated text typically score 0.30-0.48; on-topic
+    studies score 0.52+. The previous threshold of 0.20 let everything
+    through, causing HIV/cancer papers to appear for snus questions.
+    """
     if not studies:
         return []
     texts = [question] + [f"{s['title']} {s['abstract']}" for s in studies]
@@ -153,6 +220,12 @@ def filter_relevant_studies(
         )
     except Exception:
         return studies[:max_studies]
+
+    # Normalize to unit vectors for proper cosine similarity
+    norms = np.linalg.norm(vecs, axis=1, keepdims=True)
+    norms = np.where(norms == 0, 1, norms)
+    vecs = vecs / norms
+
     scores = vecs[1:] @ vecs[0]
     scored = [
         {**s, "relevance_score": float(scores[i])}
