@@ -562,7 +562,7 @@ def ask_data(question: str, conversation_history: list = None) -> dict:
         # Build a NUMBERED list — LLM picks by index, code supplies the exact names
         variable_list = "\n".join(
             f"[{i+1}] {r['report']} | table {r['table_id']} | "
-            f"{r['variable']} | {r['y_min']}-{r['y_max']} | {(r['table_title'] or '')[:60]}"
+            f"{r['variable']} | {r['y_min']}-{r['y_max']} | {(r['table_title'] or '')[:300]}"
             for i, r in enumerate(hits)
         )
 
