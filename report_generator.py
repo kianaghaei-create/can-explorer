@@ -197,16 +197,17 @@ def search_pubmed_multi(topics: list, max_per_topic: int = 8,
 def filter_relevant_studies(
     studies: list,
     question: str,
-    threshold: float = 0.50,
+    threshold: float = 0.38,
     max_studies: int = 6,
 ) -> list:
     """
     Score study abstracts vs question via embedding cosine similarity.
 
-    Threshold of 0.50 filters out genuinely irrelevant studies — OpenAI
-    embeddings for unrelated text typically score 0.30-0.48; on-topic
-    studies score 0.52+. The previous threshold of 0.20 let everything
-    through, causing HIV/cancer papers to appear for snus questions.
+    Threshold of 0.38 is calibrated for Swedish-question vs English-abstract
+    cosine similarity using text-embedding-3-small (normalized vectors):
+    - Truly irrelevant (HIV/cancer/concussions): typically 0.30–0.36
+    - On-topic (snus/tobacco/youth Sweden):       typically 0.40–0.60
+    The 0.20 threshold passed everything; 0.50 was too strict (nothing passed).
     """
     if not studies:
         return []
