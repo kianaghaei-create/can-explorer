@@ -529,6 +529,12 @@ _YOUTH_RE = re.compile(
     r'gymnasie|school\s*survey|skolundersökning|adolescen|elev)\b',
     re.IGNORECASE,
 )
+
+_PRICE_RE = re.compile(
+    r'(pris|prisutveckling|gatupris|grossistpris|price|street[\s_]price|'
+    r'drug[\s_]price|kronor|kostar)',
+    re.IGNORECASE,
+)
 _TEMPORAL_STRIP_RE = re.compile(
     r'\b(since|from|between|changed?|how\s+has|how\s+have|sedan|från|'
     r'förändrats?|\d{4})\b',
@@ -560,6 +566,34 @@ def _boost_youth_hits(hits: list, question: str) -> list:
         if key not in seen:
             seen.add(key)
             h["topic"] = "youth"
+            hits.append(h)
+
+    return hits
+
+
+def _boost_price_hits(hits: list, question: str) -> list:
+    """
+    When the question mentions drug prices, ensure CAN-233 is represented.
+    CAN-233 price variables score ~0.53 vs CAN-239 consumption ~0.68, so they
+    often fall below the top_k cutoff even when "prisutveckling" is explicit.
+    """
+    if not _PRICE_RE.search(question):
+        return hits
+
+    can233_count = sum(1 for h in hits if h.get("report") == "CAN-233")
+    if can233_count >= 3:
+        return hits  # already represented
+
+    targeted = semantic_search_results("hasch kokain amfetamin gatupris kronor per gram medianpris", top_k=20)
+
+    seen = {(h["report"], h["table_id"], h["variable"]) for h in hits}
+    for h in targeted:
+        if h.get("report") != "CAN-233":
+            continue
+        key = (h["report"], h["table_id"], h["variable"])
+        if key not in seen:
+            seen.add(key)
+            h["topic"] = "price"
             hits.append(h)
 
     return hits
@@ -742,6 +776,7 @@ def ask_data(question: str, conversation_history: list = None) -> dict:
         hits = multi_topic_search(question, top_k_per_topic=15)
         hits = _filter_metadata_hits(hits)              # strip survey-admin variables
         hits = _boost_youth_hits(hits, question)        # ensure CAN-239 for youth questions
+        hits = _boost_price_hits(hits, question)        # ensure CAN-233 for price questions
         hits, is_enumeration = _expand_enumeration_hits(hits, question)
         if not is_enumeration:
             hits = _filter_gender_hits(hits, question)  # prefer _alla unless gender asked
