@@ -1075,14 +1075,14 @@ elif page == "🏘️ Municipal Context (KOLADA)":
                     sd_kpi = st.selectbox(
                         "Social Indicator (KOLADA — municipal avg)",
                         kpi_options["kpi_id"].tolist(),
-                        format_func=lambda x: kpi_options[kpi_options["kpi_id"] == x]["kpi_title"].iloc[0],
+                        format_func=lambda x: "[KOLADA] " + kpi_options[kpi_options["kpi_id"] == x]["kpi_title"].iloc[0],
                         key="sd_kpi",
                     )
                 with sd_col2:
                     sd_can_idx = st.selectbox(
                         "Substance Use Indicator (CAN — national)",
                         range(len(CAN_SOCIAL_INDICATORS)),
-                        format_func=lambda i: CAN_SOCIAL_INDICATORS[i]["label"],
+                        format_func=lambda i: "[CAN] " + CAN_SOCIAL_INDICATORS[i]["label"],
                         key="sd_can",
                     )
 
