@@ -31,7 +31,13 @@ from reportlab.platypus import (
     PageBreak, HRFlowable,
 )
 
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", ""))
+_api_key = os.environ.get("OPENAI_API_KEY", "")
+if not _api_key:
+    _key_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "openai_key.txt")
+    if os.path.exists(_key_file):
+        with open(_key_file) as _f:
+            _api_key = _f.read().strip()
+client = OpenAI(api_key=_api_key)
 
 PUBMED_BASE = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 
