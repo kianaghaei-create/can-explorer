@@ -525,8 +525,8 @@ def _filter_metadata_hits(hits: list) -> list:
 # Force CAN-239 into the hit list when youth intent is detected.
 
 _YOUTH_RE = re.compile(
-    r'\b(youth|ungdom|unga|young|teenager|grade\s*9|åk\s*9|årskurs\s*9|'
-    r'gymnasie|school\s*survey|skolundersökning|adolescen|elev)\b',
+    r'(youth|ungdom|unga|young|teenager|grade\s*9|åk\s*9|årskurs\s*9|'
+    r'gymnasie|school\s*survey|skolundersökning|adolescen|elev)',
     re.IGNORECASE,
 )
 
