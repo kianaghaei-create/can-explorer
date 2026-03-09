@@ -825,6 +825,10 @@ SELECTION RULES:
   IMPORTANT: When comparing drugs, genders, age groups, or time periods, pick from DIFFERENT tables
   to show the contrast. E.g. heroin price vs cannabis price → pick from t6 (heroin) AND t1 (cannabis),
   NOT only from the index table (t11). Prefer raw price tables over index tables for comparisons.
+- CROSS-REPORT: When the variable list contains hits from MULTIPLE CAN reports (e.g. CAN-234 + CAN-238,
+  or CAN-239 + CAN-235), you MUST pick variables from EACH report. The user is asking for a comparison
+  across different data sources — answering from only one report misses half the question.
+  Pick 1–3 variables per report (up to 6 total).
 - SINGLE TOPIC: Pick 2–4 variables max for readability.
 - ENUMERATION: If the list contains many variables from one table (>10), include ALL their indices.
 - year_from: Extract the start year if the user mentions one ("since 2000" → 2000,
