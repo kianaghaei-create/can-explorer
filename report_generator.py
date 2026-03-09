@@ -19,7 +19,7 @@ import numpy as np
 from datetime import datetime
 import os
 
-from openai import OpenAI
+from chat_engine import client  # reuse the working OpenAI client
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import mm
 from reportlab.lib.colors import HexColor, white
@@ -31,13 +31,7 @@ from reportlab.platypus import (
     PageBreak, HRFlowable,
 )
 
-_api_key = os.environ.get("OPENAI_API_KEY", "")
-if not _api_key:
-    _key_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "openai_key.txt")
-    if os.path.exists(_key_file):
-        with open(_key_file) as _f:
-            _api_key = _f.read().strip()
-client = OpenAI(api_key=_api_key)
+# client is imported from chat_engine (single source of truth for API key)
 
 PUBMED_BASE = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 
@@ -234,7 +228,10 @@ def filter_relevant_studies(
         vecs = np.array(
             [item.embedding for item in response.data], dtype=np.float32
         )
-    except Exception:
+    except Exception as exc:
+        import traceback, sys
+        print(f"[report_generator] Embedding scoring failed: {exc}", file=sys.stderr)
+        traceback.print_exc(file=sys.stderr)
         return studies[:max_studies]
 
     # Normalize to unit vectors for proper cosine similarity
