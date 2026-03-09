@@ -337,9 +337,9 @@ if page == "💬 Ask the Data":
 - Hur skiljer sig alkoholvanorna åt mellan olika åldersgrupper?
 
 **Nivå 2 — Korsrapport (2+ rapporter)**
-- Har minskat cigarettrökning kompenserats av ökad snusning och e-cigaretter?
-- Verkar alkoholprisutvecklingen hänga ihop med hur mycket folk dricker?
-- Har ungas cannabisbruk ökat i takt med beslag och narkotikabrott?
+- Har minskat cigarettrökning (CAN-234) kompenserats av ökad tobakskonsumtion via andra produkter (CAN-238)?
+- Hur ser sambandet ut mellan självrapporterade alkoholvanor (CAN-237) och den registrerade alkoholförsäljningen (CAN-236)?
+- Har ungas cannabisbruk (CAN-239) ökat i takt med narkotikabeslag (CAN-235)?
 
 **Nivå 3 — Rapport + extern källa**
 - Vad säger internationell forskning om varför Sverige lyckats minska tobaksrökning, och stämmer det med de svenska trenderna? *(→ Create Report)*
