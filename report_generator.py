@@ -19,7 +19,7 @@ import numpy as np
 from datetime import datetime
 import os
 
-from chat_engine import client  # reuse the working OpenAI client
+from openai import OpenAI
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import mm
 from reportlab.lib.colors import HexColor, white
@@ -31,7 +31,14 @@ from reportlab.platypus import (
     PageBreak, HRFlowable,
 )
 
-# client is imported from chat_engine (single source of truth for API key)
+# Own client — reads env var first, then openai_key.txt fallback
+_api_key = os.environ.get("OPENAI_API_KEY", "")
+if not _api_key:
+    _key_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "openai_key.txt")
+    if os.path.exists(_key_file):
+        with open(_key_file) as _f:
+            _api_key = _f.read().strip()
+client = OpenAI(api_key=_api_key)
 
 PUBMED_BASE = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
 
