@@ -812,8 +812,11 @@ the system will look up the exact variable names in the catalog, so you never ne
 SELECTION RULES:
 - YOUTH (ungdomar/unga/åk 9/gymnasium/elev/school/young): ONLY pick CAN-239 variables.
   CAN-237 AND CAN-234 cover ADULTS aged 17–84 — NEVER pick them for youth/school questions.
-  EXCEPTION: If the question asks about a CORRELATION with drug prices (pris/prisutveckling/price),
-  also include CAN-233 price variables alongside CAN-239 consumption variables.
+  EXCEPTIONS:
+  1. If the question asks about a CORRELATION with drug prices (pris/prisutveckling/price),
+     also include CAN-233 price variables alongside CAN-239 consumption variables.
+  2. If the question COMPARES youth with adults (vuxna/adults/dagligrökare/befolkning vs ungdomar/elever),
+     pick from BOTH CAN-239 (youth) AND CAN-234/CAN-237 (adults). The user wants both populations.
 - TABLE TITLE MATCH: Always read the table title (last column) and match it to the question topic.
   snus/snusat → pick tables with "snus" in title. DO NOT pick "vejpar"(vaping), "sniffat"(huffing),
   "trivs i skolan"(wellbeing), "skolka"(truancy), or "alkohol" tables for snus questions.
