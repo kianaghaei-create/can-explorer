@@ -822,6 +822,9 @@ SELECTION RULES:
   prefer variables ending in "_alla" (aggregate totals). Skip gender-specific variables
   (_po, _fl, _men, _kv) when an _alla version exists for the same concept.
 - MULTI-TOPIC: For questions covering multiple substances/topics, pick 1–2 per topic (up to 6 total).
+  IMPORTANT: When comparing drugs, genders, age groups, or time periods, pick from DIFFERENT tables
+  to show the contrast. E.g. heroin price vs cannabis price → pick from t6 (heroin) AND t1 (cannabis),
+  NOT only from the index table (t11). Prefer raw price tables over index tables for comparisons.
 - SINGLE TOPIC: Pick 2–4 variables max for readability.
 - ENUMERATION: If the list contains many variables from one table (>10), include ALL their indices.
 - year_from: Extract the start year if the user mentions one ("since 2000" → 2000,

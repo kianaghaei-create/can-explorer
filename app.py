@@ -328,17 +328,21 @@ if page == "💬 Ask the Data":
         "explain what it finds, and show you a chart."
     )
 
-    # Example questions
+    # Example questions grouped by complexity level
     with st.expander("Example questions to try"):
         st.markdown("""
-- How has youth alcohol consumption changed since 2000?
-- Compare cocaine street prices with cocaine seizures over time
-- What happened to smoking rates among young women (17-29)?
-- Show me the trend in cannabis use among grade 9 students
-- Has the gender gap in drug experimentation changed?
-- What are the biggest changes in the youth school survey since 2010?
-- How do amphetamine prices relate to seizure rates?
-- Show me all alcohol consumption data from CAN-236
+**Nivå 1 — Samma rapport, flera tabeller**
+- Hur har priset på heroin förändrats jämfört med cannabis sedan 1990?
+- Röker unga kvinnor och män lika mycket idag jämfört med 2003?
+- Hur skiljer sig alkoholvanorna åt mellan olika åldersgrupper?
+
+**Nivå 2 — Korsrapport (2+ rapporter)**
+- Har minskat cigarettrökning kompenserats av ökad snusning och e-cigaretter?
+- Verkar alkoholprisutvecklingen hänga ihop med hur mycket folk dricker?
+- Har ungas cannabisbruk ökat i takt med beslag och narkotikabrott?
+
+**Nivå 3 — Rapport + extern källa**
+- Vad säger internationell forskning om varför Sverige lyckats minska tobaksrökning, och stämmer det med de svenska trenderna? *(→ Create Report)*
         """)
 
     # Initialize chat history
