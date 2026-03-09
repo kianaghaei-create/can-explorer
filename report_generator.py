@@ -220,7 +220,10 @@ def filter_relevant_studies(
     # Build anchor: use English queries if available, otherwise fall back to question
     anchor = " ".join(anchor_texts) if anchor_texts else question
 
-    texts = [anchor] + [f"{s['title']} {s['abstract']}" for s in studies]
+    # Truncate abstracts to stay within embedding token limits (~8k tokens total)
+    texts = [anchor] + [
+        f"{s['title']} {(s.get('abstract') or '')[:500]}" for s in studies
+    ]
     try:
         response = client.embeddings.create(
             input=texts, model="text-embedding-3-small"
