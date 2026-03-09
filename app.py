@@ -182,6 +182,11 @@ def report_dialog():
         st.markdown("---")
 
         st.markdown(f"### Relevant studies found: {len(studies)}")
+        st.caption(
+            "Relevance score (0–1): cosine similarity between each study's abstract "
+            "and the search query, computed via OpenAI embeddings. "
+            "Only studies scoring ≥ 0.30 are shown."
+        )
         if not studies:
             st.info(
                 "No highly relevant PubMed studies were found for this query. "
